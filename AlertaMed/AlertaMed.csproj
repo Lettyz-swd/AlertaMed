@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F9444D7-CA5E-4160-A1E1-CD64238BE8F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlertaMed</RootNamespace>
+    <AssemblyName>AlertaMed</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Montserrat-Arabic Regular.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed Design.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão instituição.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão instituição 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão uso pessoal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed tela 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão cadastrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão configurações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sair2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão inicio normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão configurações normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão inicio 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão inicio 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sair normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão instituição selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio botão sobre selec..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio botão uso selec..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio botão inst. selec..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sobre selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão uso pessoal selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão instituição selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio animada.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio com mascote.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio sem fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio com masc..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio sobre selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio uso pessoal selec..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio inst. selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio 2 inst. selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio 2 sobre selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Sobre.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Sobre 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Sobre 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão uso profissional selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão uso profissional .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicio 3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio nova botão uso pessoal selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio nova botão sobre selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio nova botão profissional selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela inicio nova botão inst selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre selecionado 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre selecionado corrigido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar sobre corrigido .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro nova.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar cadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar cadastro selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão olho .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão olho riscado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão de entrar cadastro inst..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de Login Instituição.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão de entrar cadastro inst.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de inicio v.2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão criar uma conta .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão entrar em uma instituição.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicio v2 botão entrar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicio v2 botão criar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão entrar em uma instituição selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão criar uma conta selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão entrar em uma instituição1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de inicio v.21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela opc de instituição 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar normal na tela opc de inst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar selecionado na tela opc de inst..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão entrar cadastro selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão cadastrar 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão cadastrar 2 selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de cadastro com botão cadastrar selec..gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela nova botão cadastrar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela nova botão cadastrar selecionado1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela nova botão cadastrar selecionado2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão continuar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão continuar normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela botão continuar normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela botão continuar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro dono da instituição.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de continuar o cadastro selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de continuar o cadastro normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de continuar o cadastro selecionado 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de continuar o cadastro normal 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg Deseja voltar v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg Deseja voltar v1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg Deseja voltar v1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela começar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão começar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela começar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão começar selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão começar normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sim 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão nao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão nao selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão sim selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg Deseja voltar v1 nao selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg Deseja voltar v1 sim selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão cadastrar-se.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão solicitar normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão solicitar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de entrar inst. botão solicitar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela de entrar inst. botao solicitar normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela pedido de entrada bot. ok normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão ok normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão ok selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela pedido de entrada bot. ok selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela entrar na conta inst. bt selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela entrar na conta inst bt. normal.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
