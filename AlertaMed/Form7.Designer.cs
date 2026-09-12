@@ -109,9 +109,9 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AlertaMed.Properties.Resources.botão_começar_normal;
-            this.button1.Location = new System.Drawing.Point(517, 552);
+            this.button1.Location = new System.Drawing.Point(510, 552);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(432, 42);
+            this.button1.Size = new System.Drawing.Size(440, 42);
             this.button1.TabIndex = 3;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;

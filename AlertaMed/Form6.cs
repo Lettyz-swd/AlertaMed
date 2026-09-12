@@ -90,7 +90,25 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show(
+               "Você realmente deseja voltar ao início?\n\nVocê sairá desta tela.",
+               "Atenção!",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Warning);
 
+            if (resultado == DialogResult.No)
+            {
+                return;
+            }
+
+            Form1 form1 = new Form1();
+
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+
+            form1.Show();
+            this.Close();
         }
 
         private void button2_Enter_1(object sender, EventArgs e)

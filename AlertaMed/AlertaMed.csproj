@@ -489,5 +489,14 @@
   <ItemGroup>
     <None Include="Resources\Tela entrar na conta inst bt. normal.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela entrar na conta inst bt. normal1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao entrar normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao entrar selecionado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

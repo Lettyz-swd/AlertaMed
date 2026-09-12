@@ -126,7 +126,7 @@
             this.button1.Image = global::AlertaMed.Properties.Resources.botão_cadastrar_2;
             this.button1.Location = new System.Drawing.Point(509, 521);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(432, 42);
+            this.button1.Size = new System.Drawing.Size(443, 42);
             this.button1.TabIndex = 7;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;

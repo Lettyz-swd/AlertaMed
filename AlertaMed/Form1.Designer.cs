@@ -65,7 +65,7 @@
             this.button4.Image = global::AlertaMed.Properties.Resources.botão_instituição;
             this.button4.Location = new System.Drawing.Point(424, 306);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(432, 40);
+            this.button4.Size = new System.Drawing.Size(435, 40);
             this.button4.TabIndex = 4;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = false;
@@ -84,7 +84,7 @@
             this.button3.Image = global::AlertaMed.Properties.Resources.botão_sobre;
             this.button3.Location = new System.Drawing.Point(424, 499);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(432, 38);
+            this.button3.Size = new System.Drawing.Size(432, 42);
             this.button3.TabIndex = 3;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;

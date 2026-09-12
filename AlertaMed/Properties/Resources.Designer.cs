@@ -273,6 +273,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_entrar_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao entrar normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_entrar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao entrar selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_inicio {
             get {
                 object obj = ResourceManager.GetObject("botão inicio", resourceCulture);
@@ -906,6 +926,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_entrar_na_conta_inst_bt__normal {
             get {
                 object obj = ResourceManager.GetObject("Tela entrar na conta inst bt. normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_entrar_na_conta_inst_bt1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela entrar na conta inst bt1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

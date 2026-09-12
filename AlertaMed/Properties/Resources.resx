@@ -142,9 +142,6 @@
   <data name="botão continuar selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão continuar selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tela botão continuar selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tela botão continuar selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="botão criar uma conta selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão criar uma conta selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +165,9 @@
   </data>
   <data name="botão cadastrar 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão cadastrar 2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela entrar na conta inst bt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela entrar na conta inst bt. normal1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botão sair normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão sair normal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,8 +343,8 @@
   <data name="msg Deseja voltar v1 sim selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\msg Deseja voltar v1 sim selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tela de Login Instituição" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tela de Login Instituição.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tela botão continuar selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela botão continuar selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="msg Deseja voltar v1 nao selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\msg Deseja voltar v1 nao selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -373,6 +373,9 @@
   <data name="Tela nova botão cadastrar selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tela nova botão cadastrar selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tela entrar na conta inst. bt selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela entrar na conta inst. bt selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tela inicio 2 inst. selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tela inicio 2 inst. selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -384,6 +387,9 @@
   </data>
   <data name="botão solicitar normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão solicitar normal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tela de Login Instituição" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela de Login Instituição.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tela inicio inst. selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tela inicio inst. selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,6 +433,9 @@
   <data name="botão sair2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão sair2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tela entrar na conta inst bt. normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tela entrar na conta inst bt. normal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botão de entrar cadastro inst." type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botão de entrar cadastro inst..png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -455,10 +464,10 @@
     <value>..\Resources\AlertaMed Design.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Tela entrar na conta inst. bt selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tela entrar na conta inst. bt selecionado.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botao entrar normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botao entrar normal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tela entrar na conta inst bt. normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tela entrar na conta inst bt. normal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botao entrar selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botao entrar selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

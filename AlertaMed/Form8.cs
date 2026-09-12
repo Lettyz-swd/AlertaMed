@@ -3,17 +3,52 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
 namespace AlertaMed
 {
     public partial class Form8 : Form
+
     {
+        //codigo para fonte personalizada
+        private PrivateFontCollection fontes = new PrivateFontCollection();
+        private Font fonteMontserrat;
         public Form8()
         {
             InitializeComponent();
+            Assembly assembly = Assembly.GetExecutingAssembly();
+
+            using (Stream stream = assembly.GetManifestResourceStream("AlertaMed.Montserrat-Arabic Regular.ttf"))
+            {
+                byte[] dados = new byte[stream.Length];
+                stream.Read(dados, 0, dados.Length);
+
+                IntPtr memoria = Marshal.AllocCoTaskMem(dados.Length);
+
+                try
+                {
+                    Marshal.Copy(dados, 0, memoria, dados.Length);
+                    fontes.AddMemoryFont(memoria, dados.Length);
+                }
+                finally
+                {
+                    Marshal.FreeCoTaskMem(memoria);
+                }
+            }
+            //botões para ficar com fonte personalizada
+            fonteMontserrat = new Font(fontes.Families[0], 12);
+
+            textBox1.Font = fonteMontserrat;
+            textBox2.Font = fonteMontserrat;
+            textBox3.Font = fonteMontserrat;
+            textBox4.Font = fonteMontserrat;
+            textBox5.Font = fonteMontserrat;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,6 +144,11 @@ namespace AlertaMed
             form6.Size = this.Size;
             form6.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

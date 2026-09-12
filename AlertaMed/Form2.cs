@@ -73,8 +73,40 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            
+            bool temDados = false;
+
+            if ((textBox1.Text.Trim() != "" && textBox1.Text != "Digite seu nome") ||
+                (textBox2.Text.Trim() != "" && textBox2.Text != "Digite seu e-mail") ||
+                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite sua senha") ||
+                comboBox1.SelectedIndex != -1)
+            {
+                temDados = true;
+            }
+
+            if (temDados)
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Você realmente deseja voltar?\n\nOs dados preenchidos serão perdidos.",
+                    "Atenção!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (resultado == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            Form5 form5 = new Form5();
+
+            form5.StartPosition = FormStartPosition.Manual;
+            form5.Location = this.Location;
+            form5.Size = this.Size;
+
+            form5.Show();
+            this.Close();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
