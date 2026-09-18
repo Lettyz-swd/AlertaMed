@@ -56,7 +56,8 @@ namespace AlertaMed
             this.textBox1.Size = new System.Drawing.Size(548, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Digite o Nome ";
+            this.textBox1.Text = "Digite o Nome";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -71,6 +72,7 @@ namespace AlertaMed
             this.textBox2.TabIndex = 7;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o E-mail";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
@@ -85,6 +87,7 @@ namespace AlertaMed
             this.textBox3.TabIndex = 8;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite a Senha";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // comboBox1

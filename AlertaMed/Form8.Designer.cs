@@ -158,6 +158,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(1280, 720);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBox1
             // 
@@ -171,6 +172,7 @@
             this.textBox1.TabIndex = 14;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o Nome Completo";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -185,6 +187,8 @@
             this.textBox2.TabIndex = 15;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o seu E-mail";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -198,6 +202,7 @@
             this.textBox3.TabIndex = 16;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite o Nome da Instituição ";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // textBox4
             // 
@@ -210,7 +215,8 @@
             this.textBox4.Size = new System.Drawing.Size(548, 22);
             this.textBox4.TabIndex = 17;
             this.textBox4.TabStop = false;
-            this.textBox4.Text = "Digite o E-mail da Instituição ";
+            this.textBox4.Text = "Digite o E-mail da Instituição";
+            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
             // 
             // textBox5
             // 
@@ -224,6 +230,7 @@
             this.textBox5.TabIndex = 18;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite sua mensagem";
+            this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
             // 
             // Form8
             // 

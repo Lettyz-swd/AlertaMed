@@ -13,6 +13,8 @@ using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
+
 namespace AlertaMed
 {
     public partial class Form4 : Form
@@ -172,17 +174,41 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string nome = textBox1.Text.Trim();
+
+            // Verifica se está vazio
+            if (string.IsNullOrEmpty(nome))
+            {
+                MessageBox.Show("Digite seu nome.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Verifica se tem números ou símbolos
+            if (!nome.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            {
+                MessageBox.Show("O nome não pode conter números ou símbolos.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Se chegou aqui, o nome é válido
+            MessageBox.Show("Cadastro realizado com sucesso!");
+
             Form7 form7 = new Form7();
             form7.StartPosition = FormStartPosition.Manual;
             form7.Location = this.Location;
             form7.Size = this.Size;
             form7.Show();
             this.Hide();
+
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //configurar 
+            
+
 
         }
 
@@ -218,6 +244,30 @@ namespace AlertaMed
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             //configurar 
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Digite o Nome Completo")
+            {
+                textBox1.Clear();
+            }
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Digite o E-mail")
+            {
+                textBox2.Clear();
+            }
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite a Senha")
+            {
+                textBox3.Clear();
+            }
         }
     }
 }

@@ -59,7 +59,7 @@ namespace AlertaMed
             form1.Size = this.Size;
             form1.Show();
             this.Close();
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,7 +69,13 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Hide();
+
         }
 
         private void button2_Enter(object sender, EventArgs e)
@@ -138,6 +144,29 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+            string nome = textBox1.Text.Trim();
+
+            // Verifica se está vazio
+            if (string.IsNullOrEmpty(nome))
+            {
+                MessageBox.Show("Digite seu nome.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Verifica se tem números ou símbolos
+            if (!nome.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            {
+                MessageBox.Show("O nome não pode conter números ou símbolos.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Se chegou aqui, o nome é válido
+            MessageBox.Show("Cadastro realizado com sucesso!");
+
             Form6 form6 = new Form6();
             form6.StartPosition = FormStartPosition.Manual;
             form6.Location = this.Location;
@@ -149,6 +178,56 @@ namespace AlertaMed
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Digite o Nome Completo")
+            {
+                textBox1.Clear();
+            }
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Digite o seu E-mail")
+            {
+                textBox2.Clear();
+            }
+        }
+
+        private void textBox5_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "Digite sua mensagem")
+            {
+                textBox5.Clear();
+            }
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite o Nome da Instituição ")
+            {
+                textBox3.Clear();
+            }
+        }
+
+        private void textBox4_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "Digite o E-mail da Instituição")
+            {
+                textBox4.Clear();
+            }
         }
     }
 }

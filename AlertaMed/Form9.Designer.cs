@@ -1,4 +1,6 @@
-﻿namespace AlertaMed
+﻿using System;
+
+namespace AlertaMed
 {
     partial class Form9
     {
@@ -185,7 +187,8 @@
             this.textBox1.Size = new System.Drawing.Size(548, 22);
             this.textBox1.TabIndex = 13;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Digite o Nome ";
+            this.textBox1.Text = "Digite o Nome";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click_1);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -200,6 +203,7 @@
             this.textBox2.TabIndex = 14;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o E-mail";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click_1);
             // 
             // textBox3
             // 
@@ -212,7 +216,8 @@
             this.textBox3.Size = new System.Drawing.Size(511, 22);
             this.textBox3.TabIndex = 15;
             this.textBox3.TabStop = false;
-            this.textBox3.Text = "Digite sua Senha";
+            this.textBox3.Text = "Digite a Senha";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // Form9
             // 
@@ -237,6 +242,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void textBox1_click(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion

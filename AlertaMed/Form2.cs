@@ -116,6 +116,28 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string nome = textBox1.Text.Trim();
+
+            // Verifica se está vazio
+            if (string.IsNullOrEmpty(nome))
+            {
+                MessageBox.Show("Digite seu nome.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Verifica se tem números ou símbolos
+            if (!nome.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            {
+                MessageBox.Show("O nome não pode conter números ou símbolos.");
+                textBox1.Focus();
+                return;
+            }
+
+            // Se chegou aqui, o nome é válido
+            MessageBox.Show("Cadastro realizado com sucesso!");
+
+            //mudar tela6
             Form4 form4 = new Form4();
             form4.StartPosition = FormStartPosition.Manual;
             form4.Location = this.Location;
@@ -240,6 +262,33 @@ namespace AlertaMed
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             //configurar 
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Digite o Nome")
+            {
+                textBox1.Clear();
+               
+            }   
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+          if (textBox2.Text == "Digite o E-mail")
+            {
+                textBox2.Clear();
+
+            }
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite a Senha")
+            {
+                textBox3.Clear();
+                
+            }
         }
     }
 }
