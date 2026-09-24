@@ -199,5 +199,10 @@ namespace AlertaMed
             // tela.Show();
             // this.Close();
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

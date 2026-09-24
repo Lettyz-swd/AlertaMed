@@ -192,6 +192,7 @@
             this.txtSenha.TabIndex = 20;
             this.txtSenha.TabStop = false;
             this.txtSenha.Text = "Digite a Senha";
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // Form11
             // 
