@@ -10,12 +10,17 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form9 : Form
 
     {
+        // Textos de exemplo que aparecem dentro das caixas de texto
+        private const string PH_NOME = "Digite o Nome";
+        private const string PH_EMAIL = "Digite o E-mail";
+        private const string PH_SENHA = "Digite a Senha";
 
         public Form9()
         {
@@ -23,6 +28,13 @@ namespace AlertaMed
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+        }
+
+        // Devolve o texto digitado, ou "" se ainda estiver o texto de exemplo
+        private static string Valor(Control caixa, string textoExemplo)
+        {
+            string t = caixa.Text.Trim();
+            return t == textoExemplo ? "" : t;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,7 +50,7 @@ namespace AlertaMed
             form1.Size = this.Size;
             form1.Show();
             this.Close();
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -48,14 +60,10 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bool temDados = false;
-
-            if ((textBox1.Text.Trim() != "" && textBox1.Text != "Digite seu nome") ||
-                (textBox2.Text.Trim() != "" && textBox2.Text != "Digite seu e-mail") ||
-                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite sua senha"))
-            {
-                temDados = true;
-            }
+            bool temDados =
+                Valor(textBox1, PH_NOME) != "" ||
+                Valor(textBox2, PH_EMAIL) != "" ||
+                (textBox3.Text != "" && textBox3.Text != PH_SENHA);
 
             if (temDados)
             {
@@ -80,9 +88,9 @@ namespace AlertaMed
 
             form2.Show();
             this.Close();
-            
+
         }
-        
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -100,26 +108,111 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = textBox1.Text.Trim();
+            string nome = Valor(textBox1, PH_NOME);
+            string email = Valor(textBox2, PH_EMAIL);
+            string senha = textBox3.Text == PH_SENHA ? "" : textBox3.Text;
 
-            // Verifica se está vazio
-            if (string.IsNullOrEmpty(nome))
+            // Campos obrigatórios
+            if (nome == "")
             {
-                MessageBox.Show("Digite seu nome.");
+                MessageBox.Show("Digite o nome da instituição.");
                 textBox1.Focus();
                 return;
             }
 
-            // Verifica se tem números ou símbolos
-            if (!nome.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            if (email == "")
             {
-                MessageBox.Show("O nome não pode conter números ou símbolos.");
-                textBox1.Focus();
+                MessageBox.Show("Digite o e-mail da instituição.");
+                textBox2.Focus();
                 return;
             }
 
-            // Se chegou aqui, o nome é válido
-            MessageBox.Show("Cadastro realizado com sucesso!");
+            if (senha == "")
+            {
+                MessageBox.Show("Digite a senha.");
+                textBox3.Focus();
+                return;
+            }
+
+            int idInstituicao = 0;
+            string nomeInstituicao = null;
+            string hashSenha = null;
+            int idDono = 0;
+            string nomeDono = null;
+            bool achou = false;
+
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    @"SELECT i.id_instituicao, i.nome, i.senha, u.id_usuario, u.nome
+                      FROM public.instituicao i
+                      LEFT JOIN public.membro_instituicao m
+                             ON m.id_instituicao = i.id_instituicao AND m.papel = 'dono'
+                      LEFT JOIN public.usuario u
+                             ON u.id_usuario = m.id_usuario
+                      WHERE lower(i.email) = lower(@email)
+                        AND lower(i.nome) = lower(@nome)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@nome", nome);
+
+                    using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                    {
+                        if (rd.Read())
+                        {
+                            achou = true;
+                            idInstituicao = rd.GetInt32(0);
+                            nomeInstituicao = rd.GetString(1);
+                            hashSenha = rd.GetString(2);
+
+                            if (!rd.IsDBNull(3))
+                            {
+                                idDono = rd.GetInt32(3);
+                                nomeDono = rd.GetString(4);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao entrar:\n\n" + ex.Message);
+                return;
+            }
+
+            // Confere a senha (se o hash guardado for inválido, conta como senha errada)
+            bool senhaOk = false;
+
+            if (achou)
+            {
+                try
+                {
+                    senhaOk = Senha.Conferir(senha, hashSenha);
+                }
+                catch (Exception)
+                {
+                    senhaOk = false;
+                }
+            }
+
+            // Mesma mensagem para qualquer erro, para não revelar o que existe no banco
+            if (!achou || !senhaOk)
+            {
+                MessageBox.Show("Instituição, e-mail ou senha incorretos.");
+                textBox3.Focus();
+                return;
+            }
+
+            // Entrou: guarda na sessão (o dono da instituição e a própria instituição)
+            Sessao.Sair();
+
+            if (idDono > 0)
+            {
+                Sessao.Entrar(idDono, nomeDono);
+            }
+
+            Sessao.EntrarNaInstituicao(idInstituicao, nomeInstituicao);
 
             Form7 form7 = new Form7();
 
@@ -204,19 +297,19 @@ namespace AlertaMed
             if (textBox1.Text == "Digite o Nome")
             {
                 textBox1.Clear();
-                
+
             }
         }
 
-        
-        
+
+
 
         private void textBox2_Click_1(object sender, EventArgs e)
         {
             if (textBox2.Text == "Digite o E-mail")
             {
                 textBox2.Clear();
-                
+
             }
         }
 
@@ -225,12 +318,8 @@ namespace AlertaMed
             if (textBox3.Text == "Digite a Senha")
             {
                 textBox3.Clear();
-                
+
             }
         }
     }
-    }
-        
-
-        
-
+}

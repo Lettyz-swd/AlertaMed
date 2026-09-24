@@ -10,18 +10,46 @@ using System.Drawing.Text;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form2 : Form
     {
-        
+        // Textos de exemplo que aparecem dentro das caixas de texto
+        private const string PH_NOME = "Digite o Nome";
+        private const string PH_EMAIL = "Digite o E-mail";
+        private const string PH_SENHA = "Digite a Senha";
+
         public Form2()
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            // Tipo da instituição: só escolher, não digitar
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Se a lista estiver vazia no Designer, usa estas opções
+            if (comboBox1.Items.Count == 0)
+            {
+                comboBox1.Items.AddRange(new object[]
+                {
+                    "Hospital",
+                    "Clínica",
+                    "Casa de repouso",
+                    "Escola",
+                    "Farmácia",
+                    "Outro"
+                });
+            }
+        }
+
+        // Devolve o texto digitado, ou "" se ainda estiver o texto de exemplo
+        private static string Valor(Control caixa, string textoExemplo)
+        {
+            string t = caixa.Text.Trim();
+            return t == textoExemplo ? "" : t;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,15 +71,11 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bool temDados = false;
-
-            if ((textBox1.Text.Trim() != "" && textBox1.Text != "Digite seu nome") ||
-                (textBox2.Text.Trim() != "" && textBox2.Text != "Digite seu e-mail") ||
-                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite sua senha") ||
-                comboBox1.SelectedIndex != -1)
-            {
-                temDados = true;
-            }
+            bool temDados =
+                Valor(textBox1, PH_NOME) != "" ||
+                Valor(textBox2, PH_EMAIL) != "" ||
+                (textBox3.Text != "" && textBox3.Text != PH_SENHA) ||
+                comboBox1.SelectedIndex != -1;
 
             if (temDados)
             {
@@ -86,28 +110,79 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = textBox1.Text.Trim();
+            string nome = Valor(textBox1, PH_NOME);
+            string email = Valor(textBox2, PH_EMAIL).ToLower();
+            string senha = textBox3.Text == PH_SENHA ? "" : textBox3.Text;
 
-            // Verifica se está vazio
-            if (string.IsNullOrEmpty(nome))
+            // Nome da instituição (pode ter números, ex.: "Farmácia 24h")
+            if (nome.Length < 2)
             {
-                MessageBox.Show("Digite seu nome.");
+                MessageBox.Show("Digite o nome da instituição.");
                 textBox1.Focus();
                 return;
             }
 
-            // Verifica se tem números ou símbolos
-            if (!nome.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            // Tipo da instituição
+            if (comboBox1.SelectedIndex == -1)
             {
-                MessageBox.Show("O nome não pode conter números ou símbolos.");
-                textBox1.Focus();
+                MessageBox.Show("Escolha o tipo da instituição.");
+                comboBox1.Focus();
                 return;
             }
 
-            // Se chegou aqui, o nome é válido
-            MessageBox.Show("Cadastro realizado com sucesso!");
+            // E-mail
+            if (email == "")
+            {
+                MessageBox.Show("Digite o e-mail da instituição.");
+                textBox2.Focus();
+                return;
+            }
 
-            //mudar tela6
+            if (!email.Contains("@") || !email.Contains(".") || email.Contains(" "))
+            {
+                MessageBox.Show("Digite um e-mail válido.");
+                textBox2.Focus();
+                return;
+            }
+
+            // Senha
+            if (senha.Length < 6)
+            {
+                MessageBox.Show("A senha precisa ter pelo menos 6 caracteres.");
+                textBox3.Focus();
+                return;
+            }
+
+            // Confere agora se já existe instituição com esse e-mail
+            // (assim a pessoa descobre antes de preencher os dados do dono)
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    "SELECT 1 FROM public.instituicao WHERE lower(email) = @email", conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+
+                    if (cmd.ExecuteScalar() != null)
+                    {
+                        MessageBox.Show("Já existe uma instituição cadastrada com esse e-mail.");
+                        textBox2.Focus();
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível verificar o e-mail:\n\n" + ex.Message);
+                return;
+            }
+
+            // Guarda os dados para o Form4 gravar quando o dono se cadastrar
+            CadastroInstituicao.Nome = nome;
+            CadastroInstituicao.Tipo = comboBox1.Text.Trim();
+            CadastroInstituicao.Email = email;
+            CadastroInstituicao.SenhaHash = Senha.Gerar(senha);
+
             Form4 form4 = new Form4();
             form4.StartPosition = FormStartPosition.Manual;
             form4.Location = this.Location;
@@ -178,7 +253,7 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button6_Click_1(object sender, EventArgs e)
@@ -198,17 +273,17 @@ namespace AlertaMed
 
         private void button7_MouseEnter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button7_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button7_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Enter(object sender, EventArgs e)
@@ -239,13 +314,13 @@ namespace AlertaMed
             if (textBox1.Text == "Digite o Nome")
             {
                 textBox1.Clear();
-               
-            }   
+
+            }
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-          if (textBox2.Text == "Digite o E-mail")
+            if (textBox2.Text == "Digite o E-mail")
             {
                 textBox2.Clear();
 
@@ -257,7 +332,7 @@ namespace AlertaMed
             if (textBox3.Text == "Digite a Senha")
             {
                 textBox3.Clear();
-                
+
             }
         }
     }

@@ -10,19 +10,106 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form8 : Form
 
     {
+        // Textos de exemplo que aparecem dentro das caixas de texto
+        private const string PH_NOME = "Digite o Nome Completo";
+        private const string PH_EMAIL = "Digite o seu E-mail";
+        private const string PH_MSG = "Digite sua mensagem";
+        private const string TXT_EMAIL_AUTO = "Preenchido automaticamente";
+        private const string TXT_SELECIONE = "Selecione a instituição";
+
+        // Item da lista de instituições (mostra o nome, guarda o id e o e-mail)
+        private class InstituicaoItem
+        {
+            public int Id;
+            public string Nome;
+            public string Email;
+
+            public override string ToString()
+            {
+                return Nome;
+            }
+        }
+
         public Form8()
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            // E-mail da instituição: só leitura, mantendo a cor original da caixa
+            Color corFundo = textBox4.BackColor;
+            textBox4.ReadOnly = true;
+            textBox4.BackColor = corFundo;
+            textBox4.TabStop = false;
+            textBox4.Text = TXT_EMAIL_AUTO;
+
+            // Lista de instituições (não deixa digitar, só escolher)
+            cmbInstituicao.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbInstituicao.SelectedIndexChanged += cmbInstituicao_SelectedIndexChanged;
+            CarregarInstituicoes();
+        }
+
+        private void CarregarInstituicoes()
+        {
+            cmbInstituicao.Items.Clear();
+            cmbInstituicao.Items.Add(new InstituicaoItem { Id = 0, Nome = TXT_SELECIONE, Email = "" });
+
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    "SELECT id_instituicao, nome, email FROM public.instituicao ORDER BY nome", conn))
+                using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        cmbInstituicao.Items.Add(new InstituicaoItem
+                        {
+                            Id = rd.GetInt32(0),
+                            Nome = rd.GetString(1),
+                            Email = rd.GetString(2)
+                        });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Não foi possível carregar as instituições.\n\n" + ex.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            cmbInstituicao.SelectedIndex = 0;
+        }
+
+        private void cmbInstituicao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InstituicaoItem item = cmbInstituicao.SelectedItem as InstituicaoItem;
+
+            if (item == null || item.Id == 0)
+            {
+                textBox4.Text = TXT_EMAIL_AUTO;
+            }
+            else
+            {
+                textBox4.Text = item.Email;
+            }
+        }
+
+        // Devolve o texto digitado, ou "" se ainda estiver o texto de exemplo
+        private static string Valor(Control caixa, string textoExemplo)
+        {
+            string t = caixa.Text.Trim();
+            return t == textoExemplo ? "" : t;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,18 +130,11 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bool temDados = false;
-
-            if ((textBox1.Text.Trim() != "" && textBox1.Text != "Digite seu nome") ||
-                (textBox2.Text.Trim() != "" && textBox2.Text != "Digite o seu e-mail") ||
-                (textBox5.Text.Trim() != "" && textBox3.Text != "Digite sua mensagem") || 
-                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite o Nome da Instituição ") ||
-                (textBox4.Text.Trim() != "" && textBox3.Text != "Digite o E-mail da Instituição") )
-
-
-            {
-                temDados = true;
-            }
+            bool temDados =
+                Valor(textBox1, PH_NOME) != "" ||
+                Valor(textBox2, PH_EMAIL) != "" ||
+                Valor(textBox5, PH_MSG) != "" ||
+                cmbInstituicao.SelectedIndex > 0;
 
             if (temDados)
             {
@@ -146,11 +226,12 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string nome = Valor(textBox1, PH_NOME);
+            string email = Valor(textBox2, PH_EMAIL);
+            string mensagem = Valor(textBox5, PH_MSG);
+            InstituicaoItem inst = cmbInstituicao.SelectedItem as InstituicaoItem;
 
-
-            string nome = textBox1.Text.Trim();
-
-            // Verifica se está vazio
+            // Verifica se o nome está vazio
             if (string.IsNullOrEmpty(nome))
             {
                 MessageBox.Show("Digite seu nome.");
@@ -166,8 +247,69 @@ namespace AlertaMed
                 return;
             }
 
-            // Se chegou aqui, o nome é válido
-            MessageBox.Show("Cadastro realizado com sucesso!");
+            // Verifica o e-mail
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Digite seu e-mail.");
+                textBox2.Focus();
+                return;
+            }
+
+            if (!email.Contains("@") || !email.Contains(".") || email.Contains(" "))
+            {
+                MessageBox.Show("Digite um e-mail válido.");
+                textBox2.Focus();
+                return;
+            }
+
+            // Verifica a instituição escolhida
+            if (cmbInstituicao.Items.Count <= 1)
+            {
+                MessageBox.Show("Nenhuma instituição cadastrada ainda.");
+                return;
+            }
+
+            if (inst == null || inst.Id == 0)
+            {
+                MessageBox.Show("Selecione uma instituição.");
+                cmbInstituicao.Focus();
+                return;
+            }
+
+            // Grava o pedido de entrada (fica como "pendente" até o dono responder)
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    @"INSERT INTO public.solicitacao_entrada
+                          (id_instituicao, nome_solicitante, email_solicitante, mensagem)
+                      VALUES (@inst, @nome, @email, @msg)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@inst", inst.Id);
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@msg",
+                        mensagem == "" ? (object)DBNull.Value : mensagem);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (PostgresException ex)
+            {
+                if (ex.SqlState == "23505")
+                {
+                    MessageBox.Show("Você já tem um pedido pendente para essa instituição.");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao enviar o pedido:\n\n" + ex.Message);
+                }
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar o pedido:\n\n" + ex.Message);
+                return;
+            }
 
             Form6 form6 = new Form6();
             form6.StartPosition = FormStartPosition.Manual;
@@ -216,20 +358,20 @@ namespace AlertaMed
             }
         }
 
+        // Mantido só para não quebrar o Designer (a caixa de nome da instituição virou ComboBox)
         private void textBox3_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "Digite o Nome da Instituição ")
-            {
-                textBox3.Clear();
-            }
+
         }
 
         private void textBox4_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text == "Digite o E-mail da Instituição")
-            {
-                textBox4.Clear();
-            }
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

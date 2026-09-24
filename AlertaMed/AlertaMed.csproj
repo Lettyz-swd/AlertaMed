@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="CadastroInstituicao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,19 +97,27 @@
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs" />
+    <Compile Include="Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form12.Designer.cs">
       <DependentUpon>Form12.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form13.cs" />
+    <Compile Include="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form14.cs" />
+    <Compile Include="Form14.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form14.Designer.cs">
       <DependentUpon>Form14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form15.cs" />
+    <Compile Include="Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
