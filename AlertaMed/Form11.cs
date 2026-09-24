@@ -6,15 +6,27 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form11 : Form
     {
+        // Textos de exemplo que ficam dentro dos campos (propriedade Text no designer).
+        // O login trata esses textos como campo vazio.
+        private const string PH_EMAIL = "Digite seu E-mail";
+        private const string PH_SENHA = "Digite a Senha";
+
         public Form11()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
+        private bool Vazio(string texto, string placeholder)
+        {
+            return string.IsNullOrWhiteSpace(texto) || texto == placeholder;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -43,13 +55,8 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bool temDados = false;
-
-            if ((textBox2.Text.Trim() != "" && textBox3.Text != "Digite seu e-mail") ||
-                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite sua senha") )
-            {
-                temDados = true;
-            }
+            bool temDados = !Vazio(txtEmail.Text, PH_EMAIL)
+                         || !Vazio(txtSenha.Text, PH_SENHA);
 
             if (temDados)
             {
@@ -76,27 +83,29 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (textBox3.PasswordChar == '\0')
+            if (txtSenha.PasswordChar == '\0')
             {
-                textBox3.PasswordChar = '●';
+                txtSenha.PasswordChar = '●';
                 button6.Image = Properties.Resources.botão_olho_riscado;
             }
             else
             {
-                textBox3.PasswordChar = '\0';
+                txtSenha.PasswordChar = '\0';
                 button6.Image = Properties.Resources.botão_olho_;
             }
         }
 
+        // O designer chama este método pelo nome button1_Enter
         private void button1_Enter(object sender, EventArgs e)
         {
-            button1.Image = Properties.Resources.botao_entrar_selecionado;
+            btnEntrar.Image = Properties.Resources.botao_entrar_selecionado;
             pictureBox1.Image = Properties.Resources.Tela_entrar_usuario_botao_entrar_selecionado;
         }
 
+        // O designer chama este método pelo nome button1_Leave
         private void button1_Leave(object sender, EventArgs e)
         {
-            button1.Image = Properties.Resources.botao_entrar_normal;
+            btnEntrar.Image = Properties.Resources.botao_entrar_normal;
             pictureBox1.Image = Properties.Resources.Tela_entrar_usuario_uso_pessoal;
         }
 
@@ -130,9 +139,65 @@ namespace AlertaMed
             button4.Image = Properties.Resources.botão_voltar_cadastro;
         }
 
+        // O designer chama este método pelo nome button1_Click
         private void button1_Click(object sender, EventArgs e)
         {
+            string email = txtEmail.Text.Trim();
+            string senha = txtSenha.Text;
 
+            if (Vazio(email, PH_EMAIL) || Vazio(senha, PH_SENHA))
+            {
+                MessageBox.Show("Preencha o e-mail e a senha.");
+                return;
+            }
+
+            bool entrou = false;
+
+            try
+            {
+                using (var conn = Banco.Abrir())
+                {
+                    // Busca o id, o nome e a senha guardada (embaralhada) do usuário
+                    string sql = "SELECT id_usuario, nome, senha FROM usuario WHERE email = @email";
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("email", email);
+
+                        using (var leitor = cmd.ExecuteReader())
+                        {
+                            if (leitor.Read() && Senha.Conferir(senha, leitor.GetString(2)))
+                            {
+                                // Guarda quem entrou para as outras telas usarem
+                                Sessao.Entrar(leitor.GetInt32(0), leitor.GetString(1));
+                                entrou = true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            if (!entrou)
+            {
+                MessageBox.Show("E-mail ou senha incorretos.");
+                return;
+            }
+
+            MessageBox.Show("Bem-vindo(a), " + Sessao.Nome + "!");
+
+            // Quando a tela de medicações existir, abra ela aqui
+            // (troque FormMedicacoes pelo nome real do formulário):
+            //
+            // FormMedicacoes tela = new FormMedicacoes();
+            // tela.StartPosition = FormStartPosition.Manual;
+            // tela.Location = this.Location;
+            // tela.Size = this.Size;
+            // tela.Show();
+            // this.Close();
         }
     }
 }

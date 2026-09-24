@@ -29,59 +29,59 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastra = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(464, 234);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(548, 22);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "Digite o Nome Completo";
+            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(464, 234);
+            this.txtNome.Multiline = true;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(548, 22);
+            this.txtNome.TabIndex = 15;
+            this.txtNome.TabStop = false;
+            this.txtNome.Text = "Digite o Nome Completo";
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(465, 325);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(552, 22);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.TabStop = false;
-            this.textBox2.Text = "Digite seu E-mail";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(465, 325);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(552, 22);
+            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabStop = false;
+            this.txtEmail.Text = "Digite seu E-mail";
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtSenha
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(464, 412);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(511, 22);
-            this.textBox3.TabIndex = 17;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Digite a Senha";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(464, 412);
+            this.txtSenha.Multiline = true;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(511, 22);
+            this.txtSenha.TabIndex = 17;
+            this.txtSenha.TabStop = false;
+            this.txtSenha.Text = "Digite a Senha";
+            this.txtSenha.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button6
             // 
@@ -181,25 +181,26 @@
             this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
             // 
-            // button1
+            // btnCadastra
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::AlertaMed.Properties.Resources.botão_cadastrar_2;
-            this.button1.Location = new System.Drawing.Point(509, 520);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(439, 42);
-            this.button1.TabIndex = 8;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
+            this.btnCadastra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.btnCadastra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastra.FlatAppearance.BorderSize = 0;
+            this.btnCadastra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.btnCadastra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.btnCadastra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastra.Image = global::AlertaMed.Properties.Resources.botão_cadastrar_2;
+            this.btnCadastra.Location = new System.Drawing.Point(509, 520);
+            this.btnCadastra.Name = "btnCadastra";
+            this.btnCadastra.Size = new System.Drawing.Size(439, 42);
+            this.btnCadastra.TabIndex = 8;
+            this.btnCadastra.TabStop = false;
+            this.btnCadastra.UseVisualStyleBackColor = false;
+            this.btnCadastra.Click += new System.EventHandler(this.btnCadastra_Click);
+            this.btnCadastra.Enter += new System.EventHandler(this.button1_Enter);
+            this.btnCadastra.Leave += new System.EventHandler(this.button1_Leave);
+            this.btnCadastra.MouseEnter += new System.EventHandler(this.button1_Enter);
+            this.btnCadastra.MouseLeave += new System.EventHandler(this.button1_Leave);
             // 
             // pictureBox1
             // 
@@ -216,15 +217,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastra);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -239,14 +240,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastra;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
     }
 }

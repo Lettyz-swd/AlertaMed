@@ -6,14 +6,28 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form10 : Form
     {
+        // Textos de exemplo que ficam dentro dos campos (propriedade Text no designer).
+        // O cadastro trata esses textos como campo vazio.
+        private const string PH_NOME = "Digite o Nome Completo";
+        private const string PH_EMAIL = "Digite seu E-mail";
+        private const string PH_SENHA = "Digite a Senha";
+
         public Form10()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
+        private bool Vazio(string texto, string placeholder)
+        {
+            return string.IsNullOrWhiteSpace(texto) || texto == placeholder;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -21,23 +35,23 @@ namespace AlertaMed
 
         }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
-            if (textBox3.PasswordChar == '\0')
+            if (txtSenha.PasswordChar == '\0')
             {
-                textBox3.PasswordChar = '●';
+                txtSenha.PasswordChar = '●';
                 button6.Image = Properties.Resources.botão_olho_riscado;
             }
             else
             {
-                textBox3.PasswordChar = '\0';
+                txtSenha.PasswordChar = '\0';
                 button6.Image = Properties.Resources.botão_olho_;
             }
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Enter(object sender, EventArgs e)
@@ -70,15 +84,17 @@ namespace AlertaMed
             button4.Image = Properties.Resources.botão_voltar_cadastro;
         }
 
+        // O designer chama este método pelo nome button1_Enter
         private void button1_Enter(object sender, EventArgs e)
         {
-            button1.Image = Properties.Resources.botão_cadastrar_2_selecionado;
+            btnCadastra.Image = Properties.Resources.botão_cadastrar_2_selecionado;
             pictureBox1.Image = Properties.Resources.Tela_cadastro_usuario_botao_cad__selecionado;
         }
 
+        // O designer chama este método pelo nome button1_Leave
         private void button1_Leave(object sender, EventArgs e)
         {
-            button1.Image = Properties.Resources.botão_cadastrar_2;
+            btnCadastra.Image = Properties.Resources.botão_cadastrar_2;
             pictureBox1.Image = Properties.Resources.Tela_cadastro_usuario;
         }
 
@@ -99,14 +115,9 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bool temDados = false;
-
-            if ((textBox1.Text.Trim() != "" && textBox1.Text != "Digite seu nome") ||
-                (textBox2.Text.Trim() != "" && textBox2.Text != "Digite seu e-mail") ||
-                (textBox3.Text.Trim() != "" && textBox3.Text != "Digite sua senha") )
-            {
-                temDados = true;
-            }
+            bool temDados = !Vazio(txtNome.Text, PH_NOME)
+                         || !Vazio(txtEmail.Text, PH_EMAIL)
+                         || !Vazio(txtSenha.Text, PH_SENHA);
 
             if (temDados)
             {
@@ -141,6 +152,44 @@ namespace AlertaMed
 
             form11.Show();
             this.Close();
+        }
+
+        // O designer chama este método pelo nome btnCadastra_Click
+        private void btnCadastra_Click(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string senha = txtSenha.Text;
+
+            if (Vazio(nome, PH_NOME) || Vazio(email, PH_EMAIL) || Vazio(senha, PH_SENHA))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
+            try
+            {
+                using (var conn = Banco.Abrir())
+                {
+                    string sql = "INSERT INTO usuario (nome, email, senha) VALUES (@nome, @email, @senha)";
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("nome", nome);
+                        cmd.Parameters.AddWithValue("email", email);
+                        cmd.Parameters.AddWithValue("senha", Senha.Gerar(senha));
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Cadastro realizado!");
+            }
+            catch (PostgresException ex) when (ex.SqlState == "23505")
+            {
+                MessageBox.Show("Este e-mail já está cadastrado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

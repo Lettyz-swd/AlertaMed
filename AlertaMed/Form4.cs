@@ -28,6 +28,8 @@ namespace AlertaMed
         public Form4()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             Assembly assembly = Assembly.GetExecutingAssembly();
             
             

@@ -16,6 +16,8 @@ namespace AlertaMed
         public Form6()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public Form6(Form anterior, Form destino)
         {

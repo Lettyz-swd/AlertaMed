@@ -19,6 +19,8 @@ namespace AlertaMed
         public Form2()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
 

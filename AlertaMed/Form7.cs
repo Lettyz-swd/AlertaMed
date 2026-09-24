@@ -14,16 +14,13 @@ namespace AlertaMed
         public Form7()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form15 form15 = new Form15();
-            form15.StartPosition = FormStartPosition.Manual;
-            form15.Location = this.Location;
-            form15.Size = this.Size;
-            form15.Show();
-            this.Close();
+           
         }
 
         private void button1_Enter(object sender, EventArgs e)

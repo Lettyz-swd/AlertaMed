@@ -14,6 +14,8 @@ namespace AlertaMed
         public Form5()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             button4.Image = Properties.Resources.botão_criar_uma_conta_normal_21;
             button1.Image = Properties.Resources.botão_entrar_em_uma_instituição_normal_2;
         }

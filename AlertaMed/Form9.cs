@@ -20,7 +20,9 @@ namespace AlertaMed
         public Form9()
         {
             InitializeComponent();
-            
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
