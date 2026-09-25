@@ -83,6 +83,56 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar_doses_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao adicionar doses normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar_doses_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao adicionar doses selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar_horarios_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao adicionar horarios normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar_horarios_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao adicionar horarios selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_adicionar_remedios_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao adicionar remedios selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_cadastrar {
             get {
                 object obj = ResourceManager.GetObject("botão cadastrar", resourceCulture);
@@ -553,6 +603,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botão_ok_voltar_a_tela_normal {
+            get {
+                object obj = ResourceManager.GetObject("botão ok voltar a tela normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_ok_voltar_a_tela_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao ok voltar a tela selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_olho_ {
             get {
                 object obj = ResourceManager.GetObject("botão olho ", resourceCulture);
@@ -566,6 +636,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap botão_olho_riscado {
             get {
                 object obj = ResourceManager.GetObject("botão olho riscado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_remedios_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao remedios normal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -953,6 +1033,56 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastrar_preescrição_bt_cadastrar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastrar preescrição bt cadastrar selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastrar_preescrição_bt_remedios_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastrar preescrição bt remedios selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastrar_prescrição_bt_doses_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastrar prescrição bt doses selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastrar_prescrição_bt_horarios_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastrar prescrição bt horarios selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastrar_prescrição_normal {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastrar prescrição normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tela_cadastro_dono_da_instituição {
             get {
                 object obj = ResourceManager.GetObject("Tela cadastro dono da instituição", resourceCulture);
@@ -1056,6 +1186,26 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_cadastro_paciente_bt_voltar_selecionado {
             get {
                 object obj = ResourceManager.GetObject("Tela cadastro paciente bt voltar selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_profissional {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro profissional", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_profissional_bt_começar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro profissional bt começar selecionado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1246,6 +1396,46 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_entrar_usuario_uso_pessoal {
             get {
                 object obj = ResourceManager.GetObject("Tela entrar usuario uso pessoal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_historico_prescrição_bt_ok_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela historico prescrição bt ok selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_historico_prescrição_bt_ok_selecionado_1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela historico prescrição bt ok selecionado 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_historico_prescrição_normal {
+            get {
+                object obj = ResourceManager.GetObject("Tela historico prescrição normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_historico_prescrição_normal_1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela historico prescrição normal 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

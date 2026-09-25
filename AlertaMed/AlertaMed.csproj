@@ -121,6 +121,12 @@
     <Compile Include="Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16.Designer.cs">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form15.resx">
       <DependentUpon>Form15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16.resx">
+      <DependentUpon>Form16.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -683,6 +692,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\botao cadastrar preescrição selecionado 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastrar prescrição bt horarios selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastrar prescrição bt doses selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastrar preescrição bt remedios selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastrar preescrição bt cadastrar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastrar prescrição normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao adicionar horarios selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao adicionar doses selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao adicionar remedios selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao adicionar horarios normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao adicionar doses normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao remedios normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela historico prescrição bt ok selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela historico prescrição normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela historico prescrição bt ok selecionado 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela historico prescrição normal 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao ok voltar a tela selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão ok voltar a tela normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro profissional bt começar selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro profissional.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -180,5 +180,10 @@ namespace AlertaMed
         {
             button3.Image = Properties.Resources.botão_configurações_normal;
         }
+
+        private void button3_Enter_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

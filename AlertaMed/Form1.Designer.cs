@@ -118,7 +118,7 @@
             this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_inicio_3;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1265, 680);
+            this.pictureBox1.Size = new System.Drawing.Size(1265, 698);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
