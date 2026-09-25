@@ -43,6 +43,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //inicio
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -58,6 +59,7 @@ namespace AlertaMed
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //botao voltar
             Form13 form13 = new Form13();
             form13.StartPosition = FormStartPosition.Manual;
             form13.Location = this.Location;

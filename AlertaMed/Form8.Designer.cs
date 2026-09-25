@@ -152,6 +152,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_de_entrar_inst__botao_solicitar_normal;
             this.pictureBox1.Location = new System.Drawing.Point(-2, -12);
             this.pictureBox1.Name = "pictureBox1";
@@ -221,11 +222,12 @@
             // 
             // cmbInstituicao
             // 
-            this.cmbInstituicao.BackColor = System.Drawing.Color.White;
+            this.cmbInstituicao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.cmbInstituicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInstituicao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbInstituicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbInstituicao.FormattingEnabled = true;
-            this.cmbInstituicao.Location = new System.Drawing.Point(466, 425);
+            this.cmbInstituicao.Location = new System.Drawing.Point(466, 423);
             this.cmbInstituicao.Name = "cmbInstituicao";
             this.cmbInstituicao.Size = new System.Drawing.Size(383, 26);
             this.cmbInstituicao.TabIndex = 19;

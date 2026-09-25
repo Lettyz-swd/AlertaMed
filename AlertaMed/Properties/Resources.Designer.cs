@@ -19,7 +19,7 @@ namespace AlertaMed.Properties {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -106,6 +106,56 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap botão_cadastrar_2_selecionado {
             get {
                 object obj = ResourceManager.GetObject("botão cadastrar 2 selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_cadastrar_preescrição_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao cadastrar preescrição normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_cadastrar_preescrição_normal_2 {
+            get {
+                object obj = ResourceManager.GetObject("botao cadastrar preescrição normal 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_cadastrar_preescrição_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao cadastrar preescrição selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_cadastrar_preescrição_selecionado_2 {
+            get {
+                object obj = ResourceManager.GetObject("botao cadastrar preescrição selecionado 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_cadastrar_preescrição_selecionado_3 {
+            get {
+                object obj = ResourceManager.GetObject("botao cadastrar preescrição selecionado 3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,6 +483,36 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botão_lixeira_maior {
+            get {
+                object obj = ResourceManager.GetObject("botão lixeira maior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botão_lixeira_menor {
+            get {
+                object obj = ResourceManager.GetObject("botão lixeira menor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_lixeira_menor_2 {
+            get {
+                object obj = ResourceManager.GetObject("botao lixeira menor 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_nao {
             get {
                 object obj = ResourceManager.GetObject("botão nao", resourceCulture);
@@ -516,6 +596,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap botão_sair2 {
             get {
                 object obj = ResourceManager.GetObject("botão sair2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_selecionado_3 {
+            get {
+                object obj = ResourceManager.GetObject("botao selecionado 3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -673,9 +763,49 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_voltar_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao voltar normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_voltar_normal_na_tela_opc_de_inst {
             get {
                 object obj = ResourceManager.GetObject("botão voltar normal na tela opc de inst", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botão_voltar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botão voltar selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botão_voltar_selecionado_2 {
+            get {
+                object obj = ResourceManager.GetObject("botão voltar selecionado 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_voltar_selecionado_3 {
+            get {
+                object obj = ResourceManager.GetObject("botao voltar selecionado 3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -836,6 +966,96 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_cadastro_nova {
             get {
                 object obj = ResourceManager.GetObject("Tela cadastro nova", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_1_bt_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente 1 bt selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_2_bt_normal {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente 2 bt normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_2_bt_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente 2 bt selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_bt__selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente bt. selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_bt_cadastrar_presc__selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente bt cadastrar presc. selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_bt_voltar_normal {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente bt voltar normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_cadastro_paciente_bt_voltar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela cadastro paciente bt voltar selecionado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

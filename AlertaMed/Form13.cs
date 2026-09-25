@@ -34,6 +34,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //inicio
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -44,6 +45,7 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //add remedios
             textoGuardado = textBox2.Text;
 
             MessageBox.Show("Remédios guardados com sucesso!", "Aviso");
@@ -51,6 +53,7 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //add doses
             textoGuardado2 = textBox3.Text;
 
             MessageBox.Show("Doses guardadas com sucesso!", "Aviso");
@@ -58,13 +61,15 @@ namespace AlertaMed
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //add horario
             textoGuardado3 = textBox4.Text;
 
-            MessageBox.Show("Doses guardadas com sucesso!", "Aviso");
+            MessageBox.Show("Horários salvos com sucesso!", "Aviso");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //cadastrar paciente
             Form14 form14 = new Form14(textoGuardado, textoGuardado2, textoGuardado3, LbLNP.Text);
             form14.StartPosition = FormStartPosition.Manual;
             form14.Location = this.Location;
@@ -80,6 +85,7 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //voltar
             Form12 form12 = new Form12();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;

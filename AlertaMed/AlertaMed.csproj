@@ -618,5 +618,71 @@
   <ItemGroup>
     <None Include="Resources\Tela entrar usuario uso pessoal.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente bt. selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente 1 bt selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente 1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente bt cadastrar presc. selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente bt voltar normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão lixeira menor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao lixeira menor 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão lixeira maior.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botão voltar selecionado 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao selecionado 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar selecionado 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente 2 bt normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro paciente 2 bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao cadastrar preescrição normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao cadastrar preescrição normal 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao cadastrar preescrição selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao cadastrar preescrição selecionado 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao cadastrar preescrição selecionado 3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
