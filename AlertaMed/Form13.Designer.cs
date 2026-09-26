@@ -68,6 +68,8 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o nome do Técnico Responsável";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
@@ -93,7 +95,10 @@
             this.textBox3.Size = new System.Drawing.Size(554, 27);
             this.textBox3.TabIndex = 7;
             this.textBox3.TabStop = false;
+            this.textBox3.Text = "Digite os remédios";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
@@ -120,6 +125,8 @@
             this.textBox5.TabIndex = 63;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite as doses";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox6
             // 
@@ -145,7 +152,8 @@
             this.textBox7.Size = new System.Drawing.Size(161, 29);
             this.textBox7.TabIndex = 65;
             this.textBox7.TabStop = false;
-            this.textBox7.Text = "13:00";
+            this.textBox7.Text = "00:00";
+            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
             // 
             // textBox8
             // 
@@ -158,7 +166,8 @@
             this.textBox8.Size = new System.Drawing.Size(161, 29);
             this.textBox8.TabIndex = 66;
             this.textBox8.TabStop = false;
-            this.textBox8.Text = "13:00";
+            this.textBox8.Text = "00:00";
+            this.textBox8.Leave += new System.EventHandler(this.textBox8_Leave);
             // 
             // textBox9
             // 
@@ -171,7 +180,8 @@
             this.textBox9.Size = new System.Drawing.Size(161, 29);
             this.textBox9.TabIndex = 67;
             this.textBox9.TabStop = false;
-            this.textBox9.Text = "13:00";
+            this.textBox9.Text = "00:00";
+            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox10
             // 
@@ -221,6 +231,7 @@
             this.button9.TabIndex = 74;
             this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // lixeira5
             // 
@@ -237,6 +248,7 @@
             this.lixeira5.TabIndex = 73;
             this.lixeira5.TabStop = false;
             this.lixeira5.UseVisualStyleBackColor = false;
+            this.lixeira5.Click += new System.EventHandler(this.lixeira5_Click);
             // 
             // button8
             // 
@@ -253,6 +265,7 @@
             this.button8.TabIndex = 71;
             this.button8.TabStop = false;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -269,6 +282,7 @@
             this.button7.TabIndex = 70;
             this.button7.TabStop = false;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // lixeira
             // 
@@ -285,6 +299,7 @@
             this.lixeira.TabIndex = 69;
             this.lixeira.TabStop = false;
             this.lixeira.UseVisualStyleBackColor = false;
+            this.lixeira.Click += new System.EventHandler(this.lixeira_Click);
             // 
             // button6
             // 
@@ -436,6 +451,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form13";
             this.Text = "AlertaMed";
+            this.Load += new System.EventHandler(this.Form13_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
