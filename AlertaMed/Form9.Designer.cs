@@ -190,6 +190,10 @@ namespace AlertaMed
             this.textBox1.Text = "Digite o Nome";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click_1);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+<<<<<<< HEAD
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
             // 
             // textBox2
             // 
@@ -204,6 +208,10 @@ namespace AlertaMed
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o E-mail";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click_1);
+<<<<<<< HEAD
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
             // 
             // textBox3
             // 
@@ -218,6 +226,10 @@ namespace AlertaMed
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite a Senha";
             this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+<<<<<<< HEAD
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
             // 
             // Form9
             // 

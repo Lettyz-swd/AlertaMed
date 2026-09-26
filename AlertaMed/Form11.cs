@@ -204,5 +204,68 @@ namespace AlertaMed
         {
 
         }
+<<<<<<< HEAD
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == PH_EMAIL)
+            {
+                txtEmail.Clear();
+            }
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "Digite a Senha")
+            {
+                txtSenha.Clear();
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtEmail_Click_1(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Digite seu E-mail")
+            {
+                txtEmail.Clear();
+            }
+        }
+
+        private void txtEmail_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Digite seu E-mail";
+            }
+        }
+
+        private void txtSenha_Click_1(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "Digite a Senha")
+            {
+                txtSenha.Clear();
+            }
+        }
+
+        private void txtSenha_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                txtSenha.Text = "Digite a Senha";
+            }
+            }
+        }
+    }
+=======
     }
 }
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa

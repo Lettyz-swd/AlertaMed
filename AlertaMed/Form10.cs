@@ -191,5 +191,66 @@ namespace AlertaMed
                 MessageBox.Show(ex.Message);
             }
         }
+<<<<<<< HEAD
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "Digite o Nome Completo")
+            {
+                txtNome.Clear();
+            }
+        }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Digite seu E-mail")
+            {
+                txtEmail.Clear();
+            }
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "Digite a Senha")
+            {
+                txtSenha.Clear();
+            }
+        }
+
+        private void txtNome_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                txtNome.Text = "Digite o Nome Completo";
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Digite seu E-mail";
+            }
+        }
+
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSenha_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                txtSenha.Text = "Digite a Senha";
+            }
+        }
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
     }
 }

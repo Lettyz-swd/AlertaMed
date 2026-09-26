@@ -422,5 +422,39 @@ namespace AlertaMed
                 textBox3.Clear();
             }
         }
+<<<<<<< HEAD
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                textBox1.Text = "Digite o Nome Completo";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                textBox2.Text = "Digite o E-mail";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox3_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = "Digite a Senha";
+            }
+        }
+        }
+    }
+=======
     }
 }
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
