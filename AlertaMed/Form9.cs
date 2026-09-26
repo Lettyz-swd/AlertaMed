@@ -322,30 +322,21 @@ namespace AlertaMed
             }
         }
 
-
+        // Métodos abaixo: o Designer liga o evento "Leave" a eles.
+        // Ficam vazios por enquanto - podem receber validação depois.
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Digite o Nome";
-            }
+
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                textBox2.Text = "Digite o E-mail";
-            }
+
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                textBox3.Text = "Digite a Senha";
-            }
-        }
 
+        }
     }
 }

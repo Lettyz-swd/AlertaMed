@@ -28,9 +28,24 @@ namespace AlertaMed
         // Vira true quando a pessoa mexe na data de nascimento
         private bool dataEscolhida = false;
 
+        //codigo para conseguir mudar o fundo do datetime 
+        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
+        private static extern int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
+
         public Form4()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            Assembly assembly = Assembly.GetExecutingAssembly();
+
+
+            button5.Image = Properties.Resources.botão_olho_;
+
+            //personalização ativa do datetime
+            SetWindowTheme(dateTimePicker1.Handle, "", ""); // libera BackColor/ForeColor
+            dateTimePicker1.BackColor = ColorTranslator.FromHtml("#F9FDFE");
+            dateTimePicker1.ForeColor = Color.FromArgb(50, 50, 50); // combine com a cor de texto dos outros campos
 
             dateTimePicker1.MinDate = new DateTime(1900, 1, 1);
             dateTimePicker1.MaxDate = DateTime.Today.AddYears(-18);
@@ -408,35 +423,21 @@ namespace AlertaMed
             }
         }
 
-
+        // Métodos abaixo: o Designer liga o evento "Leave" a eles.
+        // Ficam vazios por enquanto - podem receber validação depois.
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Digite o Nome Completo";
-            }
+
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                textBox2.Text = "Digite o E-mail";
-            }
-        }
 
-        private void textBox3_Leave(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBox3_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                textBox3.Text = "Digite a Senha";
-            }
-        }
+
         }
     }
-
+}

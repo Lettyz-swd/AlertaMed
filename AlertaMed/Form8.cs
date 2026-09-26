@@ -125,7 +125,6 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
 
         }
 
@@ -370,35 +369,26 @@ namespace AlertaMed
 
         }
 
+        // Métodos abaixo: o Designer liga eventos a eles. Ficam vazios
+        // por enquanto - podem receber validação depois, se quiser.
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Digite o Nome Completo";
-            }
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                textBox2.Text = "Digite o seu E-mail";
-            }
-        }
-
         private void textBox5_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox5.Text))
-            {
-                textBox5.Text = "Digite sua mensagem";
-            }
-        }
+
         }
     }
-
+}

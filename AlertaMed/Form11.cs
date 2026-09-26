@@ -200,13 +200,10 @@ namespace AlertaMed
             // this.Close();
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void txtEmail_Click(object sender, EventArgs e)
+        // Métodos abaixo: o Designer liga eventos das caixas txtEmail e
+        // txtSenha a eles. O "Click" segue o mesmo padrão das outras
+        // telas: apaga o texto de exemplo ao clicar.
+        private void txtEmail_Click_1(object sender, EventArgs e)
         {
             if (txtEmail.Text == PH_EMAIL)
             {
@@ -214,55 +211,27 @@ namespace AlertaMed
             }
         }
 
-        private void txtSenha_Click(object sender, EventArgs e)
-        {
-            if (txtSenha.Text == "Digite a Senha")
-            {
-                txtSenha.Clear();
-            }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txtEmail_Click_1(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "Digite seu E-mail")
-            {
-                txtEmail.Clear();
-            }
-        }
-
         private void txtEmail_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                txtEmail.Text = "Digite seu E-mail";
-            }
+
         }
 
         private void txtSenha_Click_1(object sender, EventArgs e)
         {
-            if (txtSenha.Text == "Digite a Senha")
+            if (txtSenha.Text == PH_SENHA)
             {
                 txtSenha.Clear();
             }
         }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtSenha_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSenha.Text))
-            {
-                txtSenha.Text = "Digite a Senha";
-            }
-            }
+
         }
     }
-
+}

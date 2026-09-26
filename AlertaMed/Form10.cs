@@ -157,8 +157,50 @@ namespace AlertaMed
         // O designer chama este método pelo nome btnCadastra_Click
         private void btnCadastra_Click(object sender, EventArgs e)
         {
-            
+            string nome = txtNome.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string senha = txtSenha.Text;
 
+            if (Vazio(nome, PH_NOME) || Vazio(email, PH_EMAIL) || Vazio(senha, PH_SENHA))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
+            try
+            {
+                using (var conn = Banco.Abrir())
+                {
+                    string sql = "INSERT INTO usuario (nome, email, senha) VALUES (@nome, @email, @senha)";
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("nome", nome);
+                        cmd.Parameters.AddWithValue("email", email);
+                        cmd.Parameters.AddWithValue("senha", Senha.Gerar(senha));
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Cadastro realizado!");
+            }
+            catch (PostgresException ex) when (ex.SqlState == "23505")
+            {
+                MessageBox.Show("Este e-mail já está cadastrado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Métodos abaixo: o Designer liga eventos das caixas txtNome,
+        // txtEmail e txtSenha a eles. Os "Click" seguem o mesmo padrão
+        // das outras telas: apagam o texto de exemplo ao clicar.
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == PH_NOME)
+            {
+                txtNome.Clear();
+            }
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
@@ -166,58 +208,35 @@ namespace AlertaMed
 
         }
 
-        private void txtNome_Click(object sender, EventArgs e)
+        private void txtNome_Leave(object sender, EventArgs e)
         {
-            if (txtNome.Text == "Digite o Nome Completo")
-            {
-                txtNome.Clear();
-            }
+
         }
 
         private void txtEmail_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "Digite seu E-mail")
+            if (txtEmail.Text == PH_EMAIL)
             {
                 txtEmail.Clear();
             }
         }
 
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtSenha_Click(object sender, EventArgs e)
         {
-            if (txtSenha.Text == "Digite a Senha")
+            if (txtSenha.Text == PH_SENHA)
             {
                 txtSenha.Clear();
             }
         }
 
-        private void txtNome_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtNome.Text))
-            {
-                txtNome.Text = "Digite o Nome Completo";
-            }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                txtEmail.Text = "Digite seu E-mail";
-            }
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtSenha_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSenha.Text))
-            {
-                txtSenha.Text = "Digite a Senha";
-            }
-        }
 
+        }
     }
 }
