@@ -17,12 +17,204 @@ namespace AlertaMed
         public Form12()
         {
             InitializeComponent();
-           
+
+            // Nenhum desses eventos estava ligado no designer: fazem o efeito de
+            // "marcar um desmarca o outro" (estado civil) e mostram/habilitam os
+            // campos "Quantos?"/"Quais?" conforme o Sim/Não escolhido.
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
+
+            checkBox5.CheckedChanged += checkBox5_CheckedChanged;
+            checkBox6.CheckedChanged += checkBox6_CheckedChanged;
+            checkBox7.CheckedChanged += checkBox7_CheckedChanged;
+            checkBox10.CheckedChanged += checkBox10_CheckedChanged;
+            checkBox8.CheckedChanged += checkBox8_CheckedChanged;
+            checkBox11.CheckedChanged += checkBox11_CheckedChanged;
+            checkBox9.CheckedChanged += checkBox9_CheckedChanged;
+            checkBox12.CheckedChanged += checkBox12_CheckedChanged;
+
+            lixeira.Click += lixeira_Click;
+            lixeira2.Click += lixeira2_Click;
+            lixeira3.Click += lixeira3_Click;
+            lixeira4.Click += lixeira4_Click;
+            lixeira5.Click += lixeira5_Click;
+        }
+
+        // ================= Estado civil (só um marcado por vez) =================
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox4.Checked = false;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+            }
+        }
+
+        // ================= Tem filhos? (checkBox6 = Sim / checkBox5 = Não) =================
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked) checkBox6.Checked = false;
+            AtualizarFilhos();
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked) checkBox5.Checked = false;
+            AtualizarFilhos();
+        }
+
+        private void AtualizarFilhos()
+        {
+            textBox7.Enabled = checkBox6.Checked;
+            if (!checkBox6.Checked)
+            {
+                textBox7.Text = "Quantos?";
+                textBox7.ForeColor = Color.Gray;
+            }
+        }
+
+        // ===== Doenças respiratórias? (checkBox10 = Sim / checkBox7 = Não) =====
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked) checkBox10.Checked = false;
+            AtualizarRespiratoria();
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked) checkBox7.Checked = false;
+            AtualizarRespiratoria();
+        }
+
+        private void AtualizarRespiratoria()
+        {
+            textBox8.Enabled = checkBox10.Checked;
+            if (!checkBox10.Checked)
+            {
+                textBox8.Text = "Quais?";
+                textBox8.ForeColor = Color.Gray;
+            }
+        }
+
+        // ==== Doenças cardiovasculares? (checkBox11 = Sim / checkBox8 = Não) ====
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked) checkBox11.Checked = false;
+            AtualizarCardiovascular();
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox11.Checked) checkBox8.Checked = false;
+            AtualizarCardiovascular();
+        }
+
+        private void AtualizarCardiovascular()
+        {
+            textBox9.Enabled = checkBox11.Checked;
+            if (!checkBox11.Checked)
+            {
+                textBox9.Text = "Quais?";
+                textBox9.ForeColor = Color.Gray;
+            }
+        }
+
+        // ================= Alergias? (checkBox12 = Sim / checkBox9 = Não) =================
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked) checkBox12.Checked = false;
+            AtualizarAlergia();
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox12.Checked) checkBox9.Checked = false;
+            AtualizarAlergia();
+        }
+
+        private void AtualizarAlergia()
+        {
+            textBox10.Enabled = checkBox12.Checked;
+            if (!checkBox12.Checked)
+            {
+                textBox10.Text = "Quais?";
+                textBox10.ForeColor = Color.Gray;
+            }
+        }
+
+        // ================= Lixeiras: limpam o campo ao lado =================
+
+        private void lixeira_Click(object sender, EventArgs e)
+        {
+            textBox8.Text = "Quais?";
+            textBox8.ForeColor = Color.Gray;
+        }
+
+        private void lixeira2_Click(object sender, EventArgs e)
+        {
+            textBox9.Text = "Quais?";
+            textBox9.ForeColor = Color.Gray;
+        }
+
+        private void lixeira3_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = "Quais?";
+            textBox10.ForeColor = Color.Gray;
+        }
+
+        private void lixeira4_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = "Digite aqui";
+            textBox5.ForeColor = Color.Gray;
+        }
+
+        private void lixeira5_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = "Digite aqui";
+            textBox6.ForeColor = Color.Gray;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -95,6 +287,17 @@ namespace AlertaMed
                 return;
             }
 
+            // Valida o gênero antes de continuar
+            if (comboBox1.SelectedIndex == -1 || comboBox1.Text == "Selecione uma opção")
+            {
+                MessageBox.Show("Por favor, selecione o gênero do paciente.",
+                                "Campo obrigatório",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                comboBox1.Focus();
+                return;
+            }
+
             //cadastrar prescrição
             Form13 form13 = new Form13(TxTbxNP.Text);
             form13.StartPosition = FormStartPosition.Manual;
@@ -106,12 +309,12 @@ namespace AlertaMed
 
         private void TxTbxNP_TextChanged(object sender, EventArgs e)
         {
-        
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form12_Load(object sender, EventArgs e)
@@ -149,27 +352,7 @@ namespace AlertaMed
             textBox6.ForeColor = Color.Gray;
         }
 
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -427,49 +610,9 @@ namespace AlertaMed
             }
         }
 
-        private void radioButton11_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox10.Enabled = radioButton11.Checked;
 
-            if (!radioButton11.Checked)
-            {
-                textBox10.Text = "Quais?";
-                textBox10.ForeColor = Color.Gray;
-            }
-        }
 
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox7.Enabled = radioButton6.Checked;
 
-            if (!radioButton6.Checked)
-            {
-                textBox7.Text = "Quantos?";
-                textBox7.ForeColor = Color.Gray;
-            }
-        }
-
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox8.Enabled = radioButton7.Checked;
-
-            if (!radioButton7.Checked)
-            {
-                textBox8.Text = "Quais?";
-                textBox8.ForeColor = Color.Gray;
-            }
-        }
-
-        private void radioButton9_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox9.Enabled = radioButton9.Checked;
-
-            if (!radioButton9.Checked)
-            {
-                textBox9.Text = "Quais?";
-                textBox9.ForeColor = Color.Gray;
-            }
-        }
 
         private void textBox5_Enter(object sender, EventArgs e)
         {

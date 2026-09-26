@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,10 +126,21 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.button1_Enter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.button1_Leave);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(863, 235);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

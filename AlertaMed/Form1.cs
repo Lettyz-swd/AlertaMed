@@ -180,5 +180,15 @@ namespace AlertaMed
             form3.Show();
             this.Hide();
         }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            Form12 form5 = new Form12();
+            form5.StartPosition = FormStartPosition.Manual;
+            form5.Location = this.Location;
+            form5.Size = this.Size;
+            form5.Show();
+            this.Hide();
+        }
     }
 }
