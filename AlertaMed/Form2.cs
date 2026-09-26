@@ -335,6 +335,7 @@ namespace AlertaMed
 
             }
         }
+<<<<<<< HEAD
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
@@ -369,3 +370,7 @@ namespace AlertaMed
         }
         }
     }
+=======
+    }
+}
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa

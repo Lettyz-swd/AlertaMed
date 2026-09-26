@@ -179,8 +179,11 @@
             this.txtEmail.TabIndex = 19;
             this.txtEmail.TabStop = false;
             this.txtEmail.Text = "Digite seu E-mail";
+<<<<<<< HEAD
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click_1);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave_1);
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
             // 
             // txtSenha
             // 
@@ -194,9 +197,13 @@
             this.txtSenha.TabIndex = 20;
             this.txtSenha.TabStop = false;
             this.txtSenha.Text = "Digite a Senha";
+<<<<<<< HEAD
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click_1);
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave_1);
+=======
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
             // 
             // Form11
             // 

@@ -191,6 +191,7 @@ namespace AlertaMed
                 MessageBox.Show(ex.Message);
             }
         }
+<<<<<<< HEAD
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
@@ -249,5 +250,7 @@ namespace AlertaMed
                 txtSenha.Text = "Digite a Senha";
             }
         }
+=======
+>>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
     }
 }
