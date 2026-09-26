@@ -388,5 +388,10 @@ namespace AlertaMed
 
             return valido;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
