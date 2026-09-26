@@ -45,12 +45,15 @@ namespace AlertaMed
             button9.Click += button9_Click;   // limpar campo de dose
             button7.Click += button7_Click;   // remover última dose da lista
 
-            // ---- horários ----
+            // ---- horários (agora MaskedTextBox, formato 00:00) ----
             button5.Click += button5_Click;   // + Adicionar horários
             button8.Click += button8_Click;   // remover último horário da lista
             textBox7.Enter += HorarioCampo_Enter;
             textBox8.Enter += HorarioCampo_Enter;
             textBox9.Enter += HorarioCampo_Enter;
+            textBox7.Leave += HorarioCampo_Leave;
+            textBox8.Leave += HorarioCampo_Leave;
+            textBox9.Leave += HorarioCampo_Leave;
 
             // ---- finalizar ----
             button2.Click += button2_Click;   // Concluído! Cadastrar Prescrição
@@ -218,20 +221,52 @@ namespace AlertaMed
         }
 
         // =========================================================
-        // Horários (os 3 campos "00:00" juntos viram uma linha)
+        // Horários (agora com MaskedTextBox, máscara 00:00)
         // =========================================================
 
         // Ao focar num campo de horário, seleciona o texto todo -
         // assim digitar já substitui o "00:00", sem precisar apagar na mão.
         private void HorarioCampo_Enter(object sender, EventArgs e)
         {
-            ((TextBox)sender).SelectAll();
+            ((MaskedTextBox)sender).SelectAll();
+        }
+
+        // Ao sair do campo, valida se o horário digitado é válido (hora 00-23, minuto 00-59)
+        private void HorarioCampo_Leave(object sender, EventArgs e)
+        {
+            var campo = (MaskedTextBox)sender;
+
+            // se está vazio ou incompleto, volta pro padrão 00:00 sem reclamar
+            if (!campo.MaskCompleted)
+            {
+                campo.Clear(); // volta pro estado vazio (__:__), não força zeros
+                return;
+            }
+
+            bool valido = System.Text.RegularExpressions.Regex.IsMatch(
+                campo.Text,
+                @"^([01]\d|2[0-3]):[0-5]\d$");
+
+            if (!valido)
+            {
+                MessageBox.Show("Horário inválido. Use um horário entre 00:00 e 23:59.",
+                                "Valor inválido",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                campo.Focus();
+                campo.SelectAll();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var horarios = new[] { textBox7.Text.Trim(), textBox8.Text.Trim(), textBox9.Text.Trim() }
-                .Where(h => !string.IsNullOrEmpty(h) && h != "00:00")
+            var campos = new[] { textBox7, textBox8, textBox9 };
+
+            // agora considera preenchido pelo MaskCompleted, não pelo valor.
+            // isso permite 00:00 (meia-noite) como horário válido de verdade.
+            var horarios = campos
+                .Where(c => c.MaskCompleted)
+                .Select(c => c.Text)
                 .ToArray();
 
             if (horarios.Length == 0)
@@ -242,9 +277,9 @@ namespace AlertaMed
 
             AdicionarLinha(textBox10, string.Join(" | ", horarios));
 
-            textBox7.Text = "00:00";
-            textBox8.Text = "00:00";
-            textBox9.Text = "00:00";
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -347,6 +382,16 @@ namespace AlertaMed
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Close();
         }
     }
 }

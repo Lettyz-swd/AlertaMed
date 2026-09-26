@@ -36,9 +36,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.lixeira = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox7 = new System.Windows.Forms.MaskedTextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -169,12 +169,11 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(643, 516);
-            this.textBox9.Multiline = true;
+            this.textBox9.Mask = "00:00";
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 29);
+            this.textBox9.Size = new System.Drawing.Size(161, 26);
             this.textBox9.TabIndex = 91;
             this.textBox9.TabStop = false;
-            this.textBox9.Text = "00:00";
             // 
             // textBox8
             // 
@@ -182,12 +181,11 @@
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(432, 517);
-            this.textBox8.Multiline = true;
+            this.textBox8.Mask = "00:00";
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(161, 29);
+            this.textBox8.Size = new System.Drawing.Size(161, 26);
             this.textBox8.TabIndex = 90;
             this.textBox8.TabStop = false;
-            this.textBox8.Text = "00:00";
             // 
             // textBox7
             // 
@@ -195,12 +193,11 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(218, 515);
-            this.textBox7.Multiline = true;
+            this.textBox7.Mask = "00:00";
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 29);
+            this.textBox7.Size = new System.Drawing.Size(161, 26);
             this.textBox7.TabIndex = 89;
             this.textBox7.TabStop = false;
-            this.textBox7.Text = "00:00";
             // 
             // textBox6
             // 
@@ -335,6 +332,7 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(710, 138);
@@ -356,6 +354,7 @@
             this.button1.TabIndex = 76;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox1
             // 
@@ -413,9 +412,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button lixeira;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.MaskedTextBox textBox9;
+        private System.Windows.Forms.MaskedTextBox textBox8;
+        private System.Windows.Forms.MaskedTextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button6;
