@@ -67,7 +67,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::AlertaMed.Properties.Resources.botão_ok_voltar_a_tela_normal;
-            this.button2.Location = new System.Drawing.Point(228, 648);
+            this.button2.Location = new System.Drawing.Point(234, 656);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(988, 33);
             this.button2.TabIndex = 78;
@@ -84,7 +84,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
-            this.button6.Location = new System.Drawing.Point(-1, 173);
+            this.button6.Location = new System.Drawing.Point(3, 172);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 31);
             this.button6.TabIndex = 77;
@@ -105,7 +105,7 @@
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = global::AlertaMed.Properties.Resources.botão_configurações_normal;
-            this.button10.Location = new System.Drawing.Point(0, 133);
+            this.button10.Location = new System.Drawing.Point(4, 134);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(176, 36);
             this.button10.TabIndex = 76;
@@ -122,7 +122,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
-            this.button1.Location = new System.Drawing.Point(-3, 82);
+            this.button1.Location = new System.Drawing.Point(2, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 46);
             this.button1.TabIndex = 15;
@@ -137,7 +137,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_historico_prescrição_normal_1;
-            this.pictureBox1.Location = new System.Drawing.Point(-7, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1280, 722);
             this.pictureBox1.TabIndex = 14;
@@ -147,7 +147,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(211, 144);
+            this.textBox1.Location = new System.Drawing.Point(217, 147);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 69);
@@ -159,7 +159,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(211, 225);
+            this.textBox2.Location = new System.Drawing.Point(218, 228);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 69);
@@ -170,7 +170,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(211, 311);
+            this.textBox3.Location = new System.Drawing.Point(217, 311);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(236, 69);
@@ -181,7 +181,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(211, 389);
+            this.textBox4.Location = new System.Drawing.Point(219, 393);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(236, 69);
@@ -192,7 +192,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(211, 472);
+            this.textBox5.Location = new System.Drawing.Point(217, 476);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(236, 69);
@@ -203,7 +203,7 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(211, 557);
+            this.textBox6.Location = new System.Drawing.Point(218, 560);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(236, 69);
@@ -214,7 +214,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(458, 144);
+            this.textBox7.Location = new System.Drawing.Point(464, 144);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(248, 69);
@@ -225,7 +225,7 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(458, 225);
+            this.textBox8.Location = new System.Drawing.Point(465, 225);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(248, 69);
@@ -236,7 +236,7 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(458, 311);
+            this.textBox9.Location = new System.Drawing.Point(465, 311);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(248, 69);
@@ -247,7 +247,7 @@
             // 
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(458, 389);
+            this.textBox10.Location = new System.Drawing.Point(461, 393);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(248, 69);
@@ -258,7 +258,7 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Location = new System.Drawing.Point(458, 472);
+            this.textBox11.Location = new System.Drawing.Point(464, 475);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(248, 69);
@@ -269,7 +269,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Location = new System.Drawing.Point(458, 557);
+            this.textBox12.Location = new System.Drawing.Point(464, 558);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(248, 69);
@@ -280,7 +280,7 @@
             // 
             this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Location = new System.Drawing.Point(712, 144);
+            this.textBox13.Location = new System.Drawing.Point(719, 146);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(227, 69);
@@ -291,7 +291,7 @@
             // 
             this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Location = new System.Drawing.Point(712, 225);
+            this.textBox14.Location = new System.Drawing.Point(719, 225);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(227, 69);
@@ -302,7 +302,7 @@
             // 
             this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Location = new System.Drawing.Point(712, 311);
+            this.textBox15.Location = new System.Drawing.Point(719, 311);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(227, 69);
@@ -313,7 +313,7 @@
             // 
             this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Location = new System.Drawing.Point(712, 389);
+            this.textBox16.Location = new System.Drawing.Point(720, 392);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(227, 69);
@@ -324,7 +324,7 @@
             // 
             this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Location = new System.Drawing.Point(712, 472);
+            this.textBox17.Location = new System.Drawing.Point(719, 473);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(227, 69);
@@ -335,7 +335,7 @@
             // 
             this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.Location = new System.Drawing.Point(712, 557);
+            this.textBox18.Location = new System.Drawing.Point(718, 559);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(227, 69);
@@ -346,7 +346,7 @@
             // 
             this.textBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox19.Location = new System.Drawing.Point(947, 143);
+            this.textBox19.Location = new System.Drawing.Point(956, 145);
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(257, 69);
@@ -357,7 +357,7 @@
             // 
             this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox20.Location = new System.Drawing.Point(947, 225);
+            this.textBox20.Location = new System.Drawing.Point(957, 227);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(257, 69);
@@ -368,7 +368,7 @@
             // 
             this.textBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox21.Location = new System.Drawing.Point(947, 311);
+            this.textBox21.Location = new System.Drawing.Point(956, 312);
             this.textBox21.Multiline = true;
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(257, 69);
@@ -379,7 +379,7 @@
             // 
             this.textBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox22.Location = new System.Drawing.Point(947, 389);
+            this.textBox22.Location = new System.Drawing.Point(955, 394);
             this.textBox22.Multiline = true;
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(257, 69);
@@ -390,7 +390,7 @@
             // 
             this.textBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox23.Location = new System.Drawing.Point(947, 472);
+            this.textBox23.Location = new System.Drawing.Point(956, 475);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(257, 69);
@@ -401,10 +401,10 @@
             // 
             this.textBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox24.Location = new System.Drawing.Point(947, 557);
+            this.textBox24.Location = new System.Drawing.Point(956, 559);
             this.textBox24.Multiline = true;
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(257, 69);
+            this.textBox24.Size = new System.Drawing.Size(257, 70);
             this.textBox24.TabIndex = 102;
             this.textBox24.TabStop = false;
             // 

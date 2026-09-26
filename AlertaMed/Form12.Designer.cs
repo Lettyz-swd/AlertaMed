@@ -69,7 +69,7 @@
             this.TxTbxNP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.TxTbxNP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxTbxNP.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxTbxNP.Location = new System.Drawing.Point(234, 138);
+            this.TxTbxNP.Location = new System.Drawing.Point(234, 141);
             this.TxTbxNP.Name = "TxTbxNP";
             this.TxTbxNP.Size = new System.Drawing.Size(392, 20);
             this.TxTbxNP.TabIndex = 2;
@@ -82,7 +82,7 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(651, 136);
+            this.textBox2.Location = new System.Drawing.Point(657, 138);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 4;
@@ -95,7 +95,7 @@
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(972, 135);
+            this.textBox4.Location = new System.Drawing.Point(976, 138);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(97, 26);
             this.textBox4.TabIndex = 8;
@@ -107,7 +107,7 @@
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(213, 345);
+            this.textBox5.Location = new System.Drawing.Point(213, 349);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(994, 75);
@@ -120,7 +120,7 @@
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(213, 486);
+            this.textBox6.Location = new System.Drawing.Point(213, 487);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(994, 99);
@@ -133,7 +133,7 @@
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(333, 260);
+            this.textBox7.Location = new System.Drawing.Point(338, 262);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(77, 23);
@@ -149,7 +149,7 @@
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(434, 261);
+            this.textBox8.Location = new System.Drawing.Point(440, 263);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(157, 44);
@@ -162,7 +162,7 @@
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(628, 262);
+            this.textBox9.Location = new System.Drawing.Point(631, 265);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(157, 44);
@@ -175,7 +175,7 @@
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(840, 261);
+            this.textBox10.Location = new System.Drawing.Point(845, 264);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(92, 47);
@@ -189,7 +189,7 @@
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox1.Location = new System.Drawing.Point(204, 197);
+            this.checkBox1.Location = new System.Drawing.Point(209, 198);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(119, 29);
             this.checkBox1.TabIndex = 53;
@@ -203,7 +203,7 @@
             this.checkBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox2.Location = new System.Drawing.Point(204, 223);
+            this.checkBox2.Location = new System.Drawing.Point(208, 227);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(115, 29);
             this.checkBox2.TabIndex = 54;
@@ -216,7 +216,7 @@
             this.checkBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox3.Location = new System.Drawing.Point(205, 252);
+            this.checkBox3.Location = new System.Drawing.Point(208, 255);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(102, 29);
             this.checkBox3.TabIndex = 55;
@@ -229,7 +229,7 @@
             this.checkBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox4.Location = new System.Drawing.Point(202, 285);
+            this.checkBox4.Location = new System.Drawing.Point(206, 288);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(146, 29);
             this.checkBox4.TabIndex = 56;
@@ -242,7 +242,7 @@
             this.checkBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox6.Location = new System.Drawing.Point(326, 204);
+            this.checkBox6.Location = new System.Drawing.Point(333, 204);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(59, 25);
             this.checkBox6.TabIndex = 58;
@@ -256,7 +256,7 @@
             this.checkBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox5.Location = new System.Drawing.Point(326, 230);
+            this.checkBox5.Location = new System.Drawing.Point(333, 230);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(56, 25);
             this.checkBox5.TabIndex = 59;
@@ -270,7 +270,7 @@
             this.checkBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox7.Location = new System.Drawing.Point(430, 202);
+            this.checkBox7.Location = new System.Drawing.Point(437, 203);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(59, 25);
             this.checkBox7.TabIndex = 60;
@@ -283,7 +283,7 @@
             this.checkBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox8.Location = new System.Drawing.Point(429, 228);
+            this.checkBox8.Location = new System.Drawing.Point(437, 231);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(56, 25);
             this.checkBox8.TabIndex = 61;
@@ -296,7 +296,7 @@
             this.checkBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox9.Location = new System.Drawing.Point(621, 229);
+            this.checkBox9.Location = new System.Drawing.Point(629, 229);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(56, 25);
             this.checkBox9.TabIndex = 62;
@@ -309,7 +309,7 @@
             this.checkBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox10.Location = new System.Drawing.Point(837, 227);
+            this.checkBox10.Location = new System.Drawing.Point(843, 228);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(56, 25);
             this.checkBox10.TabIndex = 63;
@@ -322,7 +322,7 @@
             this.checkBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox11.Location = new System.Drawing.Point(621, 202);
+            this.checkBox11.Location = new System.Drawing.Point(629, 202);
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(59, 25);
             this.checkBox11.TabIndex = 64;
@@ -335,7 +335,7 @@
             this.checkBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.checkBox12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.checkBox12.Location = new System.Drawing.Point(837, 200);
+            this.checkBox12.Location = new System.Drawing.Point(843, 203);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(59, 25);
             this.checkBox12.TabIndex = 65;
@@ -354,7 +354,7 @@
             "Homem Cis",
             "Não-binário(a)",
             "Prefiro não dizer"});
-            this.comboBox1.Location = new System.Drawing.Point(775, 135);
+            this.comboBox1.Location = new System.Drawing.Point(779, 137);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 28);
             this.comboBox1.TabIndex = 66;
@@ -370,7 +370,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
-            this.button4.Location = new System.Drawing.Point(-2, 84);
+            this.button4.Location = new System.Drawing.Point(-3, 84);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 46);
             this.button4.TabIndex = 74;
@@ -391,7 +391,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::AlertaMed.Properties.Resources.botão_configurações_normal;
-            this.button3.Location = new System.Drawing.Point(0, 131);
+            this.button3.Location = new System.Drawing.Point(1, 134);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 36);
             this.button3.TabIndex = 73;
@@ -411,7 +411,7 @@
             this.lixeira5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.lixeira5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lixeira5.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
-            this.lixeira5.Location = new System.Drawing.Point(1208, 557);
+            this.lixeira5.Location = new System.Drawing.Point(1210, 561);
             this.lixeira5.Name = "lixeira5";
             this.lixeira5.Size = new System.Drawing.Size(29, 29);
             this.lixeira5.TabIndex = 72;
@@ -427,7 +427,7 @@
             this.lixeira4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.lixeira4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lixeira4.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
-            this.lixeira4.Location = new System.Drawing.Point(1211, 389);
+            this.lixeira4.Location = new System.Drawing.Point(1214, 393);
             this.lixeira4.Name = "lixeira4";
             this.lixeira4.Size = new System.Drawing.Size(24, 29);
             this.lixeira4.TabIndex = 71;
@@ -443,7 +443,7 @@
             this.lixeira3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.lixeira3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lixeira3.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
-            this.lixeira3.Location = new System.Drawing.Point(931, 285);
+            this.lixeira3.Location = new System.Drawing.Point(936, 288);
             this.lixeira3.Name = "lixeira3";
             this.lixeira3.Size = new System.Drawing.Size(19, 23);
             this.lixeira3.TabIndex = 70;
@@ -459,7 +459,7 @@
             this.lixeira2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.lixeira2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lixeira2.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
-            this.lixeira2.Location = new System.Drawing.Point(785, 285);
+            this.lixeira2.Location = new System.Drawing.Point(789, 287);
             this.lixeira2.Name = "lixeira2";
             this.lixeira2.Size = new System.Drawing.Size(19, 23);
             this.lixeira2.TabIndex = 69;
@@ -491,7 +491,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
-            this.button1.Location = new System.Drawing.Point(-2, 167);
+            this.button1.Location = new System.Drawing.Point(0, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 31);
             this.button1.TabIndex = 67;
@@ -510,7 +510,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::AlertaMed.Properties.Resources.botao_cadastrar_preescrição_normal_2;
-            this.button2.Location = new System.Drawing.Point(234, 641);
+            this.button2.Location = new System.Drawing.Point(234, 646);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(996, 32);
             this.button2.TabIndex = 50;
@@ -526,9 +526,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_cadastro_paciente_2_bt_normal;
-            this.pictureBox1.Location = new System.Drawing.Point(-7, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1283, 715);
+            this.pictureBox1.Size = new System.Drawing.Size(1283, 730);
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -537,7 +537,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 710);
+            this.ClientSize = new System.Drawing.Size(1264, 718);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.lixeira5);

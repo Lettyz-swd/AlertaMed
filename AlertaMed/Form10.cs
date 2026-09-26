@@ -157,41 +157,9 @@ namespace AlertaMed
         // O designer chama este método pelo nome btnCadastra_Click
         private void btnCadastra_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string senha = txtSenha.Text;
+            
 
-            if (Vazio(nome, PH_NOME) || Vazio(email, PH_EMAIL) || Vazio(senha, PH_SENHA))
-            {
-                MessageBox.Show("Preencha todos os campos.");
-                return;
-            }
-
-            try
-            {
-                using (var conn = Banco.Abrir())
-                {
-                    string sql = "INSERT INTO usuario (nome, email, senha) VALUES (@nome, @email, @senha)";
-                    using (var cmd = new NpgsqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("nome", nome);
-                        cmd.Parameters.AddWithValue("email", email);
-                        cmd.Parameters.AddWithValue("senha", Senha.Gerar(senha));
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show("Cadastro realizado!");
-            }
-            catch (PostgresException ex) when (ex.SqlState == "23505")
-            {
-                MessageBox.Show("Este e-mail já está cadastrado.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
-<<<<<<< HEAD
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
@@ -250,7 +218,6 @@ namespace AlertaMed
                 txtSenha.Text = "Digite a Senha";
             }
         }
-=======
->>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
+
     }
 }

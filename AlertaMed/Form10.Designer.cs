@@ -54,36 +54,36 @@
             this.txtNome.TabIndex = 15;
             this.txtNome.TabStop = false;
             this.txtNome.Text = "Digite o Nome Completo";
-<<<<<<< HEAD
+
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
-=======
->>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
+
+
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.txtEmail.Location = new System.Drawing.Point(460, 324);
-=======
+
             this.txtEmail.Location = new System.Drawing.Point(465, 325);
->>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
+
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(552, 22);
             this.txtEmail.TabIndex = 16;
             this.txtEmail.TabStop = false;
             this.txtEmail.Text = "Digite seu E-mail";
-<<<<<<< HEAD
+
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
-=======
+
             this.txtEmail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
->>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
+
             // 
             // txtSenha
             // 
@@ -97,13 +97,13 @@
             this.txtSenha.TabIndex = 17;
             this.txtSenha.TabStop = false;
             this.txtSenha.Text = "Digite a Senha";
-<<<<<<< HEAD
+
             this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
             this.txtSenha.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave_1);
-=======
+
             this.txtSenha.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
->>>>>>> 89ea95c1bff83eaaaf44d8b7db40a0afe5812bfa
+
             // 
             // button6
             // 
