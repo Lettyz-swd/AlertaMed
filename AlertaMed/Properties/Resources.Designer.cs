@@ -693,6 +693,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_selecionar_normal {
+            get {
+                object obj = ResourceManager.GetObject("botao selecionar normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_selecionar_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao selecionar selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_sim {
             get {
                 object obj = ResourceManager.GetObject("botão sim", resourceCulture);
@@ -796,6 +816,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap botão_uso_profissional_selecionado {
             get {
                 object obj = ResourceManager.GetObject("botão uso profissional selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_ver_historico {
+            get {
+                object obj = ResourceManager.GetObject("botao ver historico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1476,6 +1506,36 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_historico_prescrição_normal_1 {
             get {
                 object obj = ResourceManager.GetObject("Tela historico prescrição normal 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_uso_pessoal {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial uso pessoal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_uso_pessoal_bt_selecionar_perfil_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial uso pessoal bt selecionar perfil selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_uso_pessoal_selecionar_prescrição_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial uso pessoal selecionar prescrição selecionado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
