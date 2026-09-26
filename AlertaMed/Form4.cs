@@ -28,24 +28,9 @@ namespace AlertaMed
         // Vira true quando a pessoa mexe na data de nascimento
         private bool dataEscolhida = false;
 
-        //codigo para conseguir mudar o fundo do datetime 
-        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
-        private static extern int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
-
         public Form4()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-
-            button5.Image = Properties.Resources.botão_olho_;
-
-            //personalização ativa do datetime
-            SetWindowTheme(dateTimePicker1.Handle, "", ""); // libera BackColor/ForeColor
-            dateTimePicker1.BackColor = ColorTranslator.FromHtml("#F9FDFE");
-            dateTimePicker1.ForeColor = Color.FromArgb(50, 50, 50); // combine com a cor de texto dos outros campos
 
             dateTimePicker1.MinDate = new DateTime(1900, 1, 1);
             dateTimePicker1.MaxDate = DateTime.Today.AddYears(-18);
