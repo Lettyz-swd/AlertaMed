@@ -242,7 +242,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
-            this.button4.Location = new System.Drawing.Point(-3, 84);
+            this.button4.Location = new System.Drawing.Point(1, 84);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 46);
             this.button4.TabIndex = 74;
@@ -263,7 +263,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::AlertaMed.Properties.Resources.botão_configurações_normal;
-            this.button3.Location = new System.Drawing.Point(1, 134);
+            this.button3.Location = new System.Drawing.Point(3, 134);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 36);
             this.button3.TabIndex = 73;
@@ -363,7 +363,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
-            this.button1.Location = new System.Drawing.Point(0, 171);
+            this.button1.Location = new System.Drawing.Point(2, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 31);
             this.button1.TabIndex = 67;
@@ -382,7 +382,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::AlertaMed.Properties.Resources.botao_cadastrar_preescrição_normal_2;
-            this.button2.Location = new System.Drawing.Point(234, 646);
+            this.button2.Location = new System.Drawing.Point(234, 649);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(996, 32);
             this.button2.TabIndex = 50;
