@@ -63,7 +63,68 @@ namespace AlertaMed
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // ---- validações básicas ----
+            if (string.IsNullOrWhiteSpace(TxTbxNP.Text) || TxTbxNP.Text == "Digite o nome do paciente")
+            {
+                MessageBox.Show("Digite o nome do paciente.");
+                return;
+            }
 
+            if (!int.TryParse(textBox2.Text, out int idade))
+            {
+                MessageBox.Show("Digite uma idade válida.");
+                return;
+            }
+
+            if (!decimal.TryParse(textBox4.Text, out decimal peso))
+            {
+                MessageBox.Show("Digite um peso válido.");
+                return;
+            }
+
+            // ---- estado civil ----
+            string estadoCivil = checkBox1.Checked ? "solteiro"
+                                : checkBox2.Checked ? "casado"
+                                : checkBox3.Checked ? "viuvo"
+                                : checkBox4.Checked ? "divorciado"
+                                : null;
+
+            // ---- filhos ----
+            bool temFilhos = checkBox6.Checked;
+            int? qtdFilhos = null;
+            if (temFilhos && int.TryParse(textBox7.Text, out int qtd))
+                qtdFilhos = qtd;
+
+            // ---- monta o objeto ----
+            var paciente = new Paciente
+            {
+                Nome = TxTbxNP.Text,
+                Idade = idade,
+                Genero = comboBox1.SelectedItem?.ToString() ?? comboBox1.Text,
+                Peso = peso,
+                EstadoCivil = estadoCivil,
+                TemFilhos = temFilhos,
+                QuantidadeFilhos = qtdFilhos,
+                DoencasRespiratorias = checkBox10.Checked,
+                QuaisDoencasRespiratorias = checkBox10.Checked ? textBox8.Text : null,
+                DoencasCardiovasculares = checkBox11.Checked,
+                QuaisDoencasCardiovasculares = checkBox11.Checked ? textBox9.Text : null,
+                TemAlergias = checkBox12.Checked,
+                QuaisAlergias = checkBox12.Checked ? textBox10.Text : null,
+                InformacoesExtras = textBox5.Text,
+                Anotacoes = textBox6.Text,
+                IdUsuario = 1 // TODO: trocar pelo id do usuário logado (sessão)
+            };
+
+            try
+            {
+                paciente.Salvar();
+                MessageBox.Show("Paciente cadastrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
+            }
         }
     }
 }

@@ -175,9 +175,7 @@
             this.textBox1.Text = "Digite o Nome Completo";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-
             // 
             // textBox2
             // 
@@ -193,9 +191,7 @@
             this.textBox2.Text = "Digite o seu E-mail";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
-
             // 
             // textBox4
             // 
@@ -225,9 +221,8 @@
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite sua mensagem";
             this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
-
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
-
             // 
             // cmbInstituicao
             // 
