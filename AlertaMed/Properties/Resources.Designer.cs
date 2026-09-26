@@ -823,6 +823,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_voltar_a_tela_inicial_ {
+            get {
+                object obj = ResourceManager.GetObject("botao voltar a tela inicial ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_voltar_a_tela_inicial_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("botao voltar a tela inicial selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_voltar_cadastro {
             get {
                 object obj = ResourceManager.GetObject("botão voltar cadastro", resourceCulture);
@@ -1346,6 +1366,26 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_de_Login_Instituição {
             get {
                 object obj = ResourceManager.GetObject("Tela de Login Instituição", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_mensagem_paciente_cadastrado {
+            get {
+                object obj = ResourceManager.GetObject("Tela de mensagem paciente cadastrado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_de_mensagem_paciente_cadastro_bt_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("Tela de mensagem paciente cadastro bt selecionado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
