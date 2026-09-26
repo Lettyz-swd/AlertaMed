@@ -427,49 +427,9 @@ namespace AlertaMed
             }
         }
 
-        private void radioButton11_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox10.Enabled = radioButton11.Checked;
+       
 
-            if (!radioButton11.Checked)
-            {
-                textBox10.Text = "Quais?";
-                textBox10.ForeColor = Color.Gray;
-            }
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox7.Enabled = radioButton6.Checked;
-
-            if (!radioButton6.Checked)
-            {
-                textBox7.Text = "Quantos?";
-                textBox7.ForeColor = Color.Gray;
-            }
-        }
-
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox8.Enabled = radioButton7.Checked;
-
-            if (!radioButton7.Checked)
-            {
-                textBox8.Text = "Quais?";
-                textBox8.ForeColor = Color.Gray;
-            }
-        }
-
-        private void radioButton9_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox9.Enabled = radioButton9.Checked;
-
-            if (!radioButton9.Checked)
-            {
-                textBox9.Text = "Quais?";
-                textBox9.ForeColor = Color.Gray;
-            }
-        }
+       
 
         private void textBox5_Enter(object sender, EventArgs e)
         {
