@@ -173,7 +173,11 @@ namespace AlertaMed
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form13 form3 = new Form13();
+=======
+            Form12 form3 = new Form12();
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             form3.StartPosition = FormStartPosition.Manual;
             form3.Location = this.Location;
             form3.Size = this.Size;

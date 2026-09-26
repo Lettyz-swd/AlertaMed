@@ -128,7 +128,11 @@
             // 
             // button5
             // 
+<<<<<<< HEAD
             this.button5.Location = new System.Drawing.Point(788, 82);
+=======
+            this.button5.Location = new System.Drawing.Point(882, 226);
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 66);
             this.button5.TabIndex = 6;

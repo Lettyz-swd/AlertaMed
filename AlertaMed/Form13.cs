@@ -204,6 +204,7 @@ namespace AlertaMed
         {
 
         }
+<<<<<<< HEAD
 
         private void textBox2_Click(object sender, EventArgs e)
         {
@@ -243,3 +244,7 @@ namespace AlertaMed
         }
         }
     }
+=======
+    }
+}
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77

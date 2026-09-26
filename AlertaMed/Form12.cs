@@ -13,6 +13,7 @@ namespace AlertaMed
 {
     public partial class Form12 : Form
     {
+<<<<<<< HEAD
         // Textos de exemplo que ficam dentro dos campos (propriedade Text no designer).
         // O formulário trata esses textos como campo vazio.
         private const string PH_NOME = "Digite o nome do paciente";
@@ -253,6 +254,19 @@ namespace AlertaMed
 
         // ================= Resto do código original (sem alterações) =================
 
+=======
+        public Form12()
+        {
+            InitializeComponent();
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -283,14 +297,35 @@ namespace AlertaMed
 
         }
 
+<<<<<<< HEAD
         private void TxTbxNP_TextChanged(object sender, EventArgs e)
         {
 
+=======
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //cadastrar prescrição
+            Form13 form13 = new Form13(TxTbxNP.Text);
+            form13.StartPosition = FormStartPosition.Manual;
+            form13.Location = this.Location;
+            form13.Size = this.Size;
+            form13.Show();
+            this.Close();
+        }
+
+        private void TxTbxNP_TextChanged(object sender, EventArgs e)
+        {
+        
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
         }
 
         private void Form12_Load(object sender, EventArgs e)
@@ -298,7 +333,11 @@ namespace AlertaMed
 
         }
 
+<<<<<<< HEAD
         private void checkBox9_CheckedChanged_1(object sender, EventArgs e)
+=======
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
         {
 
         }
@@ -308,6 +347,24 @@ namespace AlertaMed
 
         }
 
+<<<<<<< HEAD
+=======
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -388,6 +445,7 @@ namespace AlertaMed
         {
 
         }
+<<<<<<< HEAD
 
         private void TxTbxNP_Click(object sender, EventArgs e)
         {
@@ -438,3 +496,7 @@ namespace AlertaMed
         }
         }
     }
+=======
+    }
+}
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77

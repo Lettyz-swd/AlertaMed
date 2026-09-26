@@ -75,9 +75,13 @@
             this.TxTbxNP.TabIndex = 2;
             this.TxTbxNP.TabStop = false;
             this.TxTbxNP.Text = "Digite o nome do paciente";
+<<<<<<< HEAD
             this.TxTbxNP.Click += new System.EventHandler(this.TxTbxNP_Click);
             this.TxTbxNP.TextChanged += new System.EventHandler(this.TxTbxNP_TextChanged);
             this.TxTbxNP.Leave += new System.EventHandler(this.TxTbxNP_Leave);
+=======
+            this.TxTbxNP.TextChanged += new System.EventHandler(this.TxTbxNP_TextChanged);
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             // 
             // textBox2
             // 
@@ -90,9 +94,13 @@
             this.textBox2.TabIndex = 4;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Idade";
+<<<<<<< HEAD
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+=======
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             // 
             // textBox4
             // 
@@ -105,8 +113,11 @@
             this.textBox4.TabIndex = 8;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Peso";
+<<<<<<< HEAD
             this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
+=======
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             // 
             // textBox5
             // 

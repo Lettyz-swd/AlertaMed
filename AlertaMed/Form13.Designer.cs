@@ -67,9 +67,13 @@
             this.textBox1.TabIndex = 3;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o nome do Técnico Responsável";
+<<<<<<< HEAD
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave_1);
+=======
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             // 
             // textBox2
             // 
@@ -83,8 +87,11 @@
             this.textBox2.TabIndex = 5;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o nome do paciente";
+<<<<<<< HEAD
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+=======
+>>>>>>> c19d5dae449a2247c59ea3c12d2bb3ea810d0e77
             // 
             // textBox3
             // 
