@@ -12,10 +12,7 @@ namespace AlertaMed
 {
     public partial class Form13 : Form
     {
-        private string textoGuardado = "";
-        private string textoGuardado2 = "";
-        private string textoGuardado3 = "";
-        private string nomePaciente = "";
+        
 
         private List<string> listaRemedios = new List<string>();
         private List<string> listaDoses = new List<string>();
@@ -29,56 +26,24 @@ namespace AlertaMed
         public Form13(string texto)
         {
             InitializeComponent();
-            nomePaciente = texto;
+            
         }
 
         private void Form13_Load(object sender, EventArgs e)
         {
-            // Nome do paciente (travado, vindo do Form12)
-            if (!string.IsNullOrWhiteSpace(nomePaciente) && nomePaciente != "Nome do Paciente")
-            {
-                textBox2.Text = nomePaciente;
-                textBox2.ForeColor = Color.Black;
-            }
-            else
-            {
-                textBox2.Text = "Nome do Paciente";
-                textBox2.ForeColor = Color.Gray;
-            }
-            textBox2.ReadOnly = true;
-
-            // Técnico responsável (placeholder)
-            textBox1.Text = "Digite o nome do técnico responsável";
-            textBox1.ForeColor = Color.Gray;
-
-            // Listas grandes (travadas, só o código escreve)
-            textBox4.ReadOnly = true;
-            textBox6.ReadOnly = true;
-            textBox10.ReadOnly = true;
-
-            textBox3.Text = "Digite o remédio";
-            textBox3.ForeColor = Color.Gray;
-            textBox5.Text = "Digite a dose";
-            textBox5.ForeColor = Color.Gray;
+            
         }
 
         // ---------- textBox1 - Técnico Responsável ----------
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Digite o nome do técnico responsável")
-            {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
-            }
+            
+            
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Digite o nome do técnico responsável";
-                textBox1.ForeColor = Color.Gray;
-            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -221,58 +186,58 @@ namespace AlertaMed
 
         private void button3_Enter(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_remedios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_remedio_selecionado;
             button3.Image = Properties.Resources.botao_adicionar_remedios_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_remedios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_remedio_selecionado;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button3.Image = Properties.Resources.botao_remedios_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button4_Enter(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_doses_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_doses_selecionado;
             button4.Image = Properties.Resources.botao_adicionar_doses_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_doses_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_doses_selecionado;
         }
 
         private void button4_Leave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button4.Image = Properties.Resources.botao_adicionar_doses_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button5_Enter(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_horarios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_horarios_selecionado;
             button5.Image = Properties.Resources.botao_adicionar_horarios_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_horarios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_horarios_selecionado;
         }
 
         private void button5_Leave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button5.Image = Properties.Resources.botao_adicionar_horarios_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button2_Enter(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_cadastrar_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_concluido_selecionado;
             button2.Image = Properties.Resources.botao_cadastrar_preescrição_selecionado_2;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_cadastrar_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_concluido_selecionado;
         }
 
         private void button2_Leave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button2.Image = Properties.Resources.botao_cadastrar_preescrição_normal_2;
-            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

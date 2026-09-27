@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form21));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -58,17 +57,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_historico_prescrição_normal_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1280, 722);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // textBox24
             // 
@@ -346,6 +337,10 @@
             this.button2.TabIndex = 106;
             this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Enter += new System.EventHandler(this.button2_Enter);
+            this.button2.Leave += new System.EventHandler(this.button2_Leave);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
             // 
             // button6
             // 
@@ -359,6 +354,10 @@
             this.button6.TabIndex = 105;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Enter += new System.EventHandler(this.button6_Enter);
+            this.button6.Leave += new System.EventHandler(this.button6_Leave);
+            this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_Leave);
             // 
             // button10
             // 
@@ -375,6 +374,10 @@
             this.button10.TabIndex = 104;
             this.button10.TabStop = false;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Enter += new System.EventHandler(this.button10_Enter);
+            this.button10.Leave += new System.EventHandler(this.button10_Leave);
+            this.button10.MouseEnter += new System.EventHandler(this.button10_Enter);
+            this.button10.MouseLeave += new System.EventHandler(this.button10_Leave);
             // 
             // button1
             // 
@@ -388,6 +391,20 @@
             this.button1.TabIndex = 103;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_historico_prescrição_normal_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1280, 722);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Form21
             // 
@@ -423,7 +440,7 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form21";
             this.Text = "AlertaMed";

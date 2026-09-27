@@ -17,16 +17,7 @@ namespace AlertaMed
             InitializeComponent();
         }
 
-        private void button1_Enter(object sender, EventArgs e)
-        {
-            button1.Image = Properties.Resources.botão_começar_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_profissional_bt_começar_selecionado;
-        }
-        private void button1_Leave(object sender, EventArgs e)
-        {
-            button1.Image = Properties.Resources.botão_começar_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_profissional;
-        }
+       
 
         private void button2_Enter(object sender, EventArgs e)
         {
@@ -50,12 +41,12 @@ namespace AlertaMed
 
         private void button3_Enter(object sender, EventArgs e)
         {
-
+            button3.Image = Properties.Resources.botão_configurações;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
-
+            button3.Image = Properties.Resources.botão_configurações_normal;
         }
 
         private void button2_Click(object sender, EventArgs e)

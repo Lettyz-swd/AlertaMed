@@ -163,6 +163,18 @@
     <Compile Include="Form21.Designer.cs">
       <DependentUpon>Form21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22.Designer.cs">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form23.Designer.cs">
+      <DependentUpon>Form23.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form21.resx">
       <DependentUpon>Form21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form22.resx">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form23.resx">
+      <DependentUpon>Form23.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -827,10 +845,76 @@
     <None Include="Resources\botao ver historico.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AlertaMed Design1.gif" />
+    <None Include="Resources\Tela cadastro prescrição uso pessoal normal.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AlertaMed Design %282%29.gif" />
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt concluido selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt horarios selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt doses selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt remedio selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao concluir selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao concluir normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt sobre selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt uso pessoal selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt instituiçao selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo selecionado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo normal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela configurações.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,6 +16,7 @@ namespace AlertaMed
         // Construtor padrão (usado pelo Designer)
         public Form14()
         {
+            //design configurado
             InitializeComponent();
         }
 
@@ -131,6 +132,16 @@ namespace AlertaMed
             form15.Size = this.Size;
             form15.Show();
             this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

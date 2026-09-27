@@ -126,5 +126,10 @@ namespace AlertaMed
                 MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
