@@ -916,5 +916,17 @@
   <ItemGroup>
     <None Include="Resources\Tela configurações.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed Design1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt instituicao clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt uso pessoal clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt sobre clicado.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

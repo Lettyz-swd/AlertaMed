@@ -76,21 +76,21 @@ namespace AlertaMed
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_uso_pessoal_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_bt_uso_pessoal_clicado;
         }
 
         private void button2_Leave(object sender, EventArgs e)
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
+            pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button3.Image = Properties.Resources.botão_sobre;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
+            pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
         }
 
         private void button3_Enter(object sender, EventArgs e)
@@ -98,21 +98,21 @@ namespace AlertaMed
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button3.Image = Properties.Resources.botão_sobre_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_sobre_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_bt_sobre_clicado;
         }
 
         private void button4_Enter(object sender, EventArgs e)
         {
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button4.Image = Properties.Resources.botão_instituição_selecionado1;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_instituiçao_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_bt_instituicao_clicado;
         }
 
         private void button4_Leave(object sender, EventArgs e)
         {
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button4.Image = Properties.Resources.botão_instituição;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
+            pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace AlertaMed
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
         
-            pictureBox1.Image = Properties.Resources.Tela_inicio_3;
+            pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -179,6 +179,15 @@ namespace AlertaMed
             form12.Show();
             this.Hide();
 
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12();
+            form12.StartPosition = FormStartPosition.Manual;
+            form12.Location = this.Location;
+            form12.Show();
+            this.Hide();
         }
     }
 }

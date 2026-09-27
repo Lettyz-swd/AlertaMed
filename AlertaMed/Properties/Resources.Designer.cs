@@ -19,7 +19,7 @@ namespace AlertaMed.Properties {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -66,6 +66,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap AlertaMed_Design {
             get {
                 object obj = ResourceManager.GetObject("AlertaMed Design", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AlertaMed_Design1 {
+            get {
+                object obj = ResourceManager.GetObject("AlertaMed Design1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1676,6 +1686,36 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Tela_informaçoes_salvas_com_sucesso_selecionado1 {
             get {
                 object obj = ResourceManager.GetObject("Tela informaçoes salvas com sucesso selecionado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_bt_instituicao_clicado {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial bt instituicao clicado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_bt_sobre_clicado {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial bt sobre clicado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_inicial_bt_uso_pessoal_clicado {
+            get {
+                object obj = ResourceManager.GetObject("Tela inicial bt uso pessoal clicado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
