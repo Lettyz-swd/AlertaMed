@@ -146,7 +146,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            button1.Image = Properties.Resources.botão_uso_profissional_selecionado;
+       
             pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_profissional_selecionado;
         }
 
@@ -155,7 +155,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            button1.Image = Properties.Resources.botão_uso_profissional_;
+        
             pictureBox1.Image = Properties.Resources.Tela_inicio_3;
         }
 

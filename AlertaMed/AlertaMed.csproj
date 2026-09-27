@@ -826,5 +826,11 @@
   <ItemGroup>
     <None Include="Resources\botao ver historico.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed Design1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed Design %282%29.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
