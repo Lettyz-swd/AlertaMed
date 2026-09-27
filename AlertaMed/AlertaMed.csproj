@@ -181,6 +181,18 @@
     <Compile Include="Form24.Designer.cs">
       <DependentUpon>Form24.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form25.Designer.cs">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form26.Designer.cs">
+      <DependentUpon>Form26.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form24.resx">
       <DependentUpon>Form24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form25.resx">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form26.resx">
+      <DependentUpon>Form26.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -960,6 +978,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Personalizar perfil Gerente instituiçao bt voltar selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial perfil instituiçao bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt instituiçao selecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt perfil selecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao nova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil selecionado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt instituiçao selecionar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela perfil instituiçao bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela perfil instituiçao.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
