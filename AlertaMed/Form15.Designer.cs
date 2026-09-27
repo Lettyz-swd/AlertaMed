@@ -48,16 +48,17 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::AlertaMed.Properties.Resources.botao_selecionar_normal;
-            this.button3.Location = new System.Drawing.Point(761, 526);
+            this.button3.Location = new System.Drawing.Point(785, 532);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(232, 48);
             this.button3.TabIndex = 30;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Enter += new System.EventHandler(this.button3_Enter_1);
-            this.button3.Leave += new System.EventHandler(this.button3_Leave_1);
-            this.button3.MouseEnter += new System.EventHandler(this.button3_Enter_1);
-            this.button3.MouseLeave += new System.EventHandler(this.button3_Leave_1);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Enter += new System.EventHandler(this.button3_Enter);
+            this.button3.Leave += new System.EventHandler(this.button3_Leave);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_Leave);
             // 
             // button7
             // 
@@ -70,7 +71,7 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = global::AlertaMed.Properties.Resources.botao_ver_historico;
-            this.button7.Location = new System.Drawing.Point(451, 580);
+            this.button7.Location = new System.Drawing.Point(479, 586);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 20);
             this.button7.TabIndex = 29;
@@ -86,12 +87,13 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AlertaMed.Properties.Resources.botao_selecionar_normal;
-            this.button1.Location = new System.Drawing.Point(395, 526);
+            this.button1.Location = new System.Drawing.Point(419, 532);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 48);
             this.button1.TabIndex = 27;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             this.button1.Leave += new System.EventHandler(this.button1_Leave);
             this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
@@ -153,6 +155,7 @@
             this.button4.TabIndex = 23;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.Enter += new System.EventHandler(this.button4_Enter);
             this.button4.Leave += new System.EventHandler(this.button4_Leave);
             this.button4.MouseEnter += new System.EventHandler(this.button4_Enter);
@@ -160,7 +163,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_inicial_uso_pessoal;
+            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_inicial_2_instituiçao_nova;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1280, 720);

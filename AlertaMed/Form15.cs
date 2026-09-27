@@ -65,25 +65,25 @@ namespace AlertaMed
         private void button1_Enter(object sender, EventArgs e)
         {
             button1.Image = Properties.Resources.botao_selecionar_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal_selecionar_prescrição_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova_bt_selecionar_cadastro_clicado;
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
             button1.Image = Properties.Resources.botao_selecionar_normal;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova;
         }
 
         private void button3_Enter(object sender, EventArgs e)
         {
             button3.Image = Properties.Resources.botao_selecionar_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal_bt_selecionar_perfil_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova_bt_selecionar_perfil_clicado1;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
             button3.Image = Properties.Resources.botao_selecionar_normal;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova;
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
@@ -103,14 +103,22 @@ namespace AlertaMed
 
         private void button3_Enter_1(object sender, EventArgs e)
         {
-            button3.Image = Properties.Resources.botao_selecionar_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal_bt_selecionar_perfil_selecionado;
+           
         }
 
         private void button3_Leave_1(object sender, EventArgs e)
         {
-            button3.Image = Properties.Resources.botao_selecionar_normal;
-            pictureBox1.Image = Properties.Resources.Tela_inicial_uso_pessoal;
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

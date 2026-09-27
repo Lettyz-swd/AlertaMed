@@ -183,7 +183,7 @@ namespace AlertaMed
 
         private void button5_Click_2(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12();
+            Form24 form12 = new Form24();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;
             form12.Show();

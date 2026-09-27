@@ -175,6 +175,12 @@
     <Compile Include="Form23.Designer.cs">
       <DependentUpon>Form23.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form24.Designer.cs">
+      <DependentUpon>Form24.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form23.resx">
       <DependentUpon>Form23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form24.resx">
+      <DependentUpon>Form24.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -927,6 +936,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tela inicial bt sobre clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar perfil clicado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar cadastro clicado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar perfil clicado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personalizar perfil Gerente instituiçao bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Personalizar perfil Gerente instituiçao bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Personalizar perfil Gerente instituiçao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personalizar perfil Gerente instituiçao bt voltar selecionado1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
