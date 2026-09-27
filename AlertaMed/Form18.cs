@@ -14,18 +14,6 @@ namespace AlertaMed
         {
             InitializeComponent();
 
-            // ---- corrige z-order: imagem de fundo pra trás, combo pra frente ----
-            pictureBox1.SendToBack();
-            comboBox1.BringToFront();
-
-            // ---- hover da barra lateral ----
-            button1.Enter += button1_Enter;
-            button1.Leave += button1_Leave;
-            button10.Enter += button10_Enter;
-            button10.Leave += button10_Leave;
-            button6.Enter += button6_Enter;
-            button6.Leave += button6_Leave;
-
             // ---- navegação ----
             button1.Click += button1_Click;
             button6.Click += button6_Click;
@@ -70,34 +58,8 @@ namespace AlertaMed
 
         private void Form18_Load(object sender, EventArgs e)
         {
-            // Nome do paciente (travado, vindo do Form12, igual ao Form13)
-            if (!string.IsNullOrWhiteSpace(nomePaciente) && nomePaciente != "Nome do Paciente")
-            {
-                textBox2.Text = nomePaciente;
-                textBox2.ForeColor = Color.Black;
-                textBox2.ReadOnly = true;
-            }
 
-            CarregarTecnicos();
-            comboBox1.Invalidate();
-            comboBox1.Refresh();
         }
-
-        // =========================================================
-        // Hover da barra lateral (Início / Configurações / Voltar)
-        // =========================================================
-        private void button1_Enter(object sender, EventArgs e) => button1.Image = Properties.Resources.botão_inicio_2;
-        private void button1_Leave(object sender, EventArgs e) => button1.Image = Properties.Resources.botão_inicio_normal;
-
-        private void button10_Enter(object sender, EventArgs e) => button10.Image = Properties.Resources.botão_configurações;
-        private void button10_Leave(object sender, EventArgs e) => button10.Image = Properties.Resources.botão_configurações_normal;
-
-        private void button6_Enter(object sender, EventArgs e) => button6.Image = Properties.Resources.botão_voltar_cadastro_selecionado;
-        private void button6_Leave(object sender, EventArgs e) => button6.Image = Properties.Resources.botão_voltar_cadastro;
-
-        // =========================================================
-        // Navegação
-        // =========================================================
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -115,9 +77,9 @@ namespace AlertaMed
             this.Close();
         }
 
-        // =========================================================
+     
         // Placeholders dos campos de texto
-        // =========================================================
+     
         private void textBox2_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "Digite o nome do paciente")
@@ -136,10 +98,9 @@ namespace AlertaMed
                 textBox5.Clear();
         }
 
-        // =========================================================
         // Técnico Responsável (carregado a partir de quem se
         // cadastrou pelo Form8 - tabela solicitacao_entrada)
-        // =========================================================
+       
         private void CarregarTecnicos()
         {
             comboBox1.Items.Clear();
@@ -167,10 +128,8 @@ namespace AlertaMed
 
             comboBox1.SelectedIndex = 0;
         }
-
-        // =========================================================
         // Remédios
-        // =========================================================
+   
         private void button3_Click(object sender, EventArgs e)
         {
             string valor = textBox3.Text.Trim();
@@ -194,9 +153,8 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox4);
         }
 
-        // =========================================================
         // Doses
-        // =========================================================
+
         private void button4_Click(object sender, EventArgs e)
         {
             string valor = textBox5.Text.Trim();
@@ -220,9 +178,8 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox6);
         }
 
-        // =========================================================
+   
         // Horários (agora com MaskedTextBox, máscara 00:00)
-        // =========================================================
 
         // Ao focar num campo de horário, seleciona o texto todo -
         // assim digitar já substitui o "00:00", sem precisar apagar na mão.
@@ -287,9 +244,9 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox10);
         }
 
-        // =========================================================
+ 
         // Utilitários das listas (Remédios / Doses / Horários)
-        // =========================================================
+        
         private void AdicionarLinha(TextBox lista, string valor)
         {
             lista.Text = string.IsNullOrEmpty(lista.Text)
@@ -308,9 +265,9 @@ namespace AlertaMed
                 : string.Join(Environment.NewLine, linhas.Take(linhas.Length - 1));
         }
 
-        // =========================================================
+    
         // Concluído! Cadastrar Prescrição
-        // =========================================================
+   
         private void button2_Click(object sender, EventArgs e)
         {
             string nomePacienteAtual = textBox2.Text.Trim();
@@ -380,6 +337,95 @@ namespace AlertaMed
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Enter_1(object sender, EventArgs e)
+        {
+            button1.Image = Properties.Resources.botão_inicio_2;
+        }
+
+        private void button1_Leave_1(object sender, EventArgs e)
+        {
+            button1.Image = Properties.Resources.botão_inicio_normal;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Enter(object sender, EventArgs e)
+        {
+            button10.Image = Properties.Resources.botão_configurações;
+        }
+
+        private void button10_Leave(object sender, EventArgs e)
+        {
+            button10.Image = Properties.Resources.botão_configurações_normal;
+        }
+
+        private void button6_Enter(object sender, EventArgs e)
+        {
+            button6.Image = Properties.Resources.botão_voltar_cadastro_selecionado;
+        }
+
+        private void button6_Leave(object sender, EventArgs e)
+        {
+            button6.Image = Properties.Resources.botão_voltar_cadastro;
+        }
+
+        private void button3_Enter(object sender, EventArgs e)
+        {
+            button3.Image = Properties.Resources.botao_adicionar_horarios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_remedios_selecionado;
+
+        }
+
+        private void button3_Leave(object sender, EventArgs e)
+        {
+            button3.Image = Properties.Resources.botao_adicionar_horarios_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+        }
+
+        private void button4_Enter(object sender, EventArgs e)
+        {
+            button4.Image = Properties.Resources.botao_adicionar_doses_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_doses_selecionado;
+        }
+
+        private void button4_Leave(object sender, EventArgs e)
+        {
+            button4.Image = Properties.Resources.botao_adicionar_doses_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+        }
+
+        private void button5_Enter(object sender, EventArgs e)
+        {
+            button5.Image = Properties.Resources.botao_adicionar_horarios_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_bt_horarios_selecionado;
+        }
+
+        private void button5_Leave(object sender, EventArgs e)
+        {
+            button5.Image = Properties.Resources.botao_adicionar_horarios_normal;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+        }
+
+        private void button2_Enter(object sender, EventArgs e)
+        {
+            button2.Image = Properties.Resources.botao_cadastrar_preescrição_selecionado_2;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_preescrição_bt_cadastrar_selecionado;
+        }
+
+        private void button2_Leave(object sender, EventArgs e)
+        {
+            button2.Image = Properties.Resources.botao_cadastrar_preescrição_normal_2;
+            pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
         {
 
         }

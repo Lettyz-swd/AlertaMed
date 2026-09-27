@@ -17,7 +17,7 @@ namespace AlertaMed
             InitializeComponent();
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-          
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -59,12 +59,12 @@ namespace AlertaMed
 
         private void button1_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -128,7 +128,7 @@ namespace AlertaMed
 
         private void button1_Enter_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Leave_1(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-           
+
             pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_profissional_selecionado;
         }
 
@@ -155,7 +155,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-        
+
             pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
         }
 
@@ -184,6 +184,15 @@ namespace AlertaMed
         private void button5_Click_2(object sender, EventArgs e)
         {
             Form26 form12 = new Form26();
+            form12.StartPosition = FormStartPosition.Manual;
+            form12.Location = this.Location;
+            form12.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Form18 form12 = new Form18();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;
             form12.Show();
