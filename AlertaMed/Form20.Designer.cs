@@ -45,12 +45,6 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.lixeira5 = new System.Windows.Forms.Button();
-            this.lixeira4 = new System.Windows.Forms.Button();
-            this.lixeira3 = new System.Windows.Forms.Button();
-            this.lixeira2 = new System.Windows.Forms.Button();
-            this.lixeira = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -61,13 +55,19 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.lixeira5 = new System.Windows.Forms.Button();
+            this.lixeira4 = new System.Windows.Forms.Button();
+            this.lixeira3 = new System.Windows.Forms.Button();
+            this.lixeira2 = new System.Windows.Forms.Button();
+            this.lixeira = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TxTbxNP
@@ -269,105 +269,6 @@
             this.checkBox1.Text = "Solteiro(a)";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // lixeira5
-            // 
-            this.lixeira5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixeira5.FlatAppearance.BorderSize = 0;
-            this.lixeira5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixeira5.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
-            this.lixeira5.Location = new System.Drawing.Point(1216, 559);
-            this.lixeira5.Name = "lixeira5";
-            this.lixeira5.Size = new System.Drawing.Size(26, 29);
-            this.lixeira5.TabIndex = 99;
-            this.lixeira5.TabStop = false;
-            this.lixeira5.UseVisualStyleBackColor = false;
-            // 
-            // lixeira4
-            // 
-            this.lixeira4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixeira4.FlatAppearance.BorderSize = 0;
-            this.lixeira4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixeira4.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
-            this.lixeira4.Location = new System.Drawing.Point(1216, 394);
-            this.lixeira4.Name = "lixeira4";
-            this.lixeira4.Size = new System.Drawing.Size(24, 29);
-            this.lixeira4.TabIndex = 98;
-            this.lixeira4.TabStop = false;
-            this.lixeira4.UseVisualStyleBackColor = false;
-            // 
-            // lixeira3
-            // 
-            this.lixeira3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixeira3.FlatAppearance.BorderSize = 0;
-            this.lixeira3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixeira3.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
-            this.lixeira3.Location = new System.Drawing.Point(938, 288);
-            this.lixeira3.Name = "lixeira3";
-            this.lixeira3.Size = new System.Drawing.Size(19, 23);
-            this.lixeira3.TabIndex = 97;
-            this.lixeira3.TabStop = false;
-            this.lixeira3.UseVisualStyleBackColor = false;
-            // 
-            // lixeira2
-            // 
-            this.lixeira2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixeira2.FlatAppearance.BorderSize = 0;
-            this.lixeira2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixeira2.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
-            this.lixeira2.Location = new System.Drawing.Point(790, 289);
-            this.lixeira2.Name = "lixeira2";
-            this.lixeira2.Size = new System.Drawing.Size(19, 23);
-            this.lixeira2.TabIndex = 96;
-            this.lixeira2.TabStop = false;
-            this.lixeira2.UseVisualStyleBackColor = false;
-            // 
-            // lixeira
-            // 
-            this.lixeira.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lixeira.FlatAppearance.BorderSize = 0;
-            this.lixeira.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lixeira.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lixeira.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
-            this.lixeira.Location = new System.Drawing.Point(596, 286);
-            this.lixeira.Name = "lixeira";
-            this.lixeira.Size = new System.Drawing.Size(19, 23);
-            this.lixeira.TabIndex = 95;
-            this.lixeira.TabStop = false;
-            this.lixeira.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(93)))), ((int)(((byte)(92)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::AlertaMed.Properties.Resources.botao_cadastrar_preescrição_normal_2;
-            this.button2.Location = new System.Drawing.Point(230, 649);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(996, 32);
-            this.button2.TabIndex = 93;
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.Enter += new System.EventHandler(this.button2_Enter);
-            this.button2.Leave += new System.EventHandler(this.button2_Leave);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
-            // 
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
@@ -501,25 +402,25 @@
             this.textBox11.TabStop = false;
             this.textBox11.Text = "Peso";
             // 
-            // button4
+            // button1
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
-            this.button4.Location = new System.Drawing.Point(2, 88);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 46);
-            this.button4.TabIndex = 116;
-            this.button4.TabStop = false;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Enter += new System.EventHandler(this.button4_Enter);
-            this.button4.Leave += new System.EventHandler(this.button4_Leave);
-            this.button4.MouseEnter += new System.EventHandler(this.button4_Enter);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_Leave);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
+            this.button1.Location = new System.Drawing.Point(4, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 31);
+            this.button1.TabIndex = 118;
+            this.button1.TabStop = false;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
             // 
             // button3
             // 
@@ -541,35 +442,125 @@
             this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);
             this.button3.MouseLeave += new System.EventHandler(this.button3_Leave);
             // 
-            // button1
+            // button4
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
-            this.button1.Location = new System.Drawing.Point(4, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 31);
-            this.button1.TabIndex = 118;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(72)))), ((int)(((byte)(73)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
+            this.button4.Location = new System.Drawing.Point(2, 88);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(179, 46);
+            this.button4.TabIndex = 116;
+            this.button4.TabStop = false;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Enter += new System.EventHandler(this.button4_Enter);
+            this.button4.Leave += new System.EventHandler(this.button4_Leave);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_Enter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_Leave);
             // 
-            // pictureBox1
+            // lixeira5
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_cadastro_paciente_2_bt_normal;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1283, 730);
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
+            this.lixeira5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixeira5.FlatAppearance.BorderSize = 0;
+            this.lixeira5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixeira5.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
+            this.lixeira5.Location = new System.Drawing.Point(1216, 559);
+            this.lixeira5.Name = "lixeira5";
+            this.lixeira5.Size = new System.Drawing.Size(26, 29);
+            this.lixeira5.TabIndex = 99;
+            this.lixeira5.TabStop = false;
+            this.lixeira5.UseVisualStyleBackColor = false;
+            // 
+            // lixeira4
+            // 
+            this.lixeira4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixeira4.FlatAppearance.BorderSize = 0;
+            this.lixeira4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixeira4.Image = global::AlertaMed.Properties.Resources.botão_lixeira_maior;
+            this.lixeira4.Location = new System.Drawing.Point(1216, 394);
+            this.lixeira4.Name = "lixeira4";
+            this.lixeira4.Size = new System.Drawing.Size(24, 29);
+            this.lixeira4.TabIndex = 98;
+            this.lixeira4.TabStop = false;
+            this.lixeira4.UseVisualStyleBackColor = false;
+            // 
+            // lixeira3
+            // 
+            this.lixeira3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixeira3.FlatAppearance.BorderSize = 0;
+            this.lixeira3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixeira3.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
+            this.lixeira3.Location = new System.Drawing.Point(938, 288);
+            this.lixeira3.Name = "lixeira3";
+            this.lixeira3.Size = new System.Drawing.Size(19, 23);
+            this.lixeira3.TabIndex = 97;
+            this.lixeira3.TabStop = false;
+            this.lixeira3.UseVisualStyleBackColor = false;
+            // 
+            // lixeira2
+            // 
+            this.lixeira2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixeira2.FlatAppearance.BorderSize = 0;
+            this.lixeira2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixeira2.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
+            this.lixeira2.Location = new System.Drawing.Point(790, 289);
+            this.lixeira2.Name = "lixeira2";
+            this.lixeira2.Size = new System.Drawing.Size(19, 23);
+            this.lixeira2.TabIndex = 96;
+            this.lixeira2.TabStop = false;
+            this.lixeira2.UseVisualStyleBackColor = false;
+            // 
+            // lixeira
+            // 
+            this.lixeira.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lixeira.FlatAppearance.BorderSize = 0;
+            this.lixeira.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.lixeira.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lixeira.Image = global::AlertaMed.Properties.Resources.botão_lixeira_menor;
+            this.lixeira.Location = new System.Drawing.Point(596, 286);
+            this.lixeira.Name = "lixeira";
+            this.lixeira.Size = new System.Drawing.Size(19, 23);
+            this.lixeira.TabIndex = 95;
+            this.lixeira.TabStop = false;
+            this.lixeira.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(93)))), ((int)(((byte)(92)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::AlertaMed.Properties.Resources.botao_cadastrar_preescrição_normal_2;
+            this.button2.Location = new System.Drawing.Point(230, 649);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(996, 32);
+            this.button2.TabIndex = 93;
+            this.button2.TabStop = false;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Enter += new System.EventHandler(this.button2_Enter);
+            this.button2.Leave += new System.EventHandler(this.button2_Leave);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
             // 
             // pictureBox2
             // 
@@ -580,6 +571,16 @@
             this.pictureBox2.Size = new System.Drawing.Size(1283, 730);
             this.pictureBox2.TabIndex = 94;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_cadastro_paciente_2_bt_normal;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1283, 730);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
             // 
             // Form20
             // 
@@ -623,12 +624,12 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.TxTbxNP);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form20";
             this.Text = "AlertaMed";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

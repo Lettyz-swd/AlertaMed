@@ -76,21 +76,21 @@ namespace AlertaMed
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal_selecionado;
-            pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_uso_pessoal_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_uso_pessoal_selecionado;
         }
 
         private void button2_Leave(object sender, EventArgs e)
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            pictureBox1.Image = Properties.Resources.Tela_inicio_3;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
             button4.Image = Properties.Resources.botão_instituição_2;
             button3.Image = Properties.Resources.botão_sobre;
-            pictureBox1.Image = Properties.Resources.Tela_inicio_3;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
         }
 
         private void button3_Enter(object sender, EventArgs e)
@@ -98,21 +98,21 @@ namespace AlertaMed
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button3.Image = Properties.Resources.botão_sobre_selecionado;
-            pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_sobre_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_sobre_selecionado;
         }
 
         private void button4_Enter(object sender, EventArgs e)
         {
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button4.Image = Properties.Resources.botão_instituição_selecionado1;
-            pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_inst_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_bt_instituiçao_selecionado;
         }
 
         private void button4_Leave(object sender, EventArgs e)
         {
             button2.Image = Properties.Resources.botão_uso_pessoal;
             button4.Image = Properties.Resources.botão_instituição;
-            pictureBox1.Image = Properties.Resources.Tela_inicio_3;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_do_programa_normal;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            button1.Image = Properties.Resources.botão_uso_profissional_selecionado;
+           
             pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_profissional_selecionado;
         }
 
@@ -155,7 +155,7 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_sobre;
             button4.Image = Properties.Resources.botão_instituição_2;
             button2.Image = Properties.Resources.botão_uso_pessoal;
-            button1.Image = Properties.Resources.botão_uso_profissional_;
+        
             pictureBox1.Image = Properties.Resources.Tela_inicio_3;
         }
 
@@ -173,23 +173,11 @@ namespace AlertaMed
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12();
-    form12.StartPosition = FormStartPosition.Manual;
-    form12.Location = this.Location;
-    form12.Size = this.Size;
-    form12.Show();
-    this.Hide();
-        }
-
-        private void button5_Click_2(object sender, EventArgs e)
-        {
-            Form12 form12 = new Form12();
+            Form16 form12 = new Form16();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;
-            form12.Size = this.Size;
             form12.Show();
             this.Hide();
-
 
         }
     }
