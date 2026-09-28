@@ -158,5 +158,20 @@ namespace AlertaMed
                 textBox5.Text = "Digite o e-mail";
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            return;
+        }
     }
 }

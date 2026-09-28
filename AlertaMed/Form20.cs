@@ -135,7 +135,12 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -310,6 +315,16 @@ namespace AlertaMed
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            return;
         }
     }
 }

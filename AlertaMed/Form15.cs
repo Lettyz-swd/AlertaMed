@@ -123,7 +123,12 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -138,7 +143,17 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
+            return;
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form21 form21 = new Form21();
+            form21.StartPosition = FormStartPosition.Manual;
+            form21.Location = this.Location;
+            form21.Size = this.Size;
+            form21.Show();
+            this.Close();
         }
     }
 }

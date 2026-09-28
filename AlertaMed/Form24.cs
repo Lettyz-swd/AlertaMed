@@ -69,7 +69,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            return;
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -144,6 +144,16 @@ namespace AlertaMed
             {
                 textBox4.Text = "Digite sua biografia";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Size = this.Size;
+            form1.Show();
+            this.Close();
         }
     }
 }

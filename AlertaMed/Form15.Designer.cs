@@ -77,6 +77,7 @@
             this.button7.TabIndex = 29;
             this.button7.TabStop = false;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 

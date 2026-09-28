@@ -66,6 +66,7 @@
             this.button4.TabIndex = 126;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.Enter += new System.EventHandler(this.button4_Enter);
             this.button4.Leave += new System.EventHandler(this.button4_Leave);
             this.button4.MouseEnter += new System.EventHandler(this.button4_Enter);
@@ -107,6 +108,7 @@
             this.button1.TabIndex = 128;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             this.button1.Leave += new System.EventHandler(this.button1_Leave);
             this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);

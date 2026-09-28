@@ -372,6 +372,7 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o nome do paciente";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox3
@@ -438,6 +439,7 @@
             this.button1.TabIndex = 118;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             this.button1.Leave += new System.EventHandler(this.button1_Leave);
             this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
