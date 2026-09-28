@@ -86,6 +86,7 @@
             this.button5.TabIndex = 127;
             this.button5.TabStop = false;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.Enter += new System.EventHandler(this.button5_Enter);
             this.button5.Leave += new System.EventHandler(this.button5_Leave);
             this.button5.MouseEnter += new System.EventHandler(this.button5_Enter);
@@ -122,6 +123,8 @@
             this.textBox1.TabIndex = 129;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Ex: Hospital, Casa de Repouso";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
@@ -134,6 +137,9 @@
             this.textBox2.TabIndex = 130;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Nome da instituição";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
             // 
@@ -146,6 +152,9 @@
             this.textBox3.TabIndex = 131;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Ex: Bairro, Rua";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
@@ -159,6 +168,8 @@
             this.textBox4.TabIndex = 132;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Ex: Vagas Abertas";
+            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // textBox5
             // 
@@ -171,6 +182,8 @@
             this.textBox5.TabIndex = 133;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite o e-mail ";
+            this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // button6
             // 

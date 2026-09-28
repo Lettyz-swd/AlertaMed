@@ -162,6 +162,7 @@
             this.button3.TabIndex = 10;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.Enter += new System.EventHandler(this.button3_Enter);
             this.button3.Leave += new System.EventHandler(this.button3_Leave);
             this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);

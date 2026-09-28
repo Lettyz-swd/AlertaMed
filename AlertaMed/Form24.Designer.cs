@@ -52,6 +52,8 @@
             this.textBox1.TabIndex = 121;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite seu nome";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
@@ -64,6 +66,8 @@
             this.textBox2.TabIndex = 122;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite seu genêro";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
             // 
@@ -76,6 +80,8 @@
             this.textBox3.TabIndex = 123;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Gerente";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // button10
             // 
@@ -92,6 +98,7 @@
             this.button10.TabIndex = 120;
             this.button10.TabStop = false;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             this.button10.Enter += new System.EventHandler(this.button10_Enter);
             this.button10.Leave += new System.EventHandler(this.button10_Leave);
             this.button10.MouseEnter += new System.EventHandler(this.button10_Enter);
@@ -177,6 +184,8 @@
             this.textBox4.TabIndex = 124;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Digite sua biografia";
+            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // Form24
             // 

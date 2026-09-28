@@ -125,9 +125,189 @@ namespace AlertaMed
             {
                 MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
             }
+            Form13 form13 = new Form13();
+            form13.StartPosition = FormStartPosition.Manual;
+            form13.Location = this.Location;
+            form13.Size = this.Size;
+            form13.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (TxTbxNP.Text == "Digite o nome do paciente")
+            {
+                TxTbxNP.Text = "";
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite a idade do paciente")
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_Click(object sender, EventArgs e)
+        {
+            if (textBox11.Text == "Digite o peso do paciente")
+            {
+                textBox11.Text = "";
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "Quantos?")
+            {
+                textBox7.Text = "";
+            }
+        }
+
+        private void textBox8_Click(object sender, EventArgs e)
+        {
+            if (textBox8.Text == "Quais?")
+            {
+                textBox8.Text = "";
+            }
+        }
+
+        private void textBox9_Click(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "Quais?")
+            {
+                textBox9.Text = "";
+            }
+        }
+
+        private void textBox10_Click(object sender, EventArgs e)
+        {
+            if (textBox10.Text == "Quais?")
+            {
+                textBox10.Text = "";
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxTbxNP.Text))
+            {
+                TxTbxNP.Text = "Digite o nome do paciente";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = "Idade";
+            }
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox11.Text))
+            {
+                textBox11.Text = "Peso";
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox7.Text))
+            {
+                textBox7.Text = "Quantos?";
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox8.Text))
+            {
+                textBox8.Text = "Quais?";
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox9.Text))
+            {
+                textBox9.Text = "Quais?";
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox10.Text))
+            {
+                textBox10.Text = "Quais?";
+            }
+        }
+
+        private void textBox5_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "Digite informações extras")
+            {
+                textBox5.Text = "";
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                textBox5.Text = "Digite informações extras";
+            }
+        }
+
+        private void textBox6_Click(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "Digite suas anotações")
+            {
+                textBox6.Text = "";
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                textBox6.Text = "Digite suas anotações";
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

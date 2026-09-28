@@ -24,7 +24,12 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form25 form25 = new Form25();
+            form25.StartPosition = FormStartPosition.Manual;
+            form25.Location = this.Location;
+            form25.Size = this.Size;
+            form25.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,7 +98,12 @@ namespace AlertaMed
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -117,6 +127,16 @@ namespace AlertaMed
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(); 
+            form12.StartPosition = FormStartPosition.Manual;
+            form12.Location = this.Location;
+            form12.Size = this.Size;
+            form12.Show();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

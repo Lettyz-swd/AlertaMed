@@ -51,6 +51,8 @@
             this.textBox1.TabIndex = 113;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite seu nome";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
@@ -63,6 +65,8 @@
             this.textBox2.TabIndex = 114;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite seu genêro";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
             // 
@@ -76,6 +80,8 @@
             this.textBox3.TabIndex = 115;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite sua biografia";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // button3
             // 

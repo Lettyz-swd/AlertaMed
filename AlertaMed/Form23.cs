@@ -77,7 +77,61 @@ namespace AlertaMed
 
         private void button10_Click(object sender, EventArgs e)
         {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
 
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Digite seu nome")
+            {
+                textBox1.Text = "";
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                textBox1.Text = "Digite seu nome";
+            }
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Digite seu gênero")
+            {
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                textBox2.Text = "Digite seu gênero";
+            }
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite sua biografia")
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = "Digite sua biografia";
+            }
         }
     }
 }

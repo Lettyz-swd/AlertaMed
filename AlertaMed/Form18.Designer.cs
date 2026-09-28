@@ -127,6 +127,7 @@
             this.textBox5.TabIndex = 87;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite as doses";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -152,6 +153,7 @@
             this.textBox3.TabIndex = 79;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite os remédios";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -165,6 +167,9 @@
             this.textBox2.TabIndex = 78;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o nome do paciente";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click_1);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // comboBox1
             // 
@@ -196,6 +201,7 @@
             this.button10.TabIndex = 98;
             this.button10.TabStop = false;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             this.button10.Enter += new System.EventHandler(this.button10_Enter);
             this.button10.Leave += new System.EventHandler(this.button10_Leave);
             this.button10.MouseEnter += new System.EventHandler(this.button10_Enter);
@@ -362,6 +368,7 @@
             this.button2.TabIndex = 80;
             this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             this.button2.Enter += new System.EventHandler(this.button2_Enter);
             this.button2.Leave += new System.EventHandler(this.button2_Leave);
             this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);

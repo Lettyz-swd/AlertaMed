@@ -12,12 +12,45 @@ namespace AlertaMed
 {
     public partial class Form16 : Form
     {
+        private bool atualizando = false;
+
         public Form16()
         {
             InitializeComponent();
+
+            // Carrega a preferência salva e liga os eventos dos checkboxes
+            atualizando = true;
+            checkBox1.Checked = Configuracoes.NotificacoesAtivas;
+            checkBox2.Checked = !Configuracoes.NotificacoesAtivas;
+            atualizando = false;
+
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
         }
 
-       
+        // "Ativar notificações": marcar desmarca o outro; nunca fica sem nenhum marcado
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (atualizando) return;
+            atualizando = true;
+            checkBox1.Checked = true;      // se tentou desmarcar, mantém marcado
+            checkBox2.Checked = false;
+            atualizando = false;
+            Configuracoes.NotificacoesAtivas = true;
+        }
+
+        // "Desativar notificações"
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (atualizando) return;
+            atualizando = true;
+            checkBox2.Checked = true;
+            checkBox1.Checked = false;
+            atualizando = false;
+            Configuracoes.NotificacoesAtivas = false;
+        }
+
+
 
         private void button2_Enter(object sender, EventArgs e)
         {

@@ -281,6 +281,8 @@
             this.textBox10.TabIndex = 92;
             this.textBox10.TabStop = false;
             this.textBox10.Text = "Quais?";
+            this.textBox10.Click += new System.EventHandler(this.textBox10_Click);
+            this.textBox10.Leave += new System.EventHandler(this.textBox10_Leave);
             // 
             // textBox9
             // 
@@ -294,6 +296,8 @@
             this.textBox9.TabIndex = 91;
             this.textBox9.TabStop = false;
             this.textBox9.Text = "Quais?";
+            this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
+            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox8
             // 
@@ -307,6 +311,8 @@
             this.textBox8.TabIndex = 90;
             this.textBox8.TabStop = false;
             this.textBox8.Text = "Quais?";
+            this.textBox8.Click += new System.EventHandler(this.textBox8_Click);
+            this.textBox8.Leave += new System.EventHandler(this.textBox8_Leave);
             // 
             // textBox7
             // 
@@ -320,6 +326,9 @@
             this.textBox7.TabIndex = 89;
             this.textBox7.TabStop = false;
             this.textBox7.Text = "Quantos?";
+            this.textBox7.Click += new System.EventHandler(this.textBox7_Click);
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
             // 
             // textBox6
             // 
@@ -333,6 +342,8 @@
             this.textBox6.TabIndex = 88;
             this.textBox6.TabStop = false;
             this.textBox6.Text = "Digite suas anotações";
+            this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // textBox5
             // 
@@ -346,6 +357,8 @@
             this.textBox5.TabIndex = 87;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite informações extras";
+            this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox1
             // 
@@ -358,6 +371,8 @@
             this.textBox1.TabIndex = 112;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o nome do paciente";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox3
             // 
@@ -370,6 +385,9 @@
             this.textBox3.TabIndex = 113;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Idade";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // comboBox2
             // 
@@ -401,6 +419,9 @@
             this.textBox11.TabIndex = 115;
             this.textBox11.TabStop = false;
             this.textBox11.Text = "Peso";
+            this.textBox11.Click += new System.EventHandler(this.textBox11_Click);
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox11.Leave += new System.EventHandler(this.textBox11_Leave);
             // 
             // button1
             // 
@@ -437,6 +458,7 @@
             this.button3.TabIndex = 117;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.Enter += new System.EventHandler(this.button3_Enter);
             this.button3.Leave += new System.EventHandler(this.button3_Leave);
             this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);
@@ -571,6 +593,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(1283, 730);
             this.pictureBox2.TabIndex = 94;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

@@ -238,6 +238,7 @@
     <Compile Include="Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Configuracoes.cs" />
     <Compile Include="Senha.cs" />
     <Compile Include="Sessao.cs" />
     <EmbeddedResource Include="Form1.resx">

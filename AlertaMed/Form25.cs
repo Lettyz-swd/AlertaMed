@@ -76,5 +76,35 @@ namespace AlertaMed
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form26 form26 = new Form26();
+            form26.StartPosition = FormStartPosition.Manual;
+            form26.Location = this.Location;
+            form26.Size = this.Size;
+            form26.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form24 form24 = new Form24();
+            form24.StartPosition = FormStartPosition.Manual;
+            form24.Location = this.Location;
+            form24.Size = this.Size;
+            form24.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
     }
 }

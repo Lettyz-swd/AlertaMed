@@ -65,5 +65,25 @@ namespace AlertaMed
             button2.Image = Properties.Resources.botão_ok_voltar_a_tela_normal;
             pictureBox1.Image = Properties.Resources.Tela_historico_prescrição_normal_1;
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form17 form17 = new Form17();
+            form17.StartPosition = FormStartPosition.Manual;
+            form17.Location = this.Location;
+            form17.Size = this.Size;
+            form17.Show();
+            this.Close();
+        }
     }
 }

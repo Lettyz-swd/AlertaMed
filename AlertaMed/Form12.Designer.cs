@@ -403,6 +403,7 @@
             this.button3.TabIndex = 73;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             this.button3.Enter += new System.EventHandler(this.button3_Enter_1);
             this.button3.Leave += new System.EventHandler(this.button3_Leave);
             this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);
@@ -487,6 +488,7 @@
             this.lixeira.TabIndex = 68;
             this.lixeira.TabStop = false;
             this.lixeira.UseVisualStyleBackColor = false;
+            this.lixeira.Click += new System.EventHandler(this.lixeira_Click_1);
             // 
             // button1
             // 

@@ -190,6 +190,12 @@ namespace AlertaMed
             {
                 MessageBox.Show(ex.Message);
             }
+            Form19 form19 = new Form19();
+            form19.StartPosition = FormStartPosition.Manual;
+            form19.Location = this.Location;
+            form19.Size = this.Size;
+            form19.Show();
+            this.Close();
         }
 
         // Métodos abaixo: o Designer liga eventos das caixas txtNome,
@@ -237,6 +243,16 @@ namespace AlertaMed
         private void txtSenha_Leave_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
         }
     }
 }

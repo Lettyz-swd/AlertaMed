@@ -136,12 +136,22 @@ namespace AlertaMed
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            Form22 form22 = new Form22();
+            form22.StartPosition = FormStartPosition.Manual;
+            form22.Location = this.Location;
+            form22.Size = this.Size;
+            form22.Show();
+            this.Hide();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
         }
     }
 }

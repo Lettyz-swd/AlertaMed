@@ -429,5 +429,78 @@ namespace AlertaMed
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form21 form21 = new Form21();
+            form21.StartPosition = FormStartPosition.Manual;
+             form21.Location = this.Location;
+            form21.Size = this.Size;
+            form21.Show();
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
+
+        private void textBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Digite o nome do paciente")
+            {
+                textBox2.Clear();
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Digite os remédios")
+            {
+                textBox3.Clear();
+            }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "Digite as doses")
+            {
+                textBox5.Clear();
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                textBox2.Text = "Digite o nome do paciente";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = "Digite os remédios";
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                textBox5.Text = "Digite as doses";
+            }
+        }
     }
 }

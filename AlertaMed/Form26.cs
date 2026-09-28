@@ -58,5 +58,105 @@ namespace AlertaMed
         {
             button6.Image = Properties.Resources.botao_voltar_tela_perfil_normal;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Ex: Hospital, Casa de Repouso")
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                textBox1.Text = "Ex: Hospital, Casa de Repouso";
+            }
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Nome da instituição")
+            {
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                textBox2.Text = "Nome da instituição";
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "Ex: Bairro, Rua")
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = "Ex: Bairro, Rua";
+            }
+        }
+
+        private void textBox4_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "EX: Vagas Abertas")
+            {
+                textBox4.Text = "";
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                textBox4.Text = "EX: Vagas Abertas";
+            }
+        }
+
+        private void textBox5_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "Digite o e-mail")
+            {
+                textBox5.Text = "";
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                textBox5.Text = "Digite o e-mail";
+            }
+        }
     }
 }
