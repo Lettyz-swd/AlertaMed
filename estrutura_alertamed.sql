@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict vyXJptij3cL0ShSNQXOjk8eeodXcTJX5xwPC66fTPVxutXwb7gGyF0qLl5wUebe
+\restrict Ym0qRZP6mcH5ruVOx4WCDBsrXsR9QGQogWMqt89NbmkbdAl4OLfVNRgWzxGtXtd
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
 
--- Started on 2026-09-28 19:43:01
+-- Started on 2026-09-28 19:52:08
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -57,7 +57,7 @@ CREATE SEQUENCE public.alerta_id_alerta_seq
 ALTER SEQUENCE public.alerta_id_alerta_seq OWNER TO postgres;
 
 --
--- TOC entry 5059 (class 0 OID 0)
+-- TOC entry 5060 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: alerta_id_alerta_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -101,7 +101,7 @@ CREATE SEQUENCE public.instituicao_id_instituicao_seq
 ALTER SEQUENCE public.instituicao_id_instituicao_seq OWNER TO postgres;
 
 --
--- TOC entry 5060 (class 0 OID 0)
+-- TOC entry 5061 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: instituicao_id_instituicao_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -143,7 +143,7 @@ CREATE SEQUENCE public.medicacao_id_medicamento_seq
 ALTER SEQUENCE public.medicacao_id_medicamento_seq OWNER TO postgres;
 
 --
--- TOC entry 5061 (class 0 OID 0)
+-- TOC entry 5062 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: medicacao_id_medicamento_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -214,7 +214,7 @@ CREATE SEQUENCE public.paciente_id_paciente_seq
 ALTER SEQUENCE public.paciente_id_paciente_seq OWNER TO postgres;
 
 --
--- TOC entry 5062 (class 0 OID 0)
+-- TOC entry 5063 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: paciente_id_paciente_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -234,7 +234,8 @@ CREATE TABLE public.prescricao (
     remedios text NOT NULL,
     doses text NOT NULL,
     horarios text NOT NULL,
-    data_cadastro timestamp without time zone DEFAULT now() NOT NULL
+    data_cadastro timestamp without time zone DEFAULT now() NOT NULL,
+    id_paciente integer
 );
 
 
@@ -257,7 +258,7 @@ CREATE SEQUENCE public.prescricao_id_prescricao_seq
 ALTER SEQUENCE public.prescricao_id_prescricao_seq OWNER TO postgres;
 
 --
--- TOC entry 5063 (class 0 OID 0)
+-- TOC entry 5064 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: prescricao_id_prescricao_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -301,7 +302,7 @@ CREATE SEQUENCE public.solicitacao_entrada_id_solicitacao_seq
 ALTER SEQUENCE public.solicitacao_entrada_id_solicitacao_seq OWNER TO postgres;
 
 --
--- TOC entry 5064 (class 0 OID 0)
+-- TOC entry 5065 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: solicitacao_entrada_id_solicitacao_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -344,7 +345,7 @@ CREATE SEQUENCE public.usuario_id_usuario_seq
 ALTER SEQUENCE public.usuario_id_usuario_seq OWNER TO postgres;
 
 --
--- TOC entry 5065 (class 0 OID 0)
+-- TOC entry 5066 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: usuario_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -409,7 +410,7 @@ ALTER TABLE ONLY public.usuario ALTER COLUMN id_usuario SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 5044 (class 0 OID 16421)
+-- TOC entry 5045 (class 0 OID 16421)
 -- Dependencies: 224
 -- Data for Name: alerta; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -419,7 +420,7 @@ COPY public.alerta (id_alerta, data_hora_disparo, status, id_medicamento) FROM s
 
 
 --
--- TOC entry 5046 (class 0 OID 16518)
+-- TOC entry 5047 (class 0 OID 16518)
 -- Dependencies: 226
 -- Data for Name: instituicao; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -431,7 +432,7 @@ COPY public.instituicao (id_instituicao, nome, tipo, email, senha, data_criacao,
 
 
 --
--- TOC entry 5042 (class 0 OID 16405)
+-- TOC entry 5043 (class 0 OID 16405)
 -- Dependencies: 222
 -- Data for Name: medicacao; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -441,7 +442,7 @@ COPY public.medicacao (id_medicamento, dosagem, intervalo_horas, duracao_dias, i
 
 
 --
--- TOC entry 5047 (class 0 OID 16535)
+-- TOC entry 5048 (class 0 OID 16535)
 -- Dependencies: 227
 -- Data for Name: membro_instituicao; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -460,7 +461,7 @@ COPY public.membro_instituicao (id_instituicao, id_usuario, papel, data_entrada)
 
 
 --
--- TOC entry 5051 (class 0 OID 16585)
+-- TOC entry 5052 (class 0 OID 16585)
 -- Dependencies: 231
 -- Data for Name: paciente; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -471,19 +472,19 @@ COPY public.paciente (id_paciente, nome, idade, genero, peso, estado_civil, tem_
 
 
 --
--- TOC entry 5053 (class 0 OID 16613)
+-- TOC entry 5054 (class 0 OID 16613)
 -- Dependencies: 233
 -- Data for Name: prescricao; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.prescricao (id_prescricao, nome_paciente, tecnico_responsavel, remedios, doses, horarios, data_cadastro) FROM stdin;
-1	luan	an	paracetamol	45mg	09:08	2026-09-28 17:56:00.606343
-2	tt	ana	dipirona	89mg	19:32	2026-09-28 19:31:25.810118
+COPY public.prescricao (id_prescricao, nome_paciente, tecnico_responsavel, remedios, doses, horarios, data_cadastro, id_paciente) FROM stdin;
+1	luan	an	paracetamol	45mg	09:08	2026-09-28 17:56:00.606343	\N
+2	tt	ana	dipirona	89mg	19:32	2026-09-28 19:31:25.810118	\N
 \.
 
 
 --
--- TOC entry 5049 (class 0 OID 16561)
+-- TOC entry 5050 (class 0 OID 16561)
 -- Dependencies: 229
 -- Data for Name: solicitacao_entrada; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -509,7 +510,7 @@ COPY public.solicitacao_entrada (id_solicitacao, id_instituicao, nome_solicitant
 
 
 --
--- TOC entry 5040 (class 0 OID 16390)
+-- TOC entry 5041 (class 0 OID 16390)
 -- Dependencies: 220
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -528,7 +529,7 @@ COPY public.usuario (id_usuario, nome, email, senha, data_nascimento, genero, bi
 
 
 --
--- TOC entry 5066 (class 0 OID 0)
+-- TOC entry 5067 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: alerta_id_alerta_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -537,7 +538,7 @@ SELECT pg_catalog.setval('public.alerta_id_alerta_seq', 1, false);
 
 
 --
--- TOC entry 5067 (class 0 OID 0)
+-- TOC entry 5068 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: instituicao_id_instituicao_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -546,7 +547,7 @@ SELECT pg_catalog.setval('public.instituicao_id_instituicao_seq', 2, true);
 
 
 --
--- TOC entry 5068 (class 0 OID 0)
+-- TOC entry 5069 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: medicacao_id_medicamento_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -555,7 +556,7 @@ SELECT pg_catalog.setval('public.medicacao_id_medicamento_seq', 1, false);
 
 
 --
--- TOC entry 5069 (class 0 OID 0)
+-- TOC entry 5070 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: paciente_id_paciente_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -564,7 +565,7 @@ SELECT pg_catalog.setval('public.paciente_id_paciente_seq', 1, true);
 
 
 --
--- TOC entry 5070 (class 0 OID 0)
+-- TOC entry 5071 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: prescricao_id_prescricao_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -573,7 +574,7 @@ SELECT pg_catalog.setval('public.prescricao_id_prescricao_seq', 2, true);
 
 
 --
--- TOC entry 5071 (class 0 OID 0)
+-- TOC entry 5072 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: solicitacao_entrada_id_solicitacao_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -582,7 +583,7 @@ SELECT pg_catalog.setval('public.solicitacao_entrada_id_solicitacao_seq', 16, tr
 
 
 --
--- TOC entry 5072 (class 0 OID 0)
+-- TOC entry 5073 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: usuario_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -742,6 +743,15 @@ ALTER TABLE ONLY public.paciente
 
 
 --
+-- TOC entry 4892 (class 2606 OID 16672)
+-- Name: prescricao prescricao_id_paciente_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.prescricao
+    ADD CONSTRAINT prescricao_id_paciente_fkey FOREIGN KEY (id_paciente) REFERENCES public.paciente(id_paciente);
+
+
+--
 -- TOC entry 4890 (class 2606 OID 16578)
 -- Name: solicitacao_entrada solicitacao_entrada_id_instituicao_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
@@ -750,11 +760,11 @@ ALTER TABLE ONLY public.solicitacao_entrada
     ADD CONSTRAINT solicitacao_entrada_id_instituicao_fkey FOREIGN KEY (id_instituicao) REFERENCES public.instituicao(id_instituicao);
 
 
--- Completed on 2026-09-28 19:43:01
+-- Completed on 2026-09-28 19:52:08
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict vyXJptij3cL0ShSNQXOjk8eeodXcTJX5xwPC66fTPVxutXwb7gGyF0qLl5wUebe
+\unrestrict Ym0qRZP6mcH5ruVOx4WCDBsrXsR9QGQogWMqt89NbmkbdAl4OLfVNRgWzxGtXtd
 
