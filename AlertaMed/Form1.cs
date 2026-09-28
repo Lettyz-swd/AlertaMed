@@ -18,6 +18,7 @@ namespace AlertaMed
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            GerenciadorAlarmes.Iniciar();
         }
 
         private void button2_Click(object sender, EventArgs e)

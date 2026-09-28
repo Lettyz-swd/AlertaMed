@@ -55,6 +55,7 @@
             this.button6.TabIndex = 126;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.Enter += new System.EventHandler(this.button6_Enter);
             this.button6.Leave += new System.EventHandler(this.button6_Leave);
             this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);

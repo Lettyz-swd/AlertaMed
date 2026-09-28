@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -65,7 +66,7 @@
             this.textBox2.Size = new System.Drawing.Size(332, 18);
             this.textBox2.TabIndex = 122;
             this.textBox2.TabStop = false;
-            this.textBox2.Text = "Digite seu genêro";
+            this.textBox2.Text = "Digite seu gênero";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
@@ -172,6 +173,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(1280, 720);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBox4
             // 
@@ -206,6 +208,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form24";
             this.Text = "AlertaMed";
+            this.Load += new System.EventHandler(this.Form24_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

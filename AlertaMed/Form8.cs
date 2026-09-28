@@ -199,14 +199,12 @@ namespace AlertaMed
         {
             pictureBox1.Image = Properties.Resources.Tela_de_entrar_inst__botão_solicitar_selecionado;
             button1.Image = Properties.Resources.botão_solicitar_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_de_entrar_inst__botão_solicitar_selecionado;
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_de_entrar_inst__botao_solicitar_normal;
             button1.Image = Properties.Resources.botão_solicitar_normal;
-            pictureBox1.Image = Properties.Resources.Tela_de_entrar_inst__botao_solicitar_normal;
         }
 
         private void button7_Enter(object sender, EventArgs e)
@@ -229,10 +227,12 @@ namespace AlertaMed
             this.Hide();
         }
 
+        // Solicitar: por enquanto tudo é aprovado. A pessoa é criada (sem senha de verdade),
+        // fica logada enquanto o programa estiver aberto e entra na instituição como técnico.
         private void button1_Click(object sender, EventArgs e)
         {
             string nome = Valor(textBox1, PH_NOME);
-            string email = Valor(textBox2, PH_EMAIL);
+            string email = Valor(textBox2, PH_EMAIL).ToLower();
             string mensagem = Valor(textBox5, PH_MSG);
             InstituicaoItem inst = cmbInstituicao.SelectedItem as InstituicaoItem;
 
@@ -281,38 +281,90 @@ namespace AlertaMed
                 return;
             }
 
-            // Grava o pedido de entrada (fica como "pendente" até o dono responder)
             try
             {
-                using (NpgsqlConnection conn = Banco.Abrir())
-                using (NpgsqlCommand cmd = new NpgsqlCommand(
-                    @"INSERT INTO public.solicitacao_entrada
-                          (id_instituicao, nome_solicitante, email_solicitante, mensagem)
-                      VALUES (@inst, @nome, @email, @msg)", conn))
+                int idUsuario = 0;
+
+                if (Sessao.Logado)
                 {
-                    cmd.Parameters.AddWithValue("@inst", inst.Id);
-                    cmd.Parameters.AddWithValue("@nome", nome);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@msg",
-                        mensagem == "" ? (object)DBNull.Value : mensagem);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (PostgresException ex)
-            {
-                if (ex.SqlState == "23505")
-                {
-                    MessageBox.Show("Você já tem um pedido pendente para essa instituição.");
+                    // Já está logado: usa o usuário atual
+                    idUsuario = Sessao.IdUsuario;
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao enviar o pedido:\n\n" + ex.Message);
+                    // Se o e-mail já existe (de um acesso anterior), reaproveita a conta;
+                    // senão, cria uma nova sem senha de verdade
+                    using (NpgsqlConnection conn = Banco.Abrir())
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(
+                        "SELECT id_usuario, nome FROM public.usuario WHERE lower(email) = lower(@email)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@email", email);
+                        using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                        {
+                            if (rd.Read())
+                            {
+                                idUsuario = rd.GetInt32(0);
+                                nome = rd.GetString(1); // usa o nome que já está cadastrado
+                            }
+                        }
+                    }
+
+                    if (idUsuario == 0)
+                    {
+                        using (NpgsqlConnection conn = Banco.Abrir())
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(
+                            @"INSERT INTO public.usuario (nome, email, senha)
+                              VALUES (@nome, @email, @senha)
+                              RETURNING id_usuario", conn))
+                        {
+                            cmd.Parameters.AddWithValue("@nome", nome);
+                            cmd.Parameters.AddWithValue("@email", email);
+                            // hash de uma senha que ninguém sabe
+                            cmd.Parameters.AddWithValue("@senha", Senha.Gerar(Guid.NewGuid().ToString("N")));
+                            idUsuario = Convert.ToInt32(cmd.ExecuteScalar());
+                        }
+                    }
+
+                    // Deixa a pessoa logada enquanto o programa estiver aberto
+                    Sessao.Entrar(idUsuario, nome);
                 }
-                return;
+
+                // Entra como técnico ('membro') e registra o pedido como aprovado
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlTransaction tx = conn.BeginTransaction())
+                {
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(
+                        @"INSERT INTO public.membro_instituicao (id_instituicao, id_usuario, papel)
+                          VALUES (@inst, @usr, 'membro')
+                          ON CONFLICT (id_instituicao, id_usuario) DO NOTHING", conn, tx))
+                    {
+                        cmd.Parameters.AddWithValue("@inst", inst.Id);
+                        cmd.Parameters.AddWithValue("@usr", idUsuario);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(
+                        @"INSERT INTO public.solicitacao_entrada
+                              (id_instituicao, nome_solicitante, email_solicitante, mensagem, status)
+                          VALUES (@inst, @nome, @email, @msg, 'aprovada')", conn, tx))
+                    {
+                        cmd.Parameters.AddWithValue("@inst", inst.Id);
+                        cmd.Parameters.AddWithValue("@nome", nome);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@msg",
+                            mensagem == "" ? (object)DBNull.Value : mensagem);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    tx.Commit();
+                }
+
+                // Marca a instituição como ativa na sessão
+                Sessao.EntrarNaInstituicao(inst.Id, inst.Nome);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao enviar o pedido:\n\n" + ex.Message);
+                MessageBox.Show("Erro ao entrar na instituição:\n\n" + ex.Message);
                 return;
             }
 

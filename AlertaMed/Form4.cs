@@ -82,7 +82,7 @@ namespace AlertaMed
         private void button3_Click(object sender, EventArgs e)
         {
             Form16 form16 = new Form16();
-              form16.StartPosition = FormStartPosition.Manual;
+            form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
             form16.Size = this.Size;
             form16.Show();
@@ -168,7 +168,7 @@ namespace AlertaMed
         private void button1_Click(object sender, EventArgs e)
         {
             string nome = Valor(textBox1, PH_NOME);
-            string email = Valor(textBox2, PH_EMAIL);
+            string email = Valor(textBox2, PH_EMAIL).ToLower();
             string senha = textBox3.Text == PH_SENHA ? "" : textBox3.Text;
             DateTime nascimento = dateTimePicker1.Value.Date;
 

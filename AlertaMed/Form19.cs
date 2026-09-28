@@ -18,6 +18,18 @@ namespace AlertaMed
             InitializeComponent();
         }
 
+        // Abre outra tela na mesma posição e tamanho, e fecha esta
+        private void Abrir(Form destino)
+        {
+            destino.StartPosition = FormStartPosition.Manual;
+            destino.Location = this.Location;
+            destino.Size = this.Size;
+            destino.Show();
+            this.Close();
+        }
+
+        // ---------- Efeitos visuais dos botões ----------
+
         private void button1_Enter(object sender, EventArgs e)
         {
             button1.Image = Properties.Resources.botao_selecionar_selecionado;
@@ -72,88 +84,62 @@ namespace AlertaMed
             button6.Image = Properties.Resources.botão_voltar_cadastro;
         }
 
+        // ---------- Navegação ----------
+
+        // Cadastrar prescrição
         private void button1_Click(object sender, EventArgs e)
         {
-            Form20 form20 = new Form20();
-            form20.StartPosition = FormStartPosition.Manual;
-            form20.Location = this.Location;
-            form20.Size = this.Size;
-            form20.Show();
-            this.Hide();
+            Abrir(new Form20());
         }
-        
 
+        // Perfil
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Abrir(new Form23());
+        }
+
+        // Início
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Abrir(new Form1());
+        }
+
+        // Configurações
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Abrir(new Form16());
+        }
+
+        // Voltar (antes não fazia nada)
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Abrir(new Form5());
+        }
+
+        // Ver histórico
         private void button7_Click(object sender, EventArgs e)
         {
-            Form14 form14 = new Form14();
-            form14.StartPosition = FormStartPosition.Manual;
-            form14.Location = this.Location;
-            form14.Size = this.Size;
-            form14.Show();
-            this.Hide();
+            Abrir(new Form14());
         }
+
+        // Duplicado do button7_Click: mantido só para não quebrar o Designer
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Abrir(new Form14());
+        }
+
+        // ---------- Métodos que o Designer liga (ficam vazios) ----------
 
         private void Form19_Load(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            return;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form23 form23 = new Form23();
-            form23.StartPosition = FormStartPosition.Manual;
-            form23.Location = this.Location;
-            form23.Size = this.Size;
-            form23.Show();
-            this.Hide();
-        }
-
-        
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.StartPosition = FormStartPosition.Manual;
-            form1.Location = this.Location;
-            form1.Size = this.Size;
-            form1.Show();
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Size = this.Size;
-            form16.Show();
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            Form14 form14 = new Form14();
-            form14.StartPosition = FormStartPosition.Manual;
-            form14.Location = this.Location;
-            form14.Size = this.Size;
-            form14.Show();
-            this.Hide();
-
         }
     }
 }

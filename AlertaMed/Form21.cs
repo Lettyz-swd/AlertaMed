@@ -1,20 +1,74 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form21 : Form
     {
+        // Uma coluna por informação, uma posição por linha da grade (6 linhas).
+        private TextBox[] colPaciente;
+        private TextBox[] colRemedios;
+        private TextBox[] colDoses;
+        private TextBox[] colHorarios;
+
         public Form21()
         {
             InitializeComponent();
+
+            colPaciente = new[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6 };
+            colRemedios = new[] { textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
+            colDoses = new[] { textBox13, textBox14, textBox15, textBox16, textBox17, textBox18 };
+            colHorarios = new[] { textBox19, textBox20, textBox21, textBox22, textBox23, textBox24 };
+
+            this.Load += Form21_Load;
+        }
+
+        private void Form21_Load(object sender, EventArgs e)
+        {
+            CarregarHistorico();
+        }
+
+        private void CarregarHistorico()
+        {
+            // limpa a grade toda antes de preencher, pra não sobrar linha antiga
+            for (int i = 0; i < colPaciente.Length; i++)
+            {
+                colPaciente[i].Clear();
+                colRemedios[i].Clear();
+                colDoses[i].Clear();
+                colHorarios[i].Clear();
+            }
+
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    @"SELECT nome_paciente, remedios, doses, horarios
+                      FROM public.prescricao
+                      ORDER BY data_cadastro DESC
+                      LIMIT 6", conn))
+                using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                {
+                    int linha = 0;
+                    while (rd.Read() && linha < colPaciente.Length)
+                    {
+                        colPaciente[linha].Text = rd.GetString(0);
+                        colRemedios[linha].Text = rd.GetString(1);
+                        colDoses[linha].Text = rd.GetString(2);
+                        colHorarios[linha].Text = rd.GetString(3);
+                        linha++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Não foi possível carregar o histórico.\n\n" + ex.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

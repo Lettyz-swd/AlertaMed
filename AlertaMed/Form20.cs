@@ -15,6 +15,43 @@ namespace AlertaMed
         public Form20()
         {
             InitializeComponent();
+
+            ConfigurarParNaoSim(checkBox5, checkBox6, textBox7, "Quantos?");   // Tem filhos?
+            ConfigurarParNaoSim(checkBox7, checkBox10, textBox8, "Quais?");    // Doenças Respiratórias?
+            ConfigurarParNaoSim(checkBox8, checkBox11, textBox9, "Quais?");    // Doenças Cardiovasculares?
+            ConfigurarParNaoSim(checkBox9, checkBox12, textBox10, "Quais?");   // Alergias?
+        }
+
+        // Liga um par "Não"/"Sim" a um campo de detalhe: marcar "Não" trava o
+        // campo (e limpa); marcar "Sim" destrava. Marcar um desmarca o outro.
+        private void ConfigurarParNaoSim(CheckBox chkNao, CheckBox chkSim, TextBox campo, string placeholder)
+        {
+            chkNao.CheckedChanged += (s, e) =>
+            {
+                if (chkNao.Checked) chkSim.Checked = false;
+                AtualizarBloqueioCampo(chkNao, campo, placeholder);
+            };
+
+            chkSim.CheckedChanged += (s, e) =>
+            {
+                if (chkSim.Checked) chkNao.Checked = false;
+                AtualizarBloqueioCampo(chkNao, campo, placeholder);
+            };
+        }
+
+        private void AtualizarBloqueioCampo(CheckBox chkNao, TextBox campo, string placeholder)
+        {
+            if (chkNao.Checked)
+            {
+                campo.Text = placeholder;
+                campo.Enabled = false;
+            }
+            else
+            {
+                campo.Enabled = true;
+                if (string.IsNullOrWhiteSpace(campo.Text))
+                    campo.Text = placeholder;
+            }
         }
 
         private void button4_Enter(object sender, EventArgs e)
@@ -64,19 +101,19 @@ namespace AlertaMed
         private void button2_Click(object sender, EventArgs e)
         {
             // ---- validações básicas ----
-            if (string.IsNullOrWhiteSpace(TxTbxNP.Text) || TxTbxNP.Text == "Digite o nome do paciente")
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text == "Digite o nome do paciente")
             {
                 MessageBox.Show("Digite o nome do paciente.");
                 return;
             }
 
-            if (!int.TryParse(textBox2.Text, out int idade))
+            if (!int.TryParse(textBox3.Text, out int idade))
             {
                 MessageBox.Show("Digite uma idade válida.");
                 return;
             }
 
-            if (!decimal.TryParse(textBox4.Text, out decimal peso))
+            if (!decimal.TryParse(textBox11.Text, out decimal peso))
             {
                 MessageBox.Show("Digite um peso válido.");
                 return;
@@ -98,9 +135,9 @@ namespace AlertaMed
             // ---- monta o objeto ----
             var paciente = new Paciente
             {
-                Nome = TxTbxNP.Text,
+                Nome = textBox1.Text,
                 Idade = idade,
-                Genero = comboBox1.SelectedItem?.ToString() ?? comboBox1.Text,
+                Genero = comboBox2.SelectedItem?.ToString() ?? comboBox2.Text,
                 Peso = peso,
                 EstadoCivil = estadoCivil,
                 TemFilhos = temFilhos,
@@ -124,7 +161,9 @@ namespace AlertaMed
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
+                return; // não navega pro Form13 se o salvamento falhou
             }
+
             Form13 form13 = new Form13();
             form13.StartPosition = FormStartPosition.Manual;
             form13.Location = this.Location;
@@ -155,9 +194,9 @@ namespace AlertaMed
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            if (TxTbxNP.Text == "Digite o nome do paciente")
+            if (textBox1.Text == "Digite o nome do paciente")
             {
-                TxTbxNP.Text = "";
+                textBox1.Text = "";
             }
         }
 
@@ -168,7 +207,7 @@ namespace AlertaMed
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "Digite a idade do paciente")
+            if (textBox3.Text == "Idade")
             {
                 textBox3.Text = "";
             }
@@ -181,7 +220,7 @@ namespace AlertaMed
 
         private void textBox11_Click(object sender, EventArgs e)
         {
-            if (textBox11.Text == "Digite o peso do paciente")
+            if (textBox11.Text == "Peso")
             {
                 textBox11.Text = "";
             }
@@ -226,9 +265,9 @@ namespace AlertaMed
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxTbxNP.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                TxTbxNP.Text = "Digite o nome do paciente";
+                textBox1.Text = "Digite o nome do paciente";
             }
         }
 

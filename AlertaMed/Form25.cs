@@ -69,7 +69,6 @@ namespace AlertaMed
         private void button6_Leave(object sender, EventArgs e)
         {
             button6.Image = Properties.Resources.botao_voltar_tela_perfil_normal;
-           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -82,8 +81,27 @@ namespace AlertaMed
             this.Close();
         }
 
+        // Perfil da Instituição: só o dono pode editar
         private void button3_Click(object sender, EventArgs e)
         {
+            bool ehDono;
+            try
+            {
+                ehDono = Sessao.EhDono();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível verificar seu acesso:\n\n" + ex.Message);
+                return;
+            }
+
+            if (!ehDono)
+            {
+                MessageBox.Show("Apenas o dono da instituição pode editar as informações dela.",
+                                "Acesso restrito", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Form26 form26 = new Form26();
             form26.StartPosition = FormStartPosition.Manual;
             form26.Location = this.Location;
@@ -92,6 +110,7 @@ namespace AlertaMed
             this.Close();
         }
 
+        // Perfil Profissional
         private void button1_Click(object sender, EventArgs e)
         {
             Form24 form24 = new Form24();
@@ -99,6 +118,16 @@ namespace AlertaMed
             form24.Location = this.Location;
             form24.Size = this.Size;
             form24.Show();
+            this.Close();
+        }
+        // Seta do canto superior direito
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form15 form15 = new Form15();
+            form15.StartPosition = FormStartPosition.Manual;
+            form15.Location = this.Location;
+            form15.Size = this.Size;
+            form15.Show();
             this.Close();
         }
 

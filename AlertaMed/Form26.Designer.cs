@@ -125,7 +125,7 @@
             this.textBox1.TabIndex = 129;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Ex: Hospital, Casa de Repouso";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
@@ -183,7 +183,7 @@
             this.textBox5.Size = new System.Drawing.Size(532, 18);
             this.textBox5.TabIndex = 133;
             this.textBox5.TabStop = false;
-            this.textBox5.Text = "Digite o e-mail ";
+            this.textBox5.Text = "Digite o e-mail";
             this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
             this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
@@ -202,6 +202,7 @@
             this.button6.TabIndex = 134;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.Enter += new System.EventHandler(this.button6_Enter);
             this.button6.Leave += new System.EventHandler(this.button6_Leave);
             this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);
@@ -226,6 +227,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form26";
             this.Text = "AlertaMed";
+            this.Load += new System.EventHandler(this.Form26_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

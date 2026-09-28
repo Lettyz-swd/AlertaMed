@@ -2,15 +2,8 @@
 {
     partial class Form18
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form18));
@@ -78,6 +67,8 @@
             this.textBox9.Size = new System.Drawing.Size(161, 26);
             this.textBox9.TabIndex = 91;
             this.textBox9.TabStop = false;
+            this.textBox9.Enter += new System.EventHandler(this.HorarioCampo_Enter);
+            this.textBox9.Leave += new System.EventHandler(this.HorarioCampo_Leave);
             // 
             // textBox8
             // 
@@ -90,6 +81,8 @@
             this.textBox8.Size = new System.Drawing.Size(161, 26);
             this.textBox8.TabIndex = 90;
             this.textBox8.TabStop = false;
+            this.textBox8.Enter += new System.EventHandler(this.HorarioCampo_Enter);
+            this.textBox8.Leave += new System.EventHandler(this.HorarioCampo_Leave);
             // 
             // textBox7
             // 
@@ -102,6 +95,8 @@
             this.textBox7.Size = new System.Drawing.Size(161, 26);
             this.textBox7.TabIndex = 89;
             this.textBox7.TabStop = false;
+            this.textBox7.Enter += new System.EventHandler(this.HorarioCampo_Enter);
+            this.textBox7.Leave += new System.EventHandler(this.HorarioCampo_Leave);
             // 
             // textBox6
             // 
@@ -127,7 +122,8 @@
             this.textBox5.TabIndex = 87;
             this.textBox5.TabStop = false;
             this.textBox5.Text = "Digite as doses";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox4
             // 
@@ -153,7 +149,8 @@
             this.textBox3.TabIndex = 79;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite os remédios";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox2
             // 
@@ -167,8 +164,7 @@
             this.textBox2.TabIndex = 78;
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o nome do paciente";
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click_1);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // comboBox1
@@ -184,7 +180,6 @@
             this.comboBox1.Size = new System.Drawing.Size(519, 28);
             this.comboBox1.TabIndex = 77;
             this.comboBox1.TabStop = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button10
             // 
@@ -222,6 +217,7 @@
             this.button9.TabIndex = 97;
             this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // lixeira5
             // 
@@ -238,6 +234,7 @@
             this.lixeira5.TabIndex = 96;
             this.lixeira5.TabStop = false;
             this.lixeira5.UseVisualStyleBackColor = false;
+            this.lixeira5.Click += new System.EventHandler(this.lixeira5_Click);
             // 
             // button8
             // 
@@ -254,6 +251,7 @@
             this.button8.TabIndex = 95;
             this.button8.TabStop = false;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -270,6 +268,7 @@
             this.button7.TabIndex = 94;
             this.button7.TabStop = false;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // lixeira
             // 
@@ -286,6 +285,7 @@
             this.lixeira.TabIndex = 93;
             this.lixeira.TabStop = false;
             this.lixeira.UseVisualStyleBackColor = false;
+            this.lixeira.Click += new System.EventHandler(this.lixeira_Click);
             // 
             // button6
             // 
@@ -299,6 +299,7 @@
             this.button6.TabIndex = 85;
             this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.Enter += new System.EventHandler(this.button6_Enter);
             this.button6.Leave += new System.EventHandler(this.button6_Leave);
             this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);
@@ -316,7 +317,7 @@
             this.button5.TabIndex = 83;
             this.button5.TabStop = false;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.Enter += new System.EventHandler(this.button5_Enter);
             this.button5.Leave += new System.EventHandler(this.button5_Leave);
             this.button5.MouseEnter += new System.EventHandler(this.button5_Enter);
@@ -334,6 +335,7 @@
             this.button4.TabIndex = 82;
             this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.Enter += new System.EventHandler(this.button4_Enter);
             this.button4.Leave += new System.EventHandler(this.button4_Leave);
             this.button4.MouseEnter += new System.EventHandler(this.button4_Enter);
@@ -351,6 +353,7 @@
             this.button3.TabIndex = 81;
             this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.Enter += new System.EventHandler(this.button3_Enter);
             this.button3.Leave += new System.EventHandler(this.button3_Leave);
             this.button3.MouseEnter += new System.EventHandler(this.button3_Enter);
@@ -368,7 +371,7 @@
             this.button2.TabIndex = 80;
             this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.Enter += new System.EventHandler(this.button2_Enter);
             this.button2.Leave += new System.EventHandler(this.button2_Leave);
             this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
@@ -386,11 +389,11 @@
             this.button1.TabIndex = 76;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            this.button1.Enter += new System.EventHandler(this.button1_Enter_1);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave_1);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter_1);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
             // 
             // pictureBox1
             // 
