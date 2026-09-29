@@ -142,7 +142,6 @@ namespace AlertaMed
             Form25 form25 = new Form25();
             form25.StartPosition = FormStartPosition.Manual;
             form25.Location = this.Location;
-            form25.Size = this.Size;
             form25.Show();
             this.Close();
         }
@@ -153,7 +152,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
@@ -164,7 +162,6 @@ namespace AlertaMed
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
-            form16.Size = this.Size;
             form16.Show();
             this.Close();
         }
@@ -226,7 +223,6 @@ namespace AlertaMed
             Form25 form25 = new Form25();
             form25.StartPosition = FormStartPosition.Manual;
             form25.Location = this.Location;
-            form25.Size = this.Size;
             form25.Show();
             this.Close();
         }

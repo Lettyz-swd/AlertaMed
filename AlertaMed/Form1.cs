@@ -15,9 +15,6 @@ namespace AlertaMed
         public Form1()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
             GerenciadorAlarmes.Iniciar();
         }
 
@@ -27,8 +24,6 @@ namespace AlertaMed
 
             form10.StartPosition = FormStartPosition.Manual;
             form10.Location = this.Location;
-            form10.Size = this.Size;
-
             form10.Show();
             this.Hide();
         }
@@ -43,7 +38,6 @@ namespace AlertaMed
             Form3 form3 = new Form3();
             form3.StartPosition = FormStartPosition.Manual;
             form3.Location = this.Location;
-            form3.Size = this.Size;
             form3.Show();
             this.Hide();
         }
@@ -121,7 +115,6 @@ namespace AlertaMed
             Form5 form5 = new Form5();
             form5.StartPosition = FormStartPosition.Manual;
             form5.Location = this.Location;
-            form5.Size = this.Size;
             form5.Show();
             this.Hide();
 

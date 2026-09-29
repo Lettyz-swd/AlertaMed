@@ -25,7 +25,6 @@ namespace AlertaMed
             Form2 form2 = new Form2();
             form2.StartPosition = FormStartPosition.Manual;
             form2.Location = this.Location;
-            form2.Size = this.Size;
             form2.Show();
             this.Hide();
         }
@@ -35,7 +34,6 @@ namespace AlertaMed
             Form8 form8 = new Form8();
             form8.StartPosition = FormStartPosition.Manual;
             form8.Location = this.Location;
-            form8.Size = this.Size;
             form8.Show();
             this.Hide();
         }
@@ -73,7 +71,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
@@ -87,6 +84,11 @@ namespace AlertaMed
         private void button2_Leave(object sender, EventArgs e)
         {
             button2.Image = Properties.Resources.botão_voltar_normal_na_tela_opc_de_inst;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

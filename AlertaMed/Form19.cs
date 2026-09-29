@@ -23,7 +23,6 @@ namespace AlertaMed
         {
             destino.StartPosition = FormStartPosition.Manual;
             destino.Location = this.Location;
-            destino.Size = this.Size;
             destino.Show();
             this.Close();
         }
