@@ -303,6 +303,16 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_contas_tela_de_config {
+            get {
+                object obj = ResourceManager.GetObject("botao contas tela de config", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botão_continuar_normal {
             get {
                 object obj = ResourceManager.GetObject("botão continuar normal", resourceCulture);
@@ -686,6 +696,16 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap botão_sair {
             get {
                 object obj = ResourceManager.GetObject("botão sair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_sair_da_conta_tela_de_config {
+            get {
+                object obj = ResourceManager.GetObject("botao sair da conta tela de config", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1176,6 +1196,26 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap Personalizar_perfil_Gerente_instituiçao_bt_voltar_selecionado1 {
             get {
                 object obj = ResourceManager.GetObject("Personalizar perfil Gerente instituiçao bt voltar selecionado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quer_saber_mais_sobre_nosso_projeto {
+            get {
+                object obj = ResourceManager.GetObject("quer saber mais sobre nosso projeto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quer_saber_mais_sobre_nosso_projeto2 {
+            get {
+                object obj = ResourceManager.GetObject("quer saber mais sobre nosso projeto2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

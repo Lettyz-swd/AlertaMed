@@ -63,11 +63,6 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_configurações_normal;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             bool temDados =
@@ -97,11 +92,6 @@ namespace AlertaMed
             form5.Location = this.Location;
             form5.Show();
             this.Close();
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
 
         }
 
@@ -149,9 +139,6 @@ namespace AlertaMed
                 textBox3.Focus();
                 return;
             }
-
-            // Confere agora se já existe instituição com esse e-mail
-            // (assim a pessoa descobre antes de preencher os dados do dono)
             try
             {
                 using (NpgsqlConnection conn = Banco.Abrir())
@@ -173,8 +160,6 @@ namespace AlertaMed
                 MessageBox.Show("Não foi possível verificar o e-mail:\n\n" + ex.Message);
                 return;
             }
-
-            // Guarda os dados para o Form4 gravar quando o dono se cadastrar
             CadastroInstituicao.Nome = nome;
             CadastroInstituicao.Tipo = comboBox1.Text.Trim();
             CadastroInstituicao.Email = email;
@@ -226,16 +211,6 @@ namespace AlertaMed
             button3.Image = Properties.Resources.botão_configurações_normal;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //configurar 
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            //configurar 
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -249,16 +224,6 @@ namespace AlertaMed
                 textBox3.PasswordChar = '\0';
                 button5.Image = Properties.Resources.botão_olho_;
             }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -298,16 +263,6 @@ namespace AlertaMed
             pictureBox1.Image = Properties.Resources.Tela_botão_continuar_normal;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            //configurar 
-        }
-
         private void textBox1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "Digite o Nome")
@@ -334,11 +289,6 @@ namespace AlertaMed
 
             }
         }
-
-        // Métodos abaixo: o Designer liga o evento "Leave" (quando o cursor
-        // sai da caixa) a eles. Ficam vazios por enquanto - podem receber
-        // validação depois, se quiser (ex.: avisar se o e-mail está errado
-        // assim que a pessoa sai do campo).
         private void textBox1_Leave(object sender, EventArgs e)
         {
 

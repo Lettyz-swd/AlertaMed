@@ -28,11 +28,6 @@ namespace AlertaMed
             this.Hide();
         }
 
-        private void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
@@ -40,31 +35,6 @@ namespace AlertaMed
             form3.Location = this.Location;
             form3.Show();
             this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Enter(object sender, EventArgs e)
@@ -118,79 +88,6 @@ namespace AlertaMed
             form5.Show();
             this.Hide();
 
-        }
-
-        private void button1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Leave_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Enter_2(object sender, EventArgs e)
-        {
-            button3.Image = Properties.Resources.botão_sobre;
-            button4.Image = Properties.Resources.botão_instituição_2;
-            button2.Image = Properties.Resources.botão_uso_pessoal;
-
-            pictureBox1.Image = Properties.Resources.tela_inicio_nova_botão_profissional_selecionado;
-        }
-
-        private void button1_Leave_2(object sender, EventArgs e)
-        {
-            button3.Image = Properties.Resources.botão_sobre;
-            button4.Image = Properties.Resources.botão_instituição_2;
-            button2.Image = Properties.Resources.botão_uso_pessoal;
-
-            pictureBox1.Image = Properties.Resources.AlertaMed_Design1;
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Form16 form16 = new Form16();
-
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Size = this.Size;
-
-            form16.Show();
-            this.Close();
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            Form16 form12 = new Form16();
-            form12.StartPosition = FormStartPosition.Manual;
-            form12.Location = this.Location;
-            form12.Show();
-            this.Hide();
-
-        }
-
-        private void button5_Click_2(object sender, EventArgs e)
-        {
-            Form26 form12 = new Form26();
-            form12.StartPosition = FormStartPosition.Manual;
-            form12.Location = this.Location;
-            form12.Show();
-            this.Hide();
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            Form18 form12 = new Form18();
-            form12.StartPosition = FormStartPosition.Manual;
-            form12.Location = this.Location;
-            form12.Show();
-            this.Hide();
         }
     }
 }

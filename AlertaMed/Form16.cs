@@ -99,12 +99,14 @@ namespace AlertaMed
              MessageBoxButtons.YesNo,
               MessageBoxIcon.Warning);
 
-            if (resultado == DialogResult.No)
+            if (resultado == DialogResult.Yes)
             {
-                return;
+                Form19 form19 = new Form19();
+                form19.Show();
+                this.Hide();
             }
 
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -112,7 +114,24 @@ namespace AlertaMed
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show(
+             "Você realmente deseja sair da conta?",
+             "Sair da conta",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question);
+
+            if (resposta == DialogResult.Yes)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Hide();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

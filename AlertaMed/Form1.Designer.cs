@@ -101,9 +101,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1265, 698);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.button1_Enter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.button1_Leave);
             // 
             // Form1
             // 
