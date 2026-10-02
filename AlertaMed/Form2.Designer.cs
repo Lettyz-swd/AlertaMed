@@ -58,7 +58,6 @@ namespace AlertaMed
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Digite o Nome";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
@@ -74,7 +73,6 @@ namespace AlertaMed
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite o E-mail";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
@@ -90,7 +88,6 @@ namespace AlertaMed
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Digite a Senha";
             this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave_1);
             // 
             // comboBox1
@@ -111,7 +108,6 @@ namespace AlertaMed
             this.comboBox1.Size = new System.Drawing.Size(349, 29);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.TabStop = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button7
             // 
@@ -246,7 +242,6 @@ namespace AlertaMed
             this.pictureBox1.Size = new System.Drawing.Size(1280, 718);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form2
             // 

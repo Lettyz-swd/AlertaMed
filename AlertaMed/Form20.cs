@@ -20,6 +20,39 @@ namespace AlertaMed
             ConfigurarParNaoSim(checkBox7, checkBox10, textBox8, "Quais?");    // Doenças Respiratórias?
             ConfigurarParNaoSim(checkBox8, checkBox11, textBox9, "Quais?");    // Doenças Cardiovasculares?
             ConfigurarParNaoSim(checkBox9, checkBox12, textBox10, "Quais?");   // Alergias?
+
+            lixeira.Click += lixeira_Click;
+            lixeira2.Click += lixeira2_Click;
+            lixeira3.Click += lixeira3_Click;
+            lixeira4.Click += lixeira4_Click;
+            lixeira5.Click += lixeira5_Click;
+        }
+
+        // ================= Lixeiras: limpam o campo ao lado =================
+
+        private void lixeira_Click(object sender, EventArgs e)
+        {
+            textBox8.Text = "Quais?";
+        }
+
+        private void lixeira2_Click(object sender, EventArgs e)
+        {
+            textBox9.Text = "Quais?";
+        }
+
+        private void lixeira3_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = "Quais?";
+        }
+
+        private void lixeira4_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = "Digite informações extras";
+        }
+
+        private void lixeira5_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = "Digite suas anotações";
         }
 
         // Liga um par "Não"/"Sim" a um campo de detalhe: marcar "Não" trava o
@@ -167,7 +200,6 @@ namespace AlertaMed
             Form13 form13 = new Form13();
             form13.StartPosition = FormStartPosition.Manual;
             form13.Location = this.Location;
-            form13.Size = this.Size;
             form13.Show();
             this.Hide();
         }
@@ -177,7 +209,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
@@ -187,7 +218,6 @@ namespace AlertaMed
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
-            form16.Size = this.Size;
             form16.Show();
             this.Close();
         }
@@ -363,7 +393,11 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            return;
+            Form19 form19 = new Form19();
+            form19.StartPosition = FormStartPosition.Manual;
+            form19.Location = this.Location;
+            form19.Show();
+            this.Close();
         }
     }
 }

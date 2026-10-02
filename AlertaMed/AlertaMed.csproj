@@ -1011,5 +1011,17 @@
   <ItemGroup>
     <None Include="Resources\Tela perfil instituiçao.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao sair da conta tela de config.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao contas tela de config.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quer saber mais sobre nosso projeto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quer saber mais sobre nosso projeto2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

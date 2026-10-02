@@ -488,7 +488,7 @@
             this.lixeira.TabIndex = 68;
             this.lixeira.TabStop = false;
             this.lixeira.UseVisualStyleBackColor = false;
-            this.lixeira.Click += new System.EventHandler(this.lixeira_Click_1);
+            this.lixeira.Click += new System.EventHandler(this.lixeira_Click);
             // 
             // button1
             // 

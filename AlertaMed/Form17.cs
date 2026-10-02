@@ -23,7 +23,6 @@ namespace AlertaMed
             Form15 form15 = new Form15();
             form15.StartPosition = FormStartPosition.Manual;
             form15.Location = this.Location;
-            form15.Size = this.Size;
             form15.Show();
             this.Close();
 
@@ -34,9 +33,13 @@ namespace AlertaMed
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
-            form16.Size = this.Size;
             form16.Show();
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
