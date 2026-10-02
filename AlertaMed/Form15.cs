@@ -1,0 +1,154 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace AlertaMed
+{
+    public partial class Form15 : Form
+    {
+        public Form15()
+        {
+            //design configurado
+            InitializeComponent();
+        }
+
+        private void Form15_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form25 form25 = new Form25();
+            form25.StartPosition = FormStartPosition.Manual;
+            form25.Location = this.Location;
+            form25.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Enter(object sender, EventArgs e)
+        {
+            button4.Image = Properties.Resources.botão_inicio_2;
+        }
+
+        private void button4_Leave(object sender, EventArgs e)
+        {
+            button4.Image = Properties.Resources.botão_inicio_normal;
+        }
+
+        private void button5_Enter(object sender, EventArgs e)
+        {
+            button5.Image = Properties.Resources.botão_configurações;
+        }
+
+        private void button5_Leave(object sender, EventArgs e)
+        {
+            button5.Image = Properties.Resources.botão_configurações_normal;
+        }
+
+        private void button6_Enter(object sender, EventArgs e)
+        {
+            button6.Image = Properties.Resources.botão_voltar_cadastro_selecionado;
+        }
+
+        private void button6_Leave(object sender, EventArgs e)
+        {
+            button6.Image = Properties.Resources.botão_voltar_cadastro;
+        }
+
+        private void button1_Enter(object sender, EventArgs e)
+        {
+            button1.Image = Properties.Resources.botao_selecionar_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova_bt_selecionar_cadastro_clicado;
+        }
+
+        private void button1_Leave(object sender, EventArgs e)
+        {
+            button1.Image = Properties.Resources.botao_selecionar_normal;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova;
+        }
+
+        private void button3_Enter(object sender, EventArgs e)
+        {
+            button3.Image = Properties.Resources.botao_selecionar_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova_bt_selecionar_perfil_clicado1;
+        }
+
+        private void button3_Leave(object sender, EventArgs e)
+        {
+            button3.Image = Properties.Resources.botao_selecionar_normal;
+            pictureBox1.Image = Properties.Resources.Tela_inicial_2_instituiçao_nova;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Enter_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Leave_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.StartPosition = FormStartPosition.Manual;
+            form1.Location = this.Location;
+            form1.Show();
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(); 
+            form12.StartPosition = FormStartPosition.Manual;
+            form12.Location = this.Location;
+            form12.Show();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            return;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form21 form21 = new Form21();
+            form21.StartPosition = FormStartPosition.Manual;
+            form21.Location = this.Location;
+            form21.Show();
+            this.Close();
+        }
+    }
+}
