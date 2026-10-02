@@ -661,9 +661,5 @@ namespace AlertaMed
             this.Close();
         }
 
-        private void lixeira_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
