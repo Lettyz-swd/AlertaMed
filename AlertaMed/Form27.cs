@@ -73,5 +73,10 @@ namespace AlertaMed
             somAlarme.Stop();
             this.Close();
         }
+
+        private void Form27_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
