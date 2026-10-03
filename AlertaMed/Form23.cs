@@ -131,11 +131,8 @@ namespace AlertaMed
         // Configurações
         private void button10_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide();
         }
 
         // Seta do canto: volta para a tela de uso pessoal (antes ia para o Form25, da instituição)

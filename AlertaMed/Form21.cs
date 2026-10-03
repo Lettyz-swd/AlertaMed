@@ -12,6 +12,15 @@ namespace AlertaMed
         private TextBox[] colDoses;
         private TextBox[] colHorarios;
 
+        // tela de onde o usuário veio (para o botão Voltar)
+        private readonly Form _telaAnterior;
+
+        // Use este nos outros forms: new Form21(this)
+        public Form21(Form telaAnterior) : this()
+        {
+            _telaAnterior = telaAnterior;
+        }
+
         public Form21()
         {
             InitializeComponent();
@@ -126,11 +135,8 @@ namespace AlertaMed
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -144,7 +150,14 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            return;
+            //botao voltar
+            // volta para quem abriu o Form21; se ninguém informou, usa o Form15
+            Form destino = _telaAnterior ?? new Form15();
+
+            destino.StartPosition = FormStartPosition.Manual;
+            destino.Location = this.Location;
+            destino.Show();
+            this.Close();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace AlertaMed
+﻿using System;
+
+namespace AlertaMed
 {
     partial class Form18
     {
@@ -403,6 +405,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(1280, 724);
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form18
             // 
@@ -440,6 +443,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

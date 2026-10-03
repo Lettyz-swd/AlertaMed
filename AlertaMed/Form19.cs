@@ -106,7 +106,8 @@ namespace AlertaMed
         // Configurações
         private void button5_Click(object sender, EventArgs e)
         {
-            Abrir(new Form16());
+            new Form16(this).Show();
+            this.Hide();
         }
 
         // Voltar (antes não fazia nada)

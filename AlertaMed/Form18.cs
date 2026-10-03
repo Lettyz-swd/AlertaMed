@@ -45,17 +45,16 @@ namespace AlertaMed
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide(); ;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // TODO: troque pela tela de onde o usuário costuma chegar até aqui,
-            // caso não seja simplesmente fechar/voltar a tela anterior.
+            Form12 form12 = new Form12();
+            form12.StartPosition = FormStartPosition.Manual;
+            form12.Location = this.Location;
+            form12.Show();
             this.Close();
         }
 
@@ -396,5 +395,6 @@ namespace AlertaMed
             form21.Show();
             this.Close();
         }
+
     }
 }

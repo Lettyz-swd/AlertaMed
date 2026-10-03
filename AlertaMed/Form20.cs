@@ -215,11 +215,8 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide();
         }
 
         private void textBox1_Click(object sender, EventArgs e)

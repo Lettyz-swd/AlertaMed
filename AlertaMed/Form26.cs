@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Npgsql;
+using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace AlertaMed
 {
@@ -164,11 +165,8 @@ namespace AlertaMed
         // Configurações
         private void button5_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide();
         }
 
         // Início

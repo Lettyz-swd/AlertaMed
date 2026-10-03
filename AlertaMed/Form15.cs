@@ -11,10 +11,19 @@ namespace AlertaMed
 {
     public partial class Form15 : Form
     {
+        // tela de onde o usuário veio (para o botão Voltar)
+        private readonly Form _telaAnterior;
+
         public Form15()
         {
             //design configurado
             InitializeComponent();
+        }
+
+        // Use este nos outros forms: new Form15(this)
+        public Form15(Form telaAnterior) : this()
+        {
+            _telaAnterior = telaAnterior;
         }
 
         private void Form15_Load(object sender, EventArgs e)
@@ -97,11 +106,8 @@ namespace AlertaMed
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form16 form16 = new Form16();
-            form16.StartPosition = FormStartPosition.Manual;
-            form16.Location = this.Location;
-            form16.Show();
-            this.Close();
+            new Form16(this).Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -111,12 +117,12 @@ namespace AlertaMed
 
         private void button3_Enter_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button3_Leave_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -130,7 +136,7 @@ namespace AlertaMed
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12(); 
+            Form12 form12 = new Form12();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;
             form12.Show();
@@ -139,7 +145,14 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            return;
+            //botao voltar
+            // volta para quem abriu o Form15; se ninguém informou, usa o Form1
+            Form destino = _telaAnterior ?? new Form1();
+
+            destino.StartPosition = FormStartPosition.Manual;
+            destino.Location = this.Location;
+            destino.Show();
+            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
