@@ -25,7 +25,8 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            textBox3.PasswordChar = '●';
+            button5.Image = Properties.Resources.botão_olho_riscado;
 
             // Tipo da instituição: só escolher, não digitar
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -297,6 +298,11 @@ namespace AlertaMed
         }
 
         private void textBox3_Leave_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

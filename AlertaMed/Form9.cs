@@ -26,7 +26,8 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            textBox3.PasswordChar = '●';
+            button6.Image = Properties.Resources.botão_olho_riscado;
 
         }
 

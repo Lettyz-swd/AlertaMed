@@ -22,7 +22,9 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            
+            txtSenha.PasswordChar = '●';
+            button6.Image = Properties.Resources.botão_olho_riscado;
+
         }
 
         private bool Vazio(string texto, string placeholder)
@@ -187,10 +189,10 @@ namespace AlertaMed
             {
                 MessageBox.Show(ex.Message);
             }
-            Form19 form19 = new Form19();
-            form19.StartPosition = FormStartPosition.Manual;
-            form19.Location = this.Location;
-            form19.Show();
+            Form11 form11 = new Form11();
+            form11.StartPosition = FormStartPosition.Manual;
+            form11.Location = this.Location;
+            form11.Show();
             this.Close();
         }
 

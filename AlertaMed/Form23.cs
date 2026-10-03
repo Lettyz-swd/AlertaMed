@@ -100,20 +100,25 @@ namespace AlertaMed
 
         private void button1_Enter(object sender, EventArgs e)
         {
-           
+            button1.Image = Properties.Resources.botao_concluir_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_personalizar_perfil_uso_pessoal_bt_selecionado;
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
-            
+            button1.Image = Properties.Resources.botao_concluir_normal;
+            pictureBox1.Image = Properties.Resources.Tela_personalizar_perfil_uso_pessoal_normal;
         }
 
         private void button3_Enter(object sender, EventArgs e)
         {
+            button3.Image = Properties.Resources.botao_voltar_redondo_selecionado1;
+
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
+            button3.Image = Properties.Resources.botao_voltar_redondo_normal1;
         }
 
         // ---------- Navegação ----------
@@ -237,6 +242,16 @@ namespace AlertaMed
         private void textBox3_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox3.Text)) textBox3.Text = PH_BIO;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

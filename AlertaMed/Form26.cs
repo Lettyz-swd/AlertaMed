@@ -327,5 +327,10 @@ namespace AlertaMed
         {
             if (string.IsNullOrWhiteSpace(textBox5.Text)) textBox5.Text = PH_EMAIL;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

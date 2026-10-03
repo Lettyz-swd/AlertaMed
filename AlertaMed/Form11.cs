@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AlertaMed
 {
@@ -20,8 +21,8 @@ namespace AlertaMed
         public Form11()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            txtSenha.PasswordChar = '●';
+            button6.Image = Properties.Resources.botão_olho_riscado;
         }
 
         private bool Vazio(string texto, string placeholder)

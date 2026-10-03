@@ -40,9 +40,7 @@ namespace AlertaMed
         public Form8()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
+            this.MaximizeBox = false; 
             // E-mail da instituição: só leitura, mantendo a cor original da caixa
             Color corFundo = textBox4.BackColor;
             textBox4.ReadOnly = true;

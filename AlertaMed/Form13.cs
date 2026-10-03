@@ -13,8 +13,6 @@ namespace AlertaMed
 {
     public partial class Form13 : Form
     {
-        
-
         private List<string> listaRemedios = new List<string>();
         private List<string> listaDoses = new List<string>();
         private List<string> listaHorarios = new List<string>();
