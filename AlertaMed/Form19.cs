@@ -112,7 +112,7 @@ namespace AlertaMed
         // Voltar (antes não fazia nada)
         private void button6_Click(object sender, EventArgs e)
         {
-            Abrir(new Form5());
+            Abrir(new Form1());
         }
 
         // Ver histórico

@@ -193,6 +193,12 @@
     <Compile Include="Form26.Designer.cs">
       <DependentUpon>Form26.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form27.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form27.Designer.cs">
+      <DependentUpon>Form27.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,11 @@
     <Compile Include="Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Configuracoes.cs" />
     <Compile Include="Senha.cs" />
     <Compile Include="Sessao.cs" />
@@ -299,6 +310,9 @@
     <EmbeddedResource Include="Form26.resx">
       <DependentUpon>Form26.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form27.resx">
+      <DependentUpon>Form27.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,14 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -1022,6 +1031,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\quer saber mais sobre nosso projeto2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. DO REMÉDIO INSTITUIÇÃO .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. DO REMÉDIO INSTITUIÇÃO  %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2026-10-02 211450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

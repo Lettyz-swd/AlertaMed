@@ -19,7 +19,7 @@ namespace AlertaMed.Properties {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,15 @@ namespace AlertaMed.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream alarme_katseye {
+            get {
+                return ResourceManager.GetStream("alarme_katseye", resourceCulture);
             }
         }
         
@@ -1133,6 +1142,56 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2026_10_02_211450 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2026-10-02 211450", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap msg_Deseja_voltar_v1 {
             get {
                 object obj = ResourceManager.GetObject("msg Deseja voltar v1", resourceCulture);
@@ -1183,6 +1242,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NOTIFC__DO_REMÉDIO_INSTITUIÇÃO_ {
+            get {
+                object obj = ResourceManager.GetObject("NOTIFC. DO REMÉDIO INSTITUIÇÃO ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NOTIFC__DO_REMÉDIO_INSTITUIÇÃO___1_ {
+            get {
+                object obj = ResourceManager.GetObject("NOTIFC. DO REMÉDIO INSTITUIÇÃO  (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Personalizar_perfil_Gerente_instituiçao_bt_voltar_selecionado {
             get {
                 object obj = ResourceManager.GetObject("Personalizar perfil Gerente instituiçao bt voltar selecionado", resourceCulture);
@@ -1217,6 +1296,15 @@ namespace AlertaMed.Properties {
             get {
                 object obj = ResourceManager.GetObject("quer saber mais sobre nosso projeto2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream som_alarme {
+            get {
+                return ResourceManager.GetStream("som_alarme", resourceCulture);
             }
         }
         
@@ -1523,9 +1611,19 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tela_configurações {
+        internal static System.Drawing.Bitmap Tela_Configurações {
             get {
-                object obj = ResourceManager.GetObject("Tela configurações", resourceCulture);
+                object obj = ResourceManager.GetObject("Tela Configurações", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela_Configurações1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela Configurações1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
