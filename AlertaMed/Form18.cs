@@ -396,5 +396,9 @@ namespace AlertaMed
             this.Close();
         }
 
+        private void textBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

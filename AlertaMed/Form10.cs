@@ -22,7 +22,7 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
         private bool Vazio(string texto, string placeholder)

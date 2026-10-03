@@ -97,6 +97,7 @@ namespace AlertaMed
             this.textBox7.Size = new System.Drawing.Size(161, 26);
             this.textBox7.TabIndex = 89;
             this.textBox7.TabStop = false;
+            this.textBox7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textBox7_MaskInputRejected);
             this.textBox7.Enter += new System.EventHandler(this.HorarioCampo_Enter);
             this.textBox7.Leave += new System.EventHandler(this.HorarioCampo_Leave);
             // 

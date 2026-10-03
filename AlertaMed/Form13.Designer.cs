@@ -33,9 +33,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -50,6 +47,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox9 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.textBox3.Size = new System.Drawing.Size(554, 27);
             this.textBox3.TabIndex = 7;
             this.textBox3.TabStop = false;
-            this.textBox3.Text = "Digite os remédios";
+            this.textBox3.Text = "Digite o remédio";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
@@ -93,7 +93,7 @@
             this.textBox5.Size = new System.Drawing.Size(559, 27);
             this.textBox5.TabIndex = 63;
             this.textBox5.TabStop = false;
-            this.textBox5.Text = "Digite as doses";
+            this.textBox5.Text = "Digite a dose";
             this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
             this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
@@ -109,48 +109,6 @@
             this.textBox6.TabIndex = 64;
             this.textBox6.TabStop = false;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(219, 494);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 29);
-            this.textBox7.TabIndex = 65;
-            this.textBox7.TabStop = false;
-            this.textBox7.Text = "00:00";
-            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(436, 494);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(161, 29);
-            this.textBox8.TabIndex = 66;
-            this.textBox8.TabStop = false;
-            this.textBox8.Text = "00:00";
-            this.textBox8.Leave += new System.EventHandler(this.textBox8_Leave);
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(645, 496);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 29);
-            this.textBox9.TabIndex = 67;
-            this.textBox9.TabStop = false;
-            this.textBox9.Text = "00:00";
-            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox10
             // 
@@ -386,11 +344,50 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(217, 494);
+            this.textBox7.Mask = "00:00";
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(161, 26);
+            this.textBox7.TabIndex = 90;
+            this.textBox7.TabStop = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(429, 495);
+            this.textBox8.Mask = "00:00";
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(161, 26);
+            this.textBox8.TabIndex = 91;
+            this.textBox8.TabStop = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(644, 495);
+            this.textBox9.Mask = "00:00";
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(161, 26);
+            this.textBox9.TabIndex = 92;
+            this.textBox9.TabStop = false;
+            // 
             // Form13
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 715);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -398,9 +395,6 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.lixeira5);
             this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button6);
@@ -435,9 +429,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button lixeira5;
         private System.Windows.Forms.Button button9;
@@ -445,5 +436,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.MaskedTextBox textBox7;
+        private System.Windows.Forms.MaskedTextBox textBox8;
+        private System.Windows.Forms.MaskedTextBox textBox9;
     }
 }

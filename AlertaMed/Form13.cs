@@ -228,7 +228,7 @@ namespace AlertaMed
 
         private void button2_Enter(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_concluido_selecionado;
+            
             button2.Image = Properties.Resources.botao_cadastrar_preescrição_selecionado_2;
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_concluido_selecionado;
         }
@@ -333,7 +333,7 @@ namespace AlertaMed
         {
             ValidarHorario(textBox9);
         }
-        private bool ValidarHorario(TextBox campo)
+        private bool ValidarHorario(MaskedTextBox campo)
         {
             // Regex: exige exatamente HH:mm, com HH de 00 a 23 e mm de 00 a 59
             bool valido = System.Text.RegularExpressions.Regex.IsMatch(

@@ -5,7 +5,7 @@ namespace AlertaMed
     public static class Banco
     {
         public static string ConnString =
-            "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=alertamed";
+            "Host=localhost;Port=5432;Username=postgres;Password=pgadmin;Database=alertamed";
 
         public static NpgsqlConnection Abrir()
         {
