@@ -20,6 +20,42 @@ namespace AlertaMed
             ConfigurarParNaoSim(checkBox7, checkBox10, textBox8, "Quais?");    // Doenças Respiratórias?
             ConfigurarParNaoSim(checkBox8, checkBox11, textBox9, "Quais?");    // Doenças Cardiovasculares?
             ConfigurarParNaoSim(checkBox9, checkBox12, textBox10, "Quais?");   // Alergias?
+<<<<<<< HEAD
+=======
+
+            lixeira.Click += lixeira_Click;
+            lixeira2.Click += lixeira2_Click;
+            lixeira3.Click += lixeira3_Click;
+            lixeira4.Click += lixeira4_Click;
+            lixeira5.Click += lixeira5_Click;
+        }
+
+        // ================= Lixeiras: limpam o campo ao lado =================
+
+        private void lixeira_Click(object sender, EventArgs e)
+        {
+            textBox8.Text = "Quais?";
+        }
+
+        private void lixeira2_Click(object sender, EventArgs e)
+        {
+            textBox9.Text = "Quais?";
+        }
+
+        private void lixeira3_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = "Quais?";
+        }
+
+        private void lixeira4_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = "Digite informações extras";
+        }
+
+        private void lixeira5_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = "Digite suas anotações";
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // Liga um par "Não"/"Sim" a um campo de detalhe: marcar "Não" trava o
@@ -182,11 +218,16 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
             form16.Show();
             this.Close();
+=======
+            new Form16(this).Show();
+            this.Hide();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -360,7 +401,15 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             return;
+=======
+            Form19 form19 = new Form19();
+            form19.StartPosition = FormStartPosition.Manual;
+            form19.Location = this.Location;
+            form19.Show();
+            this.Close();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
     }
 }

@@ -66,6 +66,10 @@
             this.textBox2.TabStop = false;
             this.textBox2.Text = "Digite seu genêro";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+<<<<<<< HEAD
+=======
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
@@ -172,6 +176,10 @@
             this.pictureBox1.Size = new System.Drawing.Size(1280, 720);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+<<<<<<< HEAD
+=======
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             // 
             // Form23
             // 

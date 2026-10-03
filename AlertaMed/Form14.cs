@@ -13,16 +13,27 @@ namespace AlertaMed
     {
         public string textoGuardado { get; private set; } = "";
 
+        // tela de onde o usuário veio (para o botão Voltar)
+        private readonly Form _telaAnterior;
+
         // Construtor padrão (usado pelo Designer)
         public Form14()
         {
+            //design configurado
             InitializeComponent();
         }
 
-        // Novo construtor que recebe os valores do Form13
-        public Form14(string remedios, string doses1, string doses2, string nomePaciente)
+        // Use este nos outros forms: new Form14(this)
+        public Form14(Form telaAnterior) : this()
         {
-            InitializeComponent();
+            _telaAnterior = telaAnterior;
+        }
+
+        // Construtor que recebe os valores do Form13 (e, opcionalmente, a tela anterior)
+        public Form14(string remedios, string doses1, string doses2, string nomePaciente, Form telaAnterior = null)
+            : this()
+        {
+            _telaAnterior = telaAnterior;
 
             // Atribua cada string recebida ao TextBox correto no Form14
             textBox1.Text = nomePaciente;
@@ -47,19 +58,18 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -117,7 +127,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
@@ -125,12 +134,33 @@ namespace AlertaMed
         private void button6_Click(object sender, EventArgs e)
         {
             //botao voltar
-            Form15 form15 = new Form15();
-            form15.StartPosition = FormStartPosition.Manual;
-            form15.Location = this.Location;
-            form15.Size = this.Size;
-            form15.Show();
+            // volta para quem abriu o Form14 (Form13, Form19...); se ninguém informou, usa o Form19
+            Form destino = _telaAnterior ?? new Form19();
+
+            destino.StartPosition = FormStartPosition.Manual;
+            destino.Location = this.Location;
+            destino.Show();
+            this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form22 form22 = new Form22();
+            form22.StartPosition = FormStartPosition.Manual;
+            form22.Location = this.Location;
+            form22.Show();
             this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new Form16(this).Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

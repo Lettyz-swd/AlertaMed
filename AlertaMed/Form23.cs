@@ -100,20 +100,39 @@ namespace AlertaMed
 
         private void button1_Enter(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            button1.Image = Properties.Resources.botao_concluir_selecionado;
+            pictureBox1.Image = Properties.Resources.Tela_personalizar_perfil_uso_pessoal_bt_selecionado;
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            button1.Image = Properties.Resources.botao_concluir_normal;
+            pictureBox1.Image = Properties.Resources.Tela_personalizar_perfil_uso_pessoal_normal;
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         private void button3_Enter(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            button3.Image = Properties.Resources.botao_voltar_redondo_selecionado1;
+
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            button3.Image = Properties.Resources.botao_voltar_redondo_normal1;
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // ---------- Navegação ----------
@@ -131,11 +150,16 @@ namespace AlertaMed
         // Configurações
         private void button10_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
             form16.Show();
             this.Close();
+=======
+            new Form16(this).Show();
+            this.Hide();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // Seta do canto: volta para a tela de uso pessoal (antes ia para o Form25, da instituição)
@@ -241,5 +265,18 @@ namespace AlertaMed
         {
             if (string.IsNullOrWhiteSpace(textBox3.Text)) textBox3.Text = PH_BIO;
         }
+<<<<<<< HEAD
+=======
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
     }
 }

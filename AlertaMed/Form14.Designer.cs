@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form14));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -58,90 +53,13 @@
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::AlertaMed.Properties.Resources.botão_ok_voltar_a_tela_normal;
-            this.button2.Location = new System.Drawing.Point(234, 656);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(988, 33);
-            this.button2.TabIndex = 78;
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Enter += new System.EventHandler(this.button2_Enter);
-            this.button2.Leave += new System.EventHandler(this.button2_Leave);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
-            this.button6.Location = new System.Drawing.Point(3, 172);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(177, 31);
-            this.button6.TabIndex = 77;
-            this.button6.TabStop = false;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.Enter += new System.EventHandler(this.button6_Enter);
-            this.button6.Leave += new System.EventHandler(this.button6_Leave);
-            this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);
-            this.button6.MouseLeave += new System.EventHandler(this.button10_Leave);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = global::AlertaMed.Properties.Resources.botão_configurações_normal;
-            this.button10.Location = new System.Drawing.Point(4, 134);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(176, 36);
-            this.button10.TabIndex = 76;
-            this.button10.TabStop = false;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Enter += new System.EventHandler(this.button10_Enter);
-            this.button10.Leave += new System.EventHandler(this.button10_Leave);
-            this.button10.MouseEnter += new System.EventHandler(this.button10_Enter);
-            this.button10.MouseLeave += new System.EventHandler(this.button10_Leave);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
-            this.button1.Location = new System.Drawing.Point(2, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 46);
-            this.button1.TabIndex = 15;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_historico_prescrição_normal_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1280, 722);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -408,6 +326,91 @@
             this.textBox24.TabIndex = 102;
             this.textBox24.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::AlertaMed.Properties.Resources.botão_ok_voltar_a_tela_normal;
+            this.button2.Location = new System.Drawing.Point(234, 656);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(988, 33);
+            this.button2.TabIndex = 78;
+            this.button2.TabStop = false;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Enter += new System.EventHandler(this.button2_Enter);
+            this.button2.Leave += new System.EventHandler(this.button2_Leave);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
+            // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = global::AlertaMed.Properties.Resources.botão_voltar_cadastro;
+            this.button6.Location = new System.Drawing.Point(0, 172);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(183, 31);
+            this.button6.TabIndex = 77;
+            this.button6.TabStop = false;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Enter += new System.EventHandler(this.button6_Enter);
+            this.button6.Leave += new System.EventHandler(this.button6_Leave);
+            this.button6.MouseEnter += new System.EventHandler(this.button6_Enter);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_Leave);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::AlertaMed.Properties.Resources.botão_configurações_normal;
+            this.button10.Location = new System.Drawing.Point(-3, 134);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(187, 36);
+            this.button10.TabIndex = 76;
+            this.button10.TabStop = false;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Enter += new System.EventHandler(this.button10_Enter);
+            this.button10.Leave += new System.EventHandler(this.button10_Leave);
+            this.button10.MouseEnter += new System.EventHandler(this.button10_Enter);
+            this.button10.MouseLeave += new System.EventHandler(this.button10_Leave);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::AlertaMed.Properties.Resources.botão_inicio_normal;
+            this.button1.Location = new System.Drawing.Point(2, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 46);
+            this.button1.TabIndex = 15;
+            this.button1.TabStop = false;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_Enter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AlertaMed.Properties.Resources.Tela_historico_prescrição_normal_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1280, 722);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,7 +445,7 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form14";
             this.Text = "AlertaMed";

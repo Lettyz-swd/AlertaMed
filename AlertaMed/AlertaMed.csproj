@@ -42,9 +42,20 @@
       <HintPath>..\packages\Npgsql.4.1.14\lib\net461\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.DurableInstancing" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.AddIn.Contract" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -139,11 +150,65 @@
     <Compile Include="Form18.Designer.cs">
       <DependentUpon>Form18.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19.Designer.cs">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form20.Designer.cs">
+      <DependentUpon>Form20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form21.Designer.cs">
+      <DependentUpon>Form21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22.Designer.cs">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form23.Designer.cs">
+      <DependentUpon>Form23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form24.Designer.cs">
+      <DependentUpon>Form24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form25.Designer.cs">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form26.Designer.cs">
+      <DependentUpon>Form26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form27.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form27.Designer.cs">
+      <DependentUpon>Form27.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -187,8 +252,16 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciadorAlarmes.cs" />
+    <Compile Include="Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Configuracoes.cs" />
     <Compile Include="Senha.cs" />
     <Compile Include="Sessao.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -221,8 +294,35 @@
     <EmbeddedResource Include="Form18.resx">
       <DependentUpon>Form18.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form19.resx">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form20.resx">
+      <DependentUpon>Form20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form21.resx">
+      <DependentUpon>Form21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form22.resx">
+      <DependentUpon>Form22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form23.resx">
+      <DependentUpon>Form23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form24.resx">
+      <DependentUpon>Form24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form25.resx">
+      <DependentUpon>Form25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form26.resx">
+      <DependentUpon>Form26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form27.resx">
+      <DependentUpon>Form27.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -247,14 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -779,6 +874,204 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\botao voltar a tela inicial .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial uso pessoal bt selecionar perfil selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial uso pessoal selecionar prescrição selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial uso pessoal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao selecionar selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao selecionar normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao ver historico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt concluido selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt horarios selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt doses selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal bt remedio selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela cadastro prescrição uso pessoal normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela informaçoes salvas com sucesso normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela personalizar perfil uso pessoal normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao concluir selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao concluir normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt sobre selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt uso pessoal selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa bt instituiçao selecionado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial do programa normal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo selecionado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar redondo normal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela configurações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlertaMed Design1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt instituicao clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt uso pessoal clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial bt sobre clicado.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar perfil clicado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar cadastro clicado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial 2 instituiçao nova bt selecionar perfil clicado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personalizar perfil Gerente instituiçao bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Personalizar perfil Gerente instituiçao bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Personalizar perfil Gerente instituiçao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personalizar perfil Gerente instituiçao bt voltar selecionado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial perfil instituiçao bt voltar selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt instituiçao selecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt perfil selecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao nova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil selecionado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao voltar tela perfil selecionado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela inicial instituiçao bt instituiçao selecionar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela perfil instituiçao bt selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela perfil instituiçao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao sair da conta tela de config.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao contas tela de config.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quer saber mais sobre nosso projeto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quer saber mais sobre nosso projeto2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. DO REMÉDIO INSTITUIÇÃO .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. DO REMÉDIO INSTITUIÇÃO  %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de tela 2026-10-02 211450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela Configurações3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

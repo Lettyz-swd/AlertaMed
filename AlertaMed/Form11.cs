@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AlertaMed
 {
@@ -20,8 +21,8 @@ namespace AlertaMed
         public Form11()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            txtSenha.PasswordChar = '●';
+            button6.Image = Properties.Resources.botão_olho_riscado;
         }
 
         private bool Vazio(string texto, string placeholder)
@@ -35,8 +36,6 @@ namespace AlertaMed
 
             form10.StartPosition = FormStartPosition.Manual;
             form10.Location = this.Location;
-            form10.Size = this.Size;
-
             form10.Show();
             this.Close();
         }
@@ -47,8 +46,6 @@ namespace AlertaMed
 
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
-
             form1.Show();
             this.Hide();
         }
@@ -76,7 +73,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
@@ -198,15 +194,17 @@ namespace AlertaMed
             // tela.Size = this.Size;
             // tela.Show();
             // this.Close();
+            Form19 form19 = new Form19();
+            form19.StartPosition = FormStartPosition.Manual;
+            form19.Location = this.Location;
+            form19.Show();
+            this.Close();
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void txtEmail_Click(object sender, EventArgs e)
+        // Métodos abaixo: o Designer liga eventos das caixas txtEmail e
+        // txtSenha a eles. O "Click" segue o mesmo padrão das outras
+        // telas: apaga o texto de exemplo ao clicar.
+        private void txtEmail_Click_1(object sender, EventArgs e)
         {
             if (txtEmail.Text == PH_EMAIL)
             {
@@ -214,55 +212,38 @@ namespace AlertaMed
             }
         }
 
-        private void txtSenha_Click(object sender, EventArgs e)
-        {
-            if (txtSenha.Text == "Digite a Senha")
-            {
-                txtSenha.Clear();
-            }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txtEmail_Click_1(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "Digite seu E-mail")
-            {
-                txtEmail.Clear();
-            }
-        }
-
         private void txtEmail_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                txtEmail.Text = "Digite seu E-mail";
-            }
+
         }
 
         private void txtSenha_Click_1(object sender, EventArgs e)
         {
-            if (txtSenha.Text == "Digite a Senha")
+            if (txtSenha.Text == PH_SENHA)
             {
                 txtSenha.Clear();
             }
         }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtSenha_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSenha.Text))
-            {
-                txtSenha.Text = "Digite a Senha";
-            }
-            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Form16(this).Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
-
+}

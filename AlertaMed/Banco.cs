@@ -1,13 +1,17 @@
 ﻿using Npgsql;
-using System;
 
 namespace AlertaMed
 {
     public static class Banco
     {
-        internal static NpgsqlConnection Abrir()
+        public static string ConnString =
+            "Host=localhost;Port=5432;Username=postgres;Password=pgadmin;Database=alertamed";
+
+        public static NpgsqlConnection Abrir()
         {
-            throw new NotImplementedException();
+            var conn = new NpgsqlConnection(ConnString);
+            conn.Open();
+            return conn;
         }
     }
 }

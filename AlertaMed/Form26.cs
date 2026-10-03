@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using Npgsql;
+using System;
+using System.Activities.Expressions;
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +13,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using Npgsql;
+=======
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
 
 namespace AlertaMed
 {
@@ -164,11 +173,16 @@ namespace AlertaMed
         // Configurações
         private void button5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form16 form16 = new Form16();
             form16.StartPosition = FormStartPosition.Manual;
             form16.Location = this.Location;
             form16.Show();
             this.Close();
+=======
+            new Form16(this).Show();
+            this.Hide();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // Início
@@ -329,5 +343,13 @@ namespace AlertaMed
         {
             if (string.IsNullOrWhiteSpace(textBox5.Text)) textBox5.Text = PH_EMAIL;
         }
+<<<<<<< HEAD
+=======
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
     }
 }

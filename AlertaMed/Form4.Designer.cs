@@ -56,9 +56,7 @@
             this.textBox1.Text = "Digite o Nome Completo";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-
             // 
             // textBox2
             // 
@@ -74,9 +72,7 @@
             this.textBox2.Text = "Digite o E-mail";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
-
             // 
             // textBox3
             // 
@@ -92,9 +88,7 @@
             this.textBox3.Text = "Digite a Senha";
             this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave_1);
-
             // 
             // dateTimePicker1
             // 
@@ -236,7 +230,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
             this.Text = "AlertaMed";

@@ -22,5 +22,29 @@ namespace AlertaMed.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool NotificacoesAtivas {
+            get {
+                return ((bool)(this["NotificacoesAtivas"]));
+            }
+            set {
+                this["NotificacoesAtivas"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SomAtivo {
+            get {
+                return ((bool)(this["SomAtivo"]));
+            }
+            set {
+                this["SomAtivo"] = value;
+            }
+        }
     }
 }

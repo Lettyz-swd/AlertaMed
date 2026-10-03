@@ -16,5 +16,36 @@ namespace AlertaMed
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Form15 form15 = new Form15();
+            form15.StartPosition = FormStartPosition.Manual;
+            form15.Location = this.Location;
+            form15.Show();
+            this.Close();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Form16(this).Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form15 form15 = new Form15();
+            form15.StartPosition = FormStartPosition.Manual;
+            form15.Location = this.Location;
+            form15.Show();
+            this.Close();
+        }
     }
 }

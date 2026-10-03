@@ -106,13 +106,22 @@ namespace AlertaMed
         // Configurações
         private void button5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Abrir(new Form16());
+=======
+            new Form16(this).Show();
+            this.Hide();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // Voltar (antes não fazia nada)
         private void button6_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Abrir(new Form5());
+=======
+            Abrir(new Form1());
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
         }
 
         // Ver histórico

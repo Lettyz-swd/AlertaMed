@@ -17,7 +17,7 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
         public Form6(Form anterior, Form destino)
         {
@@ -67,11 +67,10 @@ namespace AlertaMed
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form1 form1= new Form1();
-            form1.StartPosition = FormStartPosition.Manual;
-            form1.Location = this.Location;
-            form1.Size = this.Size;
-            form1.Show();
+            Form15 form15= new Form15();
+            form15.StartPosition = FormStartPosition.Manual;
+            form15.Location = this.Location;
+            form15.Show();
             this.Hide();
         }
 
@@ -80,14 +79,14 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new Form16(this).Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -107,8 +106,6 @@ namespace AlertaMed
 
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
-
             form1.Show();
             this.Close();
         }
@@ -155,6 +152,11 @@ namespace AlertaMed
             pictureBox1.Image = Properties.Resources.Tela_pedido_de_entrada_bot__ok_normal;
             button1.Image = Properties.Resources.botão_ok_normal;
             pictureBox1.Image = Properties.Resources.Tela_pedido_de_entrada_bot__ok_normal;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

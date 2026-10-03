@@ -130,7 +130,11 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::AlertaMed.Properties.Resources.botao_selecionar_normal;
+<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(764, 526);
+=======
+            this.button3.Location = new System.Drawing.Point(765, 526);
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(232, 48);
             this.button3.TabIndex = 20;

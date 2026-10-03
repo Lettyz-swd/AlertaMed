@@ -64,9 +64,13 @@
             this.lixeira2 = new System.Windows.Forms.Button();
             this.lixeira = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+=======
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -586,6 +590,7 @@
             this.button2.MouseEnter += new System.EventHandler(this.button2_Enter);
             this.button2.MouseLeave += new System.EventHandler(this.button2_Leave);
             // 
+<<<<<<< HEAD
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
@@ -597,6 +602,8 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+=======
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -643,7 +650,10 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
+<<<<<<< HEAD
             this.Controls.Add(this.pictureBox2);
+=======
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
@@ -653,7 +663,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form20";
             this.Text = "AlertaMed";
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+=======
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -697,6 +710,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+<<<<<<< HEAD
         private System.Windows.Forms.PictureBox pictureBox2;
+=======
+>>>>>>> 42b777e08f13232eb430626d064dd3eb42fea8dc
     }
 }

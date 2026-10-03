@@ -36,7 +36,8 @@ namespace AlertaMed
         {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            textBox3.PasswordChar = '●';
+            button5.Image = Properties.Resources.botão_olho_riscado;
             Assembly assembly = Assembly.GetExecutingAssembly();
 
 
@@ -67,7 +68,6 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
-            form1.Size = this.Size;
             form1.Show();
             this.Close();
             button2.Image = Properties.Resources.botão_inicio_3;
@@ -81,7 +81,8 @@ namespace AlertaMed
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new Form16(this).Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -163,7 +164,7 @@ namespace AlertaMed
         private void button1_Click(object sender, EventArgs e)
         {
             string nome = Valor(textBox1, PH_NOME);
-            string email = Valor(textBox2, PH_EMAIL);
+            string email = Valor(textBox2, PH_EMAIL).ToLower();
             string senha = textBox3.Text == PH_SENHA ? "" : textBox3.Text;
             DateTime nascimento = dateTimePicker1.Value.Date;
 
@@ -351,7 +352,6 @@ namespace AlertaMed
             Form7 form7 = new Form7();
             form7.StartPosition = FormStartPosition.Manual;
             form7.Location = this.Location;
-            form7.Size = this.Size;
             form7.Show();
             this.Hide();
 
@@ -423,35 +423,21 @@ namespace AlertaMed
             }
         }
 
-
+        // Métodos abaixo: o Designer liga o evento "Leave" a eles.
+        // Ficam vazios por enquanto - podem receber validação depois.
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Digite o Nome Completo";
-            }
+
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                textBox2.Text = "Digite o E-mail";
-            }
-        }
 
-        private void textBox3_Leave(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBox3_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                textBox3.Text = "Digite a Senha";
-            }
-        }
+
         }
     }
-
+}
