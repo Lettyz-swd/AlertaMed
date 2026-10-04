@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Media;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -39,22 +40,25 @@ namespace AlertaMed
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
+            form1.Size = this.Size;
             form1.Show();
             this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            new Form16(this).Show();
-            this.Hide(); ;
+            Form16 form16 = new Form16();
+            form16.StartPosition = FormStartPosition.Manual;
+            form16.Location = this.Location;
+            form16.Size = this.Size;
+            form16.Show();
+            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12();
-            form12.StartPosition = FormStartPosition.Manual;
-            form12.Location = this.Location;
-            form12.Show();
+            // TODO: troque pela tela de onde o usuário costuma chegar até aqui,
+            // caso não seja simplesmente fechar/voltar a tela anterior.
             this.Close();
         }
 
@@ -140,6 +144,16 @@ namespace AlertaMed
         {
             if (textBox3.Text == "Digite os remédios")
                 textBox3.Clear();
+        }
+
+        // Aperta Enter no campo de remédio = clica em "+ Adicionar remédios"
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // evita o "bip" de Enter numa textbox comum
+                button3_Click(sender, EventArgs.Empty);
+            }
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
@@ -250,6 +264,13 @@ namespace AlertaMed
         private void HorarioCampo_Enter(object sender, EventArgs e)
         {
             ((MaskedTextBox)sender).SelectAll();
+        }
+
+        // Disparado pela MaskedTextBox quando a pessoa digita algo
+        // que não encaixa na máscara 00:00 (ex: uma letra)
+        private void textBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            SystemSounds.Beep.Play();
         }
 
         private void HorarioCampo_Leave(object sender, EventArgs e)
@@ -369,20 +390,20 @@ namespace AlertaMed
                 using (NpgsqlConnection conn = Banco.Abrir())
                 using (NpgsqlCommand cmd = new NpgsqlCommand(@"
                     INSERT INTO public.prescricao
-                        (nome_paciente, tecnico_responsavel, remedios, doses, horarios)
-                    VALUES (@paciente, @tecnico, @remedios, @doses, @horarios)", conn))
+                        (nome_paciente, tecnico_responsavel, remedios, doses, horarios, id_usuario, id_instituicao)
+                    VALUES (@paciente, @tecnico, @remedios, @doses, @horarios, @id_usuario, @id_instituicao)", conn))
                 {
                     cmd.Parameters.AddWithValue("paciente", nomePacienteAtual);
                     cmd.Parameters.AddWithValue("tecnico", tecnico);
                     cmd.Parameters.AddWithValue("remedios", textBox4.Text);
                     cmd.Parameters.AddWithValue("doses", textBox6.Text);
                     cmd.Parameters.AddWithValue("horarios", textBox10.Text);
+                    Sessao.AplicarDonoNoInsert(cmd); // preenche id_usuario e id_instituicao certinho
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar a prescrição:\n\n" + ex.Message);
                 MessageBox.Show("Erro ao cadastrar a prescrição:\n\n" + ex.Message);
                 return; // não navega se o salvamento falhou
             }
@@ -392,18 +413,9 @@ namespace AlertaMed
             Form21 form21 = new Form21();
             form21.StartPosition = FormStartPosition.Manual;
             form21.Location = this.Location;
+            form21.Size = this.Size;
             form21.Show();
             this.Close();
-        }
-
-        private void textBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
         }
     }
 }

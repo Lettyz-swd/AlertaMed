@@ -78,5 +78,10 @@ namespace AlertaMed
         {
 
         }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,6 +27,17 @@ namespace AlertaMed
             this.Close();
         }
 
+        // Abre o histórico (Form14) deixando o Form19 apenas escondido,
+        // para o botão Voltar do Form14 conseguir reabri-lo
+        private void AbrirHistorico()
+        {
+            Form14 historico = new Form14(this);
+            historico.StartPosition = FormStartPosition.Manual;
+            historico.Location = this.Location;
+            historico.Show();
+            this.Hide();
+        }
+
         // ---------- Efeitos visuais dos botões ----------
 
         private void button1_Enter(object sender, EventArgs e)
@@ -110,7 +121,7 @@ namespace AlertaMed
             this.Hide();
         }
 
-        // Voltar (antes não fazia nada)
+        // Voltar
         private void button6_Click(object sender, EventArgs e)
         {
             Abrir(new Form1());
@@ -119,13 +130,13 @@ namespace AlertaMed
         // Ver histórico
         private void button7_Click(object sender, EventArgs e)
         {
-            Abrir(new Form14());
+            AbrirHistorico();
         }
 
         // Duplicado do button7_Click: mantido só para não quebrar o Designer
         private void button7_Click_1(object sender, EventArgs e)
         {
-            Abrir(new Form14());
+            AbrirHistorico();
         }
 
         // ---------- Métodos que o Designer liga (ficam vazios) ----------

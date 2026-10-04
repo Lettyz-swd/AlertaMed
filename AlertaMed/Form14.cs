@@ -6,12 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form14 : Form
     {
         public string textoGuardado { get; private set; } = "";
+
+        // Uma coluna por informação, uma posição por linha da grade (6 linhas).
+        private TextBox[] colPaciente;
+        private TextBox[] colRemedios;
+        private TextBox[] colDoses;
+        private TextBox[] colHorarios;
 
         // tela de onde o usuário veio (para o botão Voltar)
         private readonly Form _telaAnterior;
@@ -21,6 +28,14 @@ namespace AlertaMed
         {
             //design configurado
             InitializeComponent();
+
+            colPaciente = new[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6 };
+            colRemedios = new[] { textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
+            colDoses = new[] { textBox13, textBox14, textBox15, textBox16, textBox17, textBox18 };
+            colHorarios = new[] { textBox19, textBox20, textBox21, textBox22, textBox23, textBox24 };
+
+            this.Load -= Form14_Load;
+            this.Load += Form14_Load;
         }
 
         // Use este nos outros forms: new Form14(this)
@@ -29,17 +44,65 @@ namespace AlertaMed
             _telaAnterior = telaAnterior;
         }
 
-        // Construtor que recebe os valores do Form13 (e, opcionalmente, a tela anterior)
+        // Mantido para o Form13 continuar compilando.
+        // Os valores recebidos não são mais usados para preencher a tela:
+        // o histórico sempre vem do banco (public.prescricao), igual ao Form21.
         public Form14(string remedios, string doses1, string doses2, string nomePaciente, Form telaAnterior = null)
             : this()
         {
             _telaAnterior = telaAnterior;
+        }
 
-            // Atribua cada string recebida ao TextBox correto no Form14
-            textBox1.Text = nomePaciente;
-            textBox2.Text = remedios;
-            textBox3.Text = doses1;
-            textBox4.Text = doses2;
+        private void Form14_Load(object sender, EventArgs e)
+        {
+            CarregarHistorico();
+        }
+
+        private void CarregarHistorico()
+        {
+            // limpa a grade toda antes de preencher, pra não sobrar linha antiga
+            for (int i = 0; i < colPaciente.Length; i++)
+            {
+                colPaciente[i].Clear();
+                colRemedios[i].Clear();
+                colDoses[i].Clear();
+                colHorarios[i].Clear();
+            }
+
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(
+                    @"SELECT nome_paciente, remedios, doses, horarios
+                      FROM public.prescricao
+                      WHERE " + Sessao.CondicaoDono + @"
+                      ORDER BY data_cadastro DESC
+                      LIMIT 6", conn))
+                {
+                    Sessao.AplicarParametro(cmd);
+
+                    using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                    {
+                        int linha = 0;
+                        while (rd.Read() && linha < colPaciente.Length)
+                        {
+                            colPaciente[linha].Text = rd.IsDBNull(0) ? "" : rd.GetString(0);
+                            colRemedios[linha].Text = rd.IsDBNull(1) ? "" : rd.GetString(1);
+                            colDoses[linha].Text = rd.IsDBNull(2) ? "" : rd.GetString(2);
+                            colHorarios[linha].Text = rd.IsDBNull(3) ? "" : rd.GetString(3);
+                            linha++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Não foi possível carregar o histórico.\n\n" + ex.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

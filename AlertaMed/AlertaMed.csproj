@@ -55,6 +55,9 @@
     <Reference Include="System.ComponentModel.Composition.Registration" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.12, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.12\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -1072,6 +1075,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tela Configurações3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. REMÉDIO USO PESSOAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTIFC. REMÉDIO USO PESSOAL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design de mensagens %283%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

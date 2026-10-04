@@ -298,6 +298,95 @@ namespace AlertaMed
                 return;
             }
 
+            // ---- estado civil ----
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked)
+            {
+                MessageBox.Show("Selecione o estado civil do paciente.",
+                                "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string estadoCivil = checkBox1.Checked ? "solteiro"
+                                : checkBox2.Checked ? "casado"
+                                : checkBox3.Checked ? "viuvo"
+                                : "divorciado";
+
+            // ---- tem filhos? ----
+            if (!checkBox5.Checked && !checkBox6.Checked)
+            {
+                MessageBox.Show("Informe se o paciente tem filhos.",
+                                "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            bool temFilhos = checkBox6.Checked;
+            int? qtdFilhos = null;
+            if (temFilhos)
+            {
+                if (!int.TryParse(textBox7.Text, out int qtd))
+                {
+                    MessageBox.Show("Digite a quantidade de filhos corretamente.",
+                                    "Valor inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox7.Focus();
+                    textBox7.SelectAll();
+                    return;
+                }
+                qtdFilhos = qtd;
+            }
+
+            // ---- doenças respiratórias? ----
+            if (!checkBox7.Checked && !checkBox10.Checked)
+            {
+                MessageBox.Show("Informe se o paciente tem doenças respiratórias.",
+                                "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ---- doenças cardiovasculares? ----
+            if (!checkBox8.Checked && !checkBox11.Checked)
+            {
+                MessageBox.Show("Informe se o paciente tem doenças cardiovasculares.",
+                                "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ---- alergias? ----
+            if (!checkBox9.Checked && !checkBox12.Checked)
+            {
+                MessageBox.Show("Informe se o paciente tem alergias.",
+                                "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ---- monta e salva o paciente ----
+            var paciente = new Paciente
+            {
+                Nome = TxTbxNP.Text,
+                Idade = idade,
+                Genero = comboBox1.SelectedItem?.ToString() ?? comboBox1.Text,
+                Peso = (decimal)peso,
+                EstadoCivil = estadoCivil,
+                TemFilhos = temFilhos,
+                QuantidadeFilhos = qtdFilhos,
+                DoencasRespiratorias = checkBox10.Checked,
+                QuaisDoencasRespiratorias = checkBox10.Checked ? textBox8.Text : null,
+                DoencasCardiovasculares = checkBox11.Checked,
+                QuaisDoencasCardiovasculares = checkBox11.Checked ? textBox9.Text : null,
+                TemAlergias = checkBox12.Checked,
+                QuaisAlergias = checkBox12.Checked ? textBox10.Text : null,
+                InformacoesExtras = textBox5.Text,
+                Anotacoes = textBox6.Text,
+                IdUsuario = 1 // TODO: trocar pelo id do usuário logado (sessão)
+            };
+
+            try
+            {
+                paciente.Salvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
+                return; // não navega pro Form18 se o salvamento falhou
+            }
+
             //cadastrar prescrição
             Form18 form18 = new Form18(TxTbxNP.Text);
             form18.StartPosition = FormStartPosition.Manual;
@@ -607,10 +696,6 @@ namespace AlertaMed
             }
         }
 
-
-
-
-
         private void textBox5_Enter(object sender, EventArgs e)
         {
             if (textBox5.Text == "Digite aqui")
@@ -655,7 +740,7 @@ namespace AlertaMed
         private void button3_Click_1(object sender, EventArgs e)
         {
             new Form16(this).Show();
-            this.Hide(); ;
+            this.Hide();
         }
 
     }

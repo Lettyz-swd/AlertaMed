@@ -1192,6 +1192,26 @@ namespace AlertaMed.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens__3_1 {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens (3)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_de_mensagens__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Design de mensagens (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap msg_Deseja_voltar_v1 {
             get {
                 object obj = ResourceManager.GetObject("msg Deseja voltar v1", resourceCulture);
@@ -1255,6 +1275,26 @@ namespace AlertaMed.Properties {
         internal static System.Drawing.Bitmap NOTIFC__DO_REMÉDIO_INSTITUIÇÃO___1_ {
             get {
                 object obj = ResourceManager.GetObject("NOTIFC. DO REMÉDIO INSTITUIÇÃO  (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NOTIFC__REMÉDIO_USO_PESSOAL {
+            get {
+                object obj = ResourceManager.GetObject("NOTIFC. REMÉDIO USO PESSOAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NOTIFC1 {
+            get {
+                object obj = ResourceManager.GetObject("NOTIFC1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

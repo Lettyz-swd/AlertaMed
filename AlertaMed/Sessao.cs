@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using System;
+using Npgsql;
 
 namespace AlertaMed
 {
@@ -31,6 +32,8 @@ namespace AlertaMed
             Nome = nome;
             IdInstituicao = 0;
             NomeInstituicao = null;
+
+            GerenciadorAlarmes.Atualizar();   // recarrega os alarmes da conta que entrou
         }
 
         // Chame depois do Entrar, quando a pessoa entra em uma instituição
@@ -38,6 +41,8 @@ namespace AlertaMed
         {
             IdInstituicao = idInstituicao;
             NomeInstituicao = nomeInstituicao;
+
+            GerenciadorAlarmes.Atualizar();   // agora vale a instituição
         }
 
         public static void Sair()
@@ -46,6 +51,8 @@ namespace AlertaMed
             Nome = null;
             IdInstituicao = 0;
             NomeInstituicao = null;
+
+            GerenciadorAlarmes.Atualizar();   // esvazia os alarmes
         }
 
         // Diz se a pessoa logada é dono da instituição.
@@ -85,6 +92,53 @@ namespace AlertaMed
                 if (EmInstituicao) cmd.Parameters.AddWithValue("i", IdInstituicao);
                 return cmd.ExecuteScalar() as string;
             }
+        }
+
+        // ===============================================================
+        // PRESCRIÇÕES POR CONTA
+        //
+        //  - Dentro de uma instituição (EmInstituicao): só as prescrições daquela instituição.
+        //  - Uso pessoal (sem instituição): só as do próprio usuário, que não são de instituição.
+        //  - Ninguém logado: nada.
+        // ===============================================================
+
+        // Pedaço de WHERE para consultas em public.prescricao
+        public static string CondicaoDono
+        {
+            get
+            {
+                if (!Logado) return "1 = 0";
+                if (EmInstituicao) return "id_instituicao = @i";
+                return "id_usuario = @u AND id_instituicao IS NULL";
+            }
+        }
+
+        // Preenche os parâmetros usados pela CondicaoDono
+        public static void AplicarParametro(NpgsqlCommand cmd)
+        {
+            if (!Logado) return;
+
+            if (EmInstituicao)
+                cmd.Parameters.AddWithValue("i", IdInstituicao);
+            else
+                cmd.Parameters.AddWithValue("u", IdUsuario);
+        }
+
+        // Para o INSERT em public.prescricao: use as colunas id_usuario e id_instituicao
+        // com os valores @id_usuario e @id_instituicao e chame este método.
+        //  - id_usuario    = quem cadastrou (sempre preenchido)
+        //  - id_instituicao = só preenchido quando o cadastro é feito dentro de uma instituição
+        public static void AplicarDonoNoInsert(NpgsqlCommand cmd)
+        {
+            cmd.Parameters.Add(new NpgsqlParameter("@id_usuario", NpgsqlTypes.NpgsqlDbType.Integer)
+            {
+                Value = IdUsuario
+            });
+
+            cmd.Parameters.Add(new NpgsqlParameter("@id_instituicao", NpgsqlTypes.NpgsqlDbType.Integer)
+            {
+                Value = EmInstituicao ? (object)IdInstituicao : DBNull.Value
+            });
         }
     }
 }

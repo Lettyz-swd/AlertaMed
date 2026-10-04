@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace AlertaMed
 {
     public partial class Form13 : Form
     {
-        private List<string> listaRemedios = new List<string>();
-        private List<string> listaDoses = new List<string>();
-        private List<string> listaHorarios = new List<string>();
-
         public Form13()
         {
             InitializeComponent();
@@ -25,24 +20,29 @@ namespace AlertaMed
         public Form13(string texto)
         {
             InitializeComponent();
-            
+            // "texto" não é usado atualmente (essa tela não tem mais campo de
+            // nome do paciente/técnico). Mantido só pra não quebrar quem já
+            // chama new Form13(algumaCoisa) em outro lugar do código.
         }
 
         private void Form13_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         // ---------- textBox1 - Técnico Responsável ----------
+        // Deixado como estava: não mexi porque não tenho certeza se esse
+        // campo ainda existe no Designer dessa tela (não aparece mais no
+        // print que você mandou). Se ele existir e você quiser o
+        // comportamento de placeholder de volta, me avisa.
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            
-            
+
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -61,68 +61,222 @@ namespace AlertaMed
             this.Close();
         }
 
+        // =========================================================
+        // Remédios
+        // =========================================================
         private void button3_Click(object sender, EventArgs e)
         {
-            //add remedios (textBox3 = input, textBox4 = lista grande)
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            string valor = textBox3.Text.Trim();
+            if (string.IsNullOrEmpty(valor) || valor == "Digite o remédio")
             {
-                MessageBox.Show("Digite um remédio antes de adicionar.", "Aviso");
+                MessageBox.Show("Digite o nome do remédio.");
                 return;
             }
 
-            listaRemedios.Add(textBox3.Text);
-            textBox4.Text = string.Join(" - ", listaRemedios);
-
+            AdicionarLinha(textBox4, valor);
             textBox3.Clear();
-            MessageBox.Show("Remédios guardados com sucesso!", "Aviso");
         }
 
+        private void lixeira5_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+        }
+
+        private void lixeira_Click(object sender, EventArgs e)
+        {
+            RemoverUltimaLinha(textBox4);
+        }
+
+        // =========================================================
+        // Doses
+        // =========================================================
         private void button4_Click(object sender, EventArgs e)
         {
-            //add doses (textBox5 = input, textBox6 = lista grande)
-            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            string valor = textBox5.Text.Trim();
+            if (string.IsNullOrEmpty(valor) || valor == "Digite a dose")
             {
-                MessageBox.Show("Digite uma dose antes de adicionar.", "Aviso");
+                MessageBox.Show("Digite a dose.");
                 return;
             }
 
-            listaDoses.Add(textBox5.Text);
-            textBox6.Text = string.Join(" - ", listaDoses);
-
+            AdicionarLinha(textBox6, valor);
             textBox5.Clear();
-            MessageBox.Show("Doses guardadas com sucesso!", "Aviso");
         }
 
-        
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox5.Clear();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RemoverUltimaLinha(textBox6);
+        }
+
+        // =========================================================
+        // Horários (MaskedTextBox, máscara 00:00)
+        // =========================================================
+        private void HorarioCampo_Enter(object sender, EventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectAll();
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            ValidarHorario(textBox7);
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            ValidarHorario(textBox8);
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            ValidarHorario(textBox9);
+        }
+
+        private bool ValidarHorario(MaskedTextBox campo)
+        {
+            if (!campo.MaskCompleted)
+            {
+                campo.Clear();
+                return true; // campo vazio não é erro, só não preenchido
+            }
+
+            bool valido = System.Text.RegularExpressions.Regex.IsMatch(
+                campo.Text,
+                @"^([01]\d|2[0-3]):[0-5]\d$");
+
+            if (!valido)
+            {
+                MessageBox.Show("Por favor, digite o horário no formato correto (ex: 08:30, 14:00).",
+                                "Valor inválido",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                campo.Focus();
+                campo.SelectAll();
+            }
+
+            return valido;
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //add horario (textBox7, textBox8, textBox9 = inputs, textBox10 = lista grande)
-            if (!ValidarHorario(textBox7) || !ValidarHorario(textBox8) || !ValidarHorario(textBox9))
+            var campos = new[] { textBox7, textBox8, textBox9 };
+
+            var horarios = campos
+                .Where(c => c.MaskCompleted)
+                .Select(c => c.Text)
+                .ToArray();
+
+            if (horarios.Length == 0)
             {
+                MessageBox.Show("Preencha ao menos um horário.");
                 return;
             }
 
-            // Monta o grupo de 3 horários separados por vírgula
-            string grupo = $"{textBox7.Text}, {textBox8.Text}, {textBox9.Text}";
-            listaHorarios.Add(grupo);
-
-            // Junta os grupos separados por " - "
-            textBox10.Text = string.Join(" - ", listaHorarios);
+            AdicionarLinha(textBox10, string.Join(" | ", horarios));
 
             textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
-            MessageBox.Show("Horários salvos com sucesso!", "Aviso");
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RemoverUltimaLinha(textBox10);
+        }
+
+        // =========================================================
+        // Utilitários das listas (Remédios / Doses / Horários)
+        // =========================================================
+        private void AdicionarLinha(TextBox lista, string valor)
+        {
+            lista.Text = string.IsNullOrEmpty(lista.Text)
+                ? valor
+                : lista.Text + Environment.NewLine + valor;
+        }
+
+        private void RemoverUltimaLinha(TextBox lista)
+        {
+            var linhas = lista.Text.Split(
+                new[] { Environment.NewLine },
+                StringSplitOptions.RemoveEmptyEntries);
+
+            lista.Text = linhas.Length <= 1
+                ? ""
+                : string.Join(Environment.NewLine, linhas.Take(linhas.Length - 1));
+        }
+
+        // =========================================================
+        // Concluído! Cadastrar Prescrição
+        // Salva no banco já ligada à conta logada (id_usuario / id_instituicao)
+        // =========================================================
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("Adicione ao menos um remédio.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Adicione ao menos uma dose.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox10.Text))
+            {
+                MessageBox.Show("Adicione ao menos um horário.");
+                return;
+            }
+
+            if (!Sessao.Logado)
+            {
+                MessageBox.Show("Entre na sua conta para cadastrar a prescrição.");
+                return;
+            }
+
+            try
+            {
+                using (NpgsqlConnection conn = Banco.Abrir())
+                using (NpgsqlCommand cmd = new NpgsqlCommand(@"
+                    INSERT INTO public.prescricao
+                        (nome_paciente, tecnico_responsavel, remedios, doses, horarios,
+                         id_usuario, id_instituicao)
+                    VALUES (@paciente, @tecnico, @remedios, @doses, @horarios,
+                            @id_usuario, @id_instituicao)", conn))
+                {
+                    cmd.Parameters.AddWithValue("paciente", Sessao.Nome);
+                    cmd.Parameters.AddWithValue("tecnico", "Autocadastro (uso pessoal)");
+                    cmd.Parameters.AddWithValue("remedios", textBox4.Text);
+                    cmd.Parameters.AddWithValue("doses", textBox6.Text);
+                    cmd.Parameters.AddWithValue("horarios", textBox10.Text);
+
+                    // dono da prescrição: a conta logada
+                    Sessao.AplicarDonoNoInsert(cmd);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar a prescrição:\n\n" + ex.Message);
+                return; // não navega se o salvamento falhou
+            }
+
+            // já carrega os alarmes novos, sem esperar o ciclo de 60 segundos
+            GerenciadorAlarmes.Atualizar();
+
+            MessageBox.Show("Prescrição cadastrada com sucesso!");
+
             //historico
-            Form14 form14 = new Form14();
-            form14.StartPosition = FormStartPosition.Manual;
-            form14.Location = this.Location;
-            form14.Show();
+            Form22 form22 = new Form22();
+            form22.StartPosition = FormStartPosition.Manual;
+            form22.Location = this.Location;
+            form22.Show();
             this.Close();
         }
 
@@ -186,47 +340,40 @@ namespace AlertaMed
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_remedio_selecionado;
             button3.Image = Properties.Resources.botao_adicionar_remedios_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_remedio_selecionado;
         }
 
         private void button3_Leave(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button3.Image = Properties.Resources.botao_remedios_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button4_Enter(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_doses_selecionado;
             button4.Image = Properties.Resources.botao_adicionar_doses_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_doses_selecionado;
         }
 
         private void button4_Leave(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button4.Image = Properties.Resources.botao_adicionar_doses_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button5_Enter(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_horarios_selecionado;
             button5.Image = Properties.Resources.botao_adicionar_horarios_selecionado;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_horarios_selecionado;
         }
 
         private void button5_Leave(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button5.Image = Properties.Resources.botao_adicionar_horarios_normal;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void button2_Enter(object sender, EventArgs e)
         {
-            
             button2.Image = Properties.Resources.botao_cadastrar_preescrição_selecionado_2;
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_bt_concluido_selecionado;
         }
@@ -235,7 +382,6 @@ namespace AlertaMed
         {
             pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
             button2.Image = Properties.Resources.botao_cadastrar_preescrição_normal_2;
-            pictureBox1.Image = Properties.Resources.Tela_cadastro_prescrição_uso_pessoal_normal;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -251,34 +397,6 @@ namespace AlertaMed
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void lixeira5_Click(object sender, EventArgs e)
-        {
-            textBox3.Clear();
-        }
-
-        private void lixeira_Click(object sender, EventArgs e)
-        {
-            listaRemedios.Clear();
-            textBox4.Clear();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            textBox5.Clear();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            listaDoses.Clear();
-            textBox6.Clear();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            listaHorarios.Clear();
-            textBox10.Clear();
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
@@ -317,41 +435,6 @@ namespace AlertaMed
             }
         }
 
-        private void textBox7_Leave(object sender, EventArgs e)
-        {
-            ValidarHorario(textBox7);
-        }
-
-        private void textBox8_Leave(object sender, EventArgs e)
-        {
-            ValidarHorario(textBox8);
-        }
-
-        private void textBox9_Leave(object sender, EventArgs e)
-        {
-            ValidarHorario(textBox9);
-        }
-        private bool ValidarHorario(MaskedTextBox campo)
-        {
-            // Regex: exige exatamente HH:mm, com HH de 00 a 23 e mm de 00 a 59
-            bool valido = System.Text.RegularExpressions.Regex.IsMatch(
-                campo.Text,
-                @"^([01]\d|2[0-3]):[0-5]\d$"
-            );
-
-            if (!valido)
-            {
-                MessageBox.Show("Por favor, digite o horário no formato correto (ex: 08:30, 14:00).",
-                                "Valor inválido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                campo.Focus();
-                campo.SelectAll();
-            }
-
-            return valido;
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -365,42 +448,42 @@ namespace AlertaMed
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
     }
 }

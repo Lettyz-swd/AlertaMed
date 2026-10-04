@@ -55,18 +55,23 @@ namespace AlertaMed
                 using (NpgsqlCommand cmd = new NpgsqlCommand(
                     @"SELECT nome_paciente, remedios, doses, horarios
                       FROM public.prescricao
+                      WHERE " + Sessao.CondicaoDono + @"
                       ORDER BY data_cadastro DESC
                       LIMIT 6", conn))
-                using (NpgsqlDataReader rd = cmd.ExecuteReader())
                 {
-                    int linha = 0;
-                    while (rd.Read() && linha < colPaciente.Length)
+                    Sessao.AplicarParametro(cmd);
+
+                    using (NpgsqlDataReader rd = cmd.ExecuteReader())
                     {
-                        colPaciente[linha].Text = rd.GetString(0);
-                        colRemedios[linha].Text = rd.GetString(1);
-                        colDoses[linha].Text = rd.GetString(2);
-                        colHorarios[linha].Text = rd.GetString(3);
-                        linha++;
+                        int linha = 0;
+                        while (rd.Read() && linha < colPaciente.Length)
+                        {
+                            colPaciente[linha].Text = rd.GetString(0);
+                            colRemedios[linha].Text = rd.GetString(1);
+                            colDoses[linha].Text = rd.GetString(2);
+                            colHorarios[linha].Text = rd.GetString(3);
+                            linha++;
+                        }
                     }
                 }
             }

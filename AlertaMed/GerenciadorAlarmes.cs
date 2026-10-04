@@ -67,25 +67,44 @@ namespace AlertaMed
             timerChecagem.Start();
         }
 
+        // Recarrega os alarmes na hora (a Sessao chama ao entrar/sair de uma conta)
+        public static void Atualizar()
+        {
+            AtualizarCache();
+        }
+
         private static void AtualizarCache()
         {
+            // ninguém logado: nenhum alarme
+            if (!Sessao.Logado)
+            {
+                prescricoesCache = new List<(int, string, string, string, string)>();
+                return;
+            }
+
             var lista = new List<(int id, string paciente, string remedios, string doses, string horarios)>();
 
             try
             {
                 using (NpgsqlConnection conn = Banco.Abrir())
                 using (NpgsqlCommand cmd = new NpgsqlCommand(
-                    "SELECT id_prescricao, nome_paciente, remedios, doses, horarios FROM public.prescricao", conn))
-                using (NpgsqlDataReader rd = cmd.ExecuteReader())
+                    @"SELECT id_prescricao, nome_paciente, remedios, doses, horarios
+                      FROM public.prescricao
+                      WHERE " + Sessao.CondicaoDono, conn))
                 {
-                    while (rd.Read())
+                    Sessao.AplicarParametro(cmd);
+
+                    using (NpgsqlDataReader rd = cmd.ExecuteReader())
                     {
-                        lista.Add((
-                            rd.GetInt32(0),
-                            rd.GetString(1),
-                            rd.GetString(2),
-                            rd.GetString(3),
-                            rd.GetString(4)));
+                        while (rd.Read())
+                        {
+                            lista.Add((
+                                rd.GetInt32(0),
+                                rd.GetString(1),
+                                rd.GetString(2),
+                                rd.GetString(3),
+                                rd.GetString(4)));
+                        }
                     }
                 }
 

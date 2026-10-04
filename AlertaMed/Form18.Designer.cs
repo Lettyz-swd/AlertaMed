@@ -449,7 +449,7 @@ namespace AlertaMed
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         #endregion
