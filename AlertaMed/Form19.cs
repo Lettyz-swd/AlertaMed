@@ -14,11 +14,11 @@ namespace AlertaMed
     {
         public Form19()
         {
-            //design configurado
+            
             InitializeComponent();
         }
 
-        // Abre outra tela na mesma posição e tamanho, e fecha esta
+  
         private void Abrir(Form destino)
         {
             destino.StartPosition = FormStartPosition.Manual;
@@ -27,8 +27,7 @@ namespace AlertaMed
             this.Close();
         }
 
-        // Abre o histórico (Form14) deixando o Form19 apenas escondido,
-        // para o botão Voltar do Form14 conseguir reabri-lo
+    
         private void AbrirHistorico()
         {
             Form14 historico = new Form14(this);
@@ -38,7 +37,7 @@ namespace AlertaMed
             this.Hide();
         }
 
-        // ---------- Efeitos visuais dos botões ----------
+    
 
         private void button1_Enter(object sender, EventArgs e)
         {
@@ -94,52 +93,49 @@ namespace AlertaMed
             button6.Image = Properties.Resources.botão_voltar_cadastro;
         }
 
-        // ---------- Navegação ----------
-
-        // Cadastrar prescrição
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Abrir(new Form20());
         }
 
-        // Perfil
+       
         private void button3_Click(object sender, EventArgs e)
         {
             Abrir(new Form23());
         }
 
-        // Início
+        
         private void button4_Click(object sender, EventArgs e)
         {
             Abrir(new Form1());
         }
 
-        // Configurações
+       
         private void button5_Click(object sender, EventArgs e)
         {
             new Form16(this).Show();
             this.Hide();
         }
 
-        // Voltar
+      
         private void button6_Click(object sender, EventArgs e)
         {
             Abrir(new Form1());
         }
 
-        // Ver histórico
+      
         private void button7_Click(object sender, EventArgs e)
         {
             AbrirHistorico();
         }
 
-        // Duplicado do button7_Click: mantido só para não quebrar o Designer
         private void button7_Click_1(object sender, EventArgs e)
         {
             AbrirHistorico();
         }
 
-        // ---------- Métodos que o Designer liga (ficam vazios) ----------
+       
 
         private void Form19_Load(object sender, EventArgs e)
         {

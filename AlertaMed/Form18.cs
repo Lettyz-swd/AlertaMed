@@ -16,7 +16,6 @@ namespace AlertaMed
             this.Load += Form18_Load;
         }
 
-        // Construtor usado quando vem do Form12, já com o nome do paciente
         public Form18(string texto) : this()
         {
             nomePaciente = texto;
@@ -32,9 +31,7 @@ namespace AlertaMed
             CarregarTecnicos();
         }
 
-        // =========================================================
-        // Navegação
-        // =========================================================
+      
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -57,14 +54,12 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // TODO: troque pela tela de onde o usuário costuma chegar até aqui,
-            // caso não seja simplesmente fechar/voltar a tela anterior.
+            
             this.Close();
         }
 
-        // =========================================================
-        // Hover da barra lateral
-        // =========================================================
+     
+       
         private void button1_Enter(object sender, EventArgs e) => button1.Image = Properties.Resources.botão_inicio_2;
         private void button1_Leave(object sender, EventArgs e) => button1.Image = Properties.Resources.botão_inicio_normal;
 
@@ -74,9 +69,7 @@ namespace AlertaMed
         private void button6_Enter(object sender, EventArgs e) => button6.Image = Properties.Resources.botão_voltar_cadastro_selecionado;
         private void button6_Leave(object sender, EventArgs e) => button6.Image = Properties.Resources.botão_voltar_cadastro;
 
-        // =========================================================
-        // Hover dos botões de ação (com troca da imagem de fundo)
-        // =========================================================
+       
         private void button3_Enter(object sender, EventArgs e)
         {
             button3.Image = Properties.Resources.botao_adicionar_horarios_selecionado;
@@ -125,9 +118,7 @@ namespace AlertaMed
             pictureBox1.Image = Properties.Resources.Tela_cadastrar_prescrição_normal;
         }
 
-        // =========================================================
-        // Placeholders dos campos de texto
-        // =========================================================
+      
         private void textBox2_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "Digite o nome do paciente")
@@ -146,12 +137,12 @@ namespace AlertaMed
                 textBox3.Clear();
         }
 
-        // Aperta Enter no campo de remédio = clica em "+ Adicionar remédios"
+        
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                e.Handled = true; // evita o "bip" de Enter numa textbox comum
+                e.Handled = true; 
                 button3_Click(sender, EventArgs.Empty);
             }
         }
@@ -174,10 +165,7 @@ namespace AlertaMed
                 textBox5.Text = "Digite as doses";
         }
 
-        // =========================================================
-        // Técnico Responsável (carregado a partir de quem se
-        // cadastrou pelo Form8 - tabela solicitacao_entrada)
-        // =========================================================
+       
         private void CarregarTecnicos()
         {
             comboBox1.Items.Clear();
@@ -206,9 +194,7 @@ namespace AlertaMed
             comboBox1.SelectedIndex = 0;
         }
 
-        // =========================================================
-        // Remédios
-        // =========================================================
+        
         private void button3_Click(object sender, EventArgs e)
         {
             string valor = textBox3.Text.Trim();
@@ -232,9 +218,7 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox4);
         }
 
-        // =========================================================
-        // Doses
-        // =========================================================
+        
         private void button4_Click(object sender, EventArgs e)
         {
             string valor = textBox5.Text.Trim();
@@ -258,16 +242,12 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox6);
         }
 
-        // =========================================================
-        // Horários (MaskedTextBox, máscara 00:00)
-        // =========================================================
+       
         private void HorarioCampo_Enter(object sender, EventArgs e)
         {
             ((MaskedTextBox)sender).SelectAll();
         }
 
-        // Disparado pela MaskedTextBox quando a pessoa digita algo
-        // que não encaixa na máscara 00:00 (ex: uma letra)
         private void textBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             SystemSounds.Beep.Play();
@@ -325,9 +305,7 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox10);
         }
 
-        // =========================================================
-        // Utilitários das listas (Remédios / Doses / Horários)
-        // =========================================================
+        
         private void AdicionarLinha(TextBox lista, string valor)
         {
             lista.Text = string.IsNullOrEmpty(lista.Text)
@@ -346,9 +324,7 @@ namespace AlertaMed
                 : string.Join(Environment.NewLine, linhas.Take(linhas.Length - 1));
         }
 
-        // =========================================================
-        // Concluído! Cadastrar Prescrição
-        // =========================================================
+        
         private void button2_Click(object sender, EventArgs e)
         {
             string nomePacienteAtual = textBox2.Text.Trim();
@@ -398,14 +374,14 @@ namespace AlertaMed
                     cmd.Parameters.AddWithValue("remedios", textBox4.Text);
                     cmd.Parameters.AddWithValue("doses", textBox6.Text);
                     cmd.Parameters.AddWithValue("horarios", textBox10.Text);
-                    Sessao.AplicarDonoNoInsert(cmd); // preenche id_usuario e id_instituicao certinho
+                    Sessao.AplicarDonoNoInsert(cmd); 
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar a prescrição:\n\n" + ex.Message);
-                return; // não navega se o salvamento falhou
+                return; 
             }
 
             MessageBox.Show("Prescrição cadastrada com sucesso!");

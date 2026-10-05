@@ -6,16 +6,16 @@ namespace AlertaMed
 {
     public partial class Form21 : Form
     {
-        // Uma coluna por informação, uma posição por linha da grade (6 linhas).
+        
         private TextBox[] colPaciente;
         private TextBox[] colRemedios;
         private TextBox[] colDoses;
         private TextBox[] colHorarios;
 
-        // tela de onde o usuário veio (para o botão Voltar)
+   
         private readonly Form _telaAnterior;
 
-        // Use este nos outros forms: new Form21(this)
+      
         public Form21(Form telaAnterior) : this()
         {
             _telaAnterior = telaAnterior;
@@ -40,7 +40,7 @@ namespace AlertaMed
 
         private void CarregarHistorico()
         {
-            // limpa a grade toda antes de preencher, pra não sobrar linha antiga
+         
             for (int i = 0; i < colPaciente.Length; i++)
             {
                 colPaciente[i].Clear();
@@ -155,8 +155,7 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //botao voltar
-            // volta para quem abriu o Form21; se ninguém informou, usa o Form15
+           
             Form destino = _telaAnterior ?? new Form15();
 
             destino.StartPosition = FormStartPosition.Manual;

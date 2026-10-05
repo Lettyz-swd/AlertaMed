@@ -18,9 +18,7 @@ namespace AlertaMed
         {
             InitializeComponent();
 
-            // Nenhum desses eventos estava ligado no designer: fazem o efeito de
-            // "marcar um desmarca o outro" (estado civil) e mostram/habilitam os
-            // campos "Quantos?"/"Quais?" conforme o Sim/Não escolhido.
+         
             checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
             checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             checkBox3.CheckedChanged += checkBox3_CheckedChanged;
@@ -42,7 +40,7 @@ namespace AlertaMed
             lixeira5.Click += lixeira5_Click;
         }
 
-        // ================= Estado civil (só um marcado por vez) =================
+       
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -84,7 +82,7 @@ namespace AlertaMed
             }
         }
 
-        // ================= Tem filhos? (checkBox6 = Sim / checkBox5 = Não) =================
+      
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
@@ -108,7 +106,7 @@ namespace AlertaMed
             }
         }
 
-        // ===== Doenças respiratórias? (checkBox10 = Sim / checkBox7 = Não) =====
+      
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
@@ -132,7 +130,7 @@ namespace AlertaMed
             }
         }
 
-        // ==== Doenças cardiovasculares? (checkBox11 = Sim / checkBox8 = Não) ====
+     
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
@@ -156,7 +154,7 @@ namespace AlertaMed
             }
         }
 
-        // ================= Alergias? (checkBox12 = Sim / checkBox9 = Não) =================
+    
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
@@ -180,7 +178,7 @@ namespace AlertaMed
             }
         }
 
-        // ================= Lixeiras: limpam o campo ao lado =================
+     
 
         private void lixeira_Click(object sender, EventArgs e)
         {
@@ -259,7 +257,7 @@ namespace AlertaMed
                 return;
             }
 
-            // Valida o peso antes de continuar
+          
             string textoPeso = textBox4.Text.Replace(",", ".");
 
             if (textoPeso == "Peso" || string.IsNullOrWhiteSpace(textoPeso) ||
@@ -274,7 +272,7 @@ namespace AlertaMed
                 return;
             }
 
-            // Valida a idade antes de continuar
+          
             if (textBox2.Text == "Idade" || string.IsNullOrWhiteSpace(textBox2.Text) ||
                 !int.TryParse(textBox2.Text, out int idade))
             {
@@ -287,7 +285,7 @@ namespace AlertaMed
                 return;
             }
 
-            // Valida o gênero antes de continuar
+ 
             if (comboBox1.SelectedIndex == -1 || comboBox1.Text == "Selecione uma opção")
             {
                 MessageBox.Show("Por favor, selecione o gênero do paciente.",
@@ -298,7 +296,7 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- estado civil ----
+         
             if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked)
             {
                 MessageBox.Show("Selecione o estado civil do paciente.",
@@ -310,7 +308,7 @@ namespace AlertaMed
                                 : checkBox3.Checked ? "viuvo"
                                 : "divorciado";
 
-            // ---- tem filhos? ----
+   
             if (!checkBox5.Checked && !checkBox6.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem filhos.",
@@ -332,7 +330,7 @@ namespace AlertaMed
                 qtdFilhos = qtd;
             }
 
-            // ---- doenças respiratórias? ----
+   
             if (!checkBox7.Checked && !checkBox10.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem doenças respiratórias.",
@@ -340,7 +338,7 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- doenças cardiovasculares? ----
+      
             if (!checkBox8.Checked && !checkBox11.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem doenças cardiovasculares.",
@@ -348,7 +346,6 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- alergias? ----
             if (!checkBox9.Checked && !checkBox12.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem alergias.",
@@ -356,7 +353,7 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- monta e salva o paciente ----
+      
             var paciente = new Paciente
             {
                 Nome = TxTbxNP.Text,
@@ -374,7 +371,7 @@ namespace AlertaMed
                 QuaisAlergias = checkBox12.Checked ? textBox10.Text : null,
                 InformacoesExtras = textBox5.Text,
                 Anotacoes = textBox6.Text,
-                IdUsuario = 1 // TODO: trocar pelo id do usuário logado (sessão)
+                IdUsuario = 1 
             };
 
             try
@@ -384,10 +381,10 @@ namespace AlertaMed
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
-                return; // não navega pro Form18 se o salvamento falhou
+                return; 
             }
 
-            //cadastrar prescrição
+          
             Form18 form18 = new Form18(TxTbxNP.Text);
             form18.StartPosition = FormStartPosition.Manual;
             form18.Location = this.Location;
@@ -481,7 +478,7 @@ namespace AlertaMed
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //botao voltar
+  
             Form15 form15 = new Form15();
             form15.StartPosition = FormStartPosition.Manual;
             form15.Location = this.Location;
@@ -491,7 +488,7 @@ namespace AlertaMed
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //botao inicio
+        
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -529,7 +526,7 @@ namespace AlertaMed
             if (textBox4.Text == "Peso")
             {
                 textBox4.Text = "";
-                textBox4.ForeColor = Color.Black; // volta a cor normal do texto
+                textBox4.ForeColor = Color.Black; 
             }
         }
 

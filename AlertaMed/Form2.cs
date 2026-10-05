@@ -16,7 +16,7 @@ namespace AlertaMed
 {
     public partial class Form2 : Form
     {
-        // Textos de exemplo que aparecem dentro das caixas de texto
+
         private const string PH_NOME = "Digite o Nome";
         private const string PH_EMAIL = "Digite o E-mail";
         private const string PH_SENHA = "Digite a Senha";
@@ -26,14 +26,14 @@ namespace AlertaMed
             InitializeComponent();
             this.MaximizeBox = false;
 
-            // Começa sem máscara, mostrando o placeholder legível
+         
             textBox3.PasswordChar = '\0';
             button5.Image = Properties.Resources.botão_olho_;
 
-            // Tipo da instituição: só escolher, não digitar
+           
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // Se a lista estiver vazia no Designer, usa estas opções
+           
             if (comboBox1.Items.Count == 0)
             {
                 comboBox1.Items.AddRange(new object[]
@@ -48,14 +48,14 @@ namespace AlertaMed
             }
         }
 
-        // Devolve o texto digitado, ou "" se ainda estiver o texto de exemplo
+        
         private static string Valor(Control caixa, string textoExemplo)
         {
             string t = caixa.Text.Trim();
             return t == textoExemplo ? "" : t;
         }
 
-        // ---------- Placeholder genérico (Nome e Email) ----------
+        
         private void AtivarCampo(System.Windows.Forms.TextBox campo, string placeholder)
         {
             if (campo.Text == placeholder)
@@ -94,7 +94,7 @@ namespace AlertaMed
             DesativarCampo(textBox2, PH_EMAIL);
         }
 
-        // ---------- Senha (placeholder legível -> mascarado ao focar) ----------
+      
         private void textBox3_Enter(object sender, EventArgs e)
         {
             if (textBox3.Text == PH_SENHA)
@@ -120,7 +120,7 @@ namespace AlertaMed
         private void button5_Click(object sender, EventArgs e)
         {
             if (textBox3.Text == PH_SENHA)
-                return; // não faz nada enquanto estiver no placeholder
+                return; 
 
             bool estaMascarado = textBox3.PasswordChar != '\0';
 
@@ -179,7 +179,7 @@ namespace AlertaMed
             string email = Valor(textBox2, PH_EMAIL).ToLower();
             string senha = textBox3.Text == PH_SENHA ? "" : textBox3.Text;
 
-            // Nome da instituição (pode ter números, ex.: "Farmácia 24h")
+           
             if (nome.Length < 2)
             {
                 MessageBox.Show("Digite o nome da instituição.");
@@ -187,7 +187,7 @@ namespace AlertaMed
                 return;
             }
 
-            // Tipo da instituição
+            
             if (comboBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("Escolha o tipo da instituição.");
@@ -195,7 +195,7 @@ namespace AlertaMed
                 return;
             }
 
-            // E-mail
+
             if (email == "")
             {
                 MessageBox.Show("Digite o e-mail da instituição.");
@@ -210,7 +210,7 @@ namespace AlertaMed
                 return;
             }
 
-            // Senha
+          
             if (senha.Length < 6)
             {
                 MessageBox.Show("A senha precisa ter pelo menos 6 caracteres.");

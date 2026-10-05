@@ -20,9 +20,7 @@ namespace AlertaMed
         public Form13(string texto)
         {
             InitializeComponent();
-            // "texto" não é usado atualmente (essa tela não tem mais campo de
-            // nome do paciente/técnico). Mantido só pra não quebrar quem já
-            // chama new Form13(algumaCoisa) em outro lugar do código.
+            
         }
 
         private void Form13_Load(object sender, EventArgs e)
@@ -30,11 +28,7 @@ namespace AlertaMed
 
         }
 
-        // ---------- textBox1 - Técnico Responsável ----------
-        // Deixado como estava: não mexi porque não tenho certeza se esse
-        // campo ainda existe no Designer dessa tela (não aparece mais no
-        // print que você mandou). Se ele existir e você quiser o
-        // comportamento de placeholder de volta, me avisa.
+        
         private void textBox1_Enter(object sender, EventArgs e)
         {
 
@@ -52,7 +46,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //inicio
+          
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -61,9 +55,7 @@ namespace AlertaMed
             this.Close();
         }
 
-        // =========================================================
-        // Remédios
-        // =========================================================
+       
         private void button3_Click(object sender, EventArgs e)
         {
             string valor = textBox3.Text.Trim();
@@ -87,9 +79,7 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox4);
         }
 
-        // =========================================================
-        // Doses
-        // =========================================================
+        
         private void button4_Click(object sender, EventArgs e)
         {
             string valor = textBox5.Text.Trim();
@@ -113,9 +103,7 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox6);
         }
 
-        // =========================================================
-        // Horários (MaskedTextBox, máscara 00:00)
-        // =========================================================
+       
         private void HorarioCampo_Enter(object sender, EventArgs e)
         {
             ((MaskedTextBox)sender).SelectAll();
@@ -141,7 +129,7 @@ namespace AlertaMed
             if (!campo.MaskCompleted)
             {
                 campo.Clear();
-                return true; // campo vazio não é erro, só não preenchido
+                return true; 
             }
 
             bool valido = System.Text.RegularExpressions.Regex.IsMatch(
@@ -188,9 +176,7 @@ namespace AlertaMed
             RemoverUltimaLinha(textBox10);
         }
 
-        // =========================================================
-        // Utilitários das listas (Remédios / Doses / Horários)
-        // =========================================================
+       
         private void AdicionarLinha(TextBox lista, string valor)
         {
             lista.Text = string.IsNullOrEmpty(lista.Text)
@@ -209,10 +195,7 @@ namespace AlertaMed
                 : string.Join(Environment.NewLine, linhas.Take(linhas.Length - 1));
         }
 
-        // =========================================================
-        // Concluído! Cadastrar Prescrição
-        // Salva no banco já ligada à conta logada (id_usuario / id_instituicao)
-        // =========================================================
+        
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox4.Text))
@@ -255,7 +238,7 @@ namespace AlertaMed
                     cmd.Parameters.AddWithValue("doses", textBox6.Text);
                     cmd.Parameters.AddWithValue("horarios", textBox10.Text);
 
-                    // dono da prescrição: a conta logada
+               
                     Sessao.AplicarDonoNoInsert(cmd);
 
                     cmd.ExecuteNonQuery();
@@ -264,15 +247,14 @@ namespace AlertaMed
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar a prescrição:\n\n" + ex.Message);
-                return; // não navega se o salvamento falhou
+                return; 
             }
 
-            // já carrega os alarmes novos, sem esperar o ciclo de 60 segundos
             GerenciadorAlarmes.Atualizar();
 
             MessageBox.Show("Prescrição cadastrada com sucesso!");
 
-            //historico
+       
             Form22 form22 = new Form22();
             form22.StartPosition = FormStartPosition.Manual;
             form22.Location = this.Location;
@@ -287,7 +269,6 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //voltar
             Form12 form12 = new Form12();
             form12.StartPosition = FormStartPosition.Manual;
             form12.Location = this.Location;

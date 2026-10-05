@@ -13,8 +13,7 @@ namespace AlertaMed
 {
     public partial class Form11 : Form
     {
-        // Textos de exemplo que ficam dentro dos campos (propriedade Text no designer).
-        // O login trata esses textos como campo vazio.
+      
         private const string PH_EMAIL = "Digite seu E-mail";
         private const string PH_SENHA = "Digite a Senha";
 
@@ -22,7 +21,7 @@ namespace AlertaMed
         {
             InitializeComponent();
 
-            // Começa sem máscara, mostrando o placeholder legível
+           
             txtSenha.PasswordChar = '\0';
             button6.Image = Properties.Resources.botão_olho_;
         }
@@ -32,7 +31,7 @@ namespace AlertaMed
             return string.IsNullOrWhiteSpace(texto) || texto == placeholder;
         }
 
-        // ---------- Placeholder genérico (Email) ----------
+      
         private void AtivarCampo(System.Windows.Forms.TextBox campo, string placeholder)
         {
             if (campo.Text == placeholder)
@@ -61,7 +60,6 @@ namespace AlertaMed
             DesativarCampo(txtEmail, PH_EMAIL);
         }
 
-        // ---------- Senha (placeholder legível -> mascarado ao focar) ----------
         private void txtSenha_Enter(object sender, EventArgs e)
         {
             if (txtSenha.Text == PH_SENHA)
@@ -87,7 +85,7 @@ namespace AlertaMed
         private void button6_Click(object sender, EventArgs e)
         {
             if (txtSenha.Text == PH_SENHA)
-                return; // não faz nada enquanto estiver no placeholder
+                return; 
 
             bool estaMascarado = txtSenha.PasswordChar != '\0';
 
@@ -206,7 +204,7 @@ namespace AlertaMed
             {
                 using (var conn = Banco.Abrir())
                 {
-                    // Busca o id, o nome e a senha guardada (embaralhada) do usuário
+                  
                     string sql = "SELECT id_usuario, nome, senha FROM usuario WHERE email = @email";
                     using (var cmd = new NpgsqlCommand(sql, conn))
                     {
@@ -216,7 +214,7 @@ namespace AlertaMed
                         {
                             if (leitor.Read() && Senha.Conferir(senha, leitor.GetString(2)))
                             {
-                                // Guarda quem entrou para as outras telas usarem
+                              
                                 Sessao.Entrar(leitor.GetInt32(0), leitor.GetString(1));
                                 entrou = true;
                             }

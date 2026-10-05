@@ -12,8 +12,7 @@ namespace AlertaMed
 {
     public partial class Form10 : Form
     {
-        // Textos de exemplo que ficam dentro dos campos (propriedade Text no designer).
-        // O cadastro trata esses textos como campo vazio.
+        
         private const string PH_NOME = "Digite o Nome Completo";
         private const string PH_EMAIL = "Digite seu E-mail";
         private const string PH_SENHA = "Digite a Senha";
@@ -23,7 +22,7 @@ namespace AlertaMed
             InitializeComponent();
             this.MaximizeBox = false;
 
-            // Começa sem máscara, mostrando o placeholder legível
+            
             txtSenha.PasswordChar = '\0';
             button6.Image = Properties.Resources.botão_olho_;
         }
@@ -43,7 +42,7 @@ namespace AlertaMed
             return string.IsNullOrWhiteSpace(texto) || texto == placeholder;
         }
 
-        // ---------- Placeholder genérico (Nome e Email) ----------
+ 
         private void AtivarCampo(TextBox campo, string placeholder)
         {
             if (campo.Text == placeholder)
@@ -82,7 +81,7 @@ namespace AlertaMed
             DesativarCampo(txtEmail, PH_EMAIL);
         }
 
-        // ---------- Senha (placeholder legível -> mascarado ao focar) ----------
+      
         private void txtSenha_Enter(object sender, EventArgs e)
         {
             if (txtSenha.Text == PH_SENHA)
@@ -108,7 +107,7 @@ namespace AlertaMed
         private void button6_Click(object sender, EventArgs e)
         {
             if (txtSenha.Text == PH_SENHA)
-                return; // não faz nada enquanto estiver no placeholder
+                return; 
 
             bool estaMascarado = txtSenha.PasswordChar != '\0';
 

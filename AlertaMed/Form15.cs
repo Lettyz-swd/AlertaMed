@@ -11,16 +11,16 @@ namespace AlertaMed
 {
     public partial class Form15 : Form
     {
-        // tela de onde o usuário veio (para o botão Voltar)
+      
         private readonly Form _telaAnterior;
 
         public Form15()
         {
-            //design configurado
+        
             InitializeComponent();
         }
 
-        // Use este nos outros forms: new Form15(this)
+       
         public Form15(Form telaAnterior) : this()
         {
             _telaAnterior = telaAnterior;
@@ -145,8 +145,7 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //botao voltar
-            // volta para quem abriu o Form15; se ninguém informou, usa o Form1
+           
             Form destino = _telaAnterior ?? new Form1();
 
             destino.StartPosition = FormStartPosition.Manual;

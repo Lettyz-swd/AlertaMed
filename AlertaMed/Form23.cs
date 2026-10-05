@@ -13,7 +13,7 @@ namespace AlertaMed
 {
     public partial class Form23 : Form
     {
-        // Textos de exemplo que aparecem dentro das caixas
+       
         private const string PH_NOME = "Digite seu nome";
         private const string PH_GENERO = "Digite seu gênero";
         private const string PH_BIO = "Digite sua biografia";
@@ -24,21 +24,21 @@ namespace AlertaMed
             this.Load += Form23_Load;
         }
 
-        // Devolve o texto digitado, ou "" se ainda estiver o texto de exemplo
+   
         private static string Valor(Control caixa, string textoExemplo)
         {
             string t = caixa.Text.Trim();
             return t == textoExemplo ? "" : t;
         }
 
-        // Só troca o texto de exemplo se o banco tiver valor
+    
         private static void Preencher(TextBox caixa, string valor)
         {
             if (!string.IsNullOrWhiteSpace(valor))
                 caixa.Text = valor;
         }
 
-        // ---------- Carregamento da tela ----------
+    
 
         private void Form23_Load(object sender, EventArgs e)
         {

@@ -17,10 +17,10 @@ namespace AlertaMed
             InitializeComponent();
 
             ConfigurarGrupoExclusivo(checkBox1, checkBox2, checkBox3, checkBox4);
-            ConfigurarParNaoSim(checkBox5, checkBox6, textBox7, "Quantos?");   // Tem filhos?
-            ConfigurarParNaoSim(checkBox7, checkBox10, textBox8, "Quais?");    // Doenças Respiratórias?
-            ConfigurarParNaoSim(checkBox8, checkBox11, textBox9, "Quais?");    // Doenças Cardiovasculares?
-            ConfigurarParNaoSim(checkBox9, checkBox12, textBox10, "Quais?");   // Alergias?
+            ConfigurarParNaoSim(checkBox5, checkBox6, textBox7, "Quantos?");   
+            ConfigurarParNaoSim(checkBox7, checkBox10, textBox8, "Quais?");    
+            ConfigurarParNaoSim(checkBox8, checkBox11, textBox9, "Quais?");    
+            ConfigurarParNaoSim(checkBox9, checkBox12, textBox10, "Quais?");   
 
             lixeira.Click += lixeira_Click;
             lixeira2.Click += lixeira2_Click;
@@ -29,7 +29,7 @@ namespace AlertaMed
             lixeira5.Click += lixeira5_Click;
         }
 
-        // ================= Lixeiras: limpam o campo ao lado =================
+        
 
         private void lixeira_Click(object sender, EventArgs e)
         {
@@ -56,8 +56,7 @@ namespace AlertaMed
             textBox6.Text = "Digite suas anotações";
         }
 
-        // Liga um par "Não"/"Sim" a um campo de detalhe: marcar "Não" trava o
-        // campo (e limpa); marcar "Sim" destrava. Marcar um desmarca o outro.
+        
         private void ConfigurarParNaoSim(CheckBox chkNao, CheckBox chkSim, TextBox campo, string placeholder)
         {
             chkNao.CheckedChanged += (s, e) =>
@@ -134,14 +133,14 @@ namespace AlertaMed
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // ---- precisa estar logado: o paciente fica ligado à conta ----
+           
             if (!Sessao.Logado)
             {
                 MessageBox.Show("Entre na sua conta para cadastrar o paciente.");
                 return;
             }
 
-            // ---- validações básicas ----
+         
             if (string.IsNullOrWhiteSpace(textBox1.Text) || textBox1.Text == "Digite o nome do paciente")
             {
                 MessageBox.Show("Digite o nome do paciente.");
@@ -160,7 +159,7 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- gênero (faltava essa validação) ----
+            
             if (comboBox2.SelectedIndex == -1 || comboBox2.Text == "Selecione uma opção" || string.IsNullOrWhiteSpace(comboBox2.Text))
             {
                 MessageBox.Show("Selecione o gênero do paciente.");
@@ -168,7 +167,7 @@ namespace AlertaMed
                 return;
             }
 
-            // ---- estado civil (obrigatório marcar um) ----
+          
             if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked)
             {
                 MessageBox.Show("Selecione o estado civil do paciente.");
@@ -180,35 +179,35 @@ namespace AlertaMed
                                 : checkBox3.Checked ? "viuvo"
                                 : "divorciado";
 
-            // ---- tem filhos? (obrigatório Sim ou Não) ----
+        
             if (!checkBox5.Checked && !checkBox6.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem filhos.");
                 return;
             }
 
-            // ---- doenças respiratórias? ----
+         
             if (!checkBox7.Checked && !checkBox10.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem doenças respiratórias.");
                 return;
             }
 
-            // ---- doenças cardiovasculares? ----
+      
             if (!checkBox8.Checked && !checkBox11.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem doenças cardiovasculares.");
                 return;
             }
 
-            // ---- alergias? ----
+     
             if (!checkBox9.Checked && !checkBox12.Checked)
             {
                 MessageBox.Show("Informe se o paciente tem alergias.");
                 return;
             }
 
-            // ---- filhos ----
+           
             bool temFilhos = checkBox6.Checked;
             int? qtdFilhos = null;
             if (temFilhos)
@@ -223,7 +222,7 @@ namespace AlertaMed
                 qtdFilhos = qtd;
             }
 
-            // ---- monta o objeto ----
+           
             var paciente = new Paciente
             {
                 Nome = textBox1.Text,
@@ -241,7 +240,7 @@ namespace AlertaMed
                 QuaisAlergias = checkBox12.Checked ? textBox10.Text : null,
                 InformacoesExtras = textBox5.Text,
                 Anotacoes = textBox6.Text,
-                IdUsuario = Sessao.IdUsuario   // paciente ligado ao usuário logado
+                IdUsuario = Sessao.IdUsuario   
             };
 
             try
@@ -252,7 +251,7 @@ namespace AlertaMed
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar paciente: " + ex.Message);
-                return; // não navega pro Form13 se o salvamento falhou
+                return; 
             }
 
             Form13 form13 = new Form13();

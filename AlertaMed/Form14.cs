@@ -14,19 +14,19 @@ namespace AlertaMed
     {
         public string textoGuardado { get; private set; } = "";
 
-        // Uma coluna por informação, uma posição por linha da grade (6 linhas).
+       
         private TextBox[] colPaciente;
         private TextBox[] colRemedios;
         private TextBox[] colDoses;
         private TextBox[] colHorarios;
 
-        // tela de onde o usuário veio (para o botão Voltar)
+      
         private readonly Form _telaAnterior;
 
-        // Construtor padrão (usado pelo Designer)
+     
         public Form14()
         {
-            //design configurado
+            
             InitializeComponent();
 
             colPaciente = new[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6 };
@@ -38,15 +38,13 @@ namespace AlertaMed
             this.Load += Form14_Load;
         }
 
-        // Use este nos outros forms: new Form14(this)
+        
         public Form14(Form telaAnterior) : this()
         {
             _telaAnterior = telaAnterior;
         }
 
-        // Mantido para o Form13 continuar compilando.
-        // Os valores recebidos não são mais usados para preencher a tela:
-        // o histórico sempre vem do banco (public.prescricao), igual ao Form21.
+        
         public Form14(string remedios, string doses1, string doses2, string nomePaciente, Form telaAnterior = null)
             : this()
         {
@@ -60,7 +58,7 @@ namespace AlertaMed
 
         private void CarregarHistorico()
         {
-            // limpa a grade toda antes de preencher, pra não sobrar linha antiga
+           
             for (int i = 0; i < colPaciente.Length; i++)
             {
                 colPaciente[i].Clear();
@@ -117,7 +115,7 @@ namespace AlertaMed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //inicio
+         
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -186,7 +184,7 @@ namespace AlertaMed
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //inicio
+            
             Form1 form1 = new Form1();
             form1.StartPosition = FormStartPosition.Manual;
             form1.Location = this.Location;
@@ -196,8 +194,7 @@ namespace AlertaMed
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //botao voltar
-            // volta para quem abriu o Form14 (Form13, Form19...); se ninguém informou, usa o Form19
+            
             Form destino = _telaAnterior ?? new Form19();
 
             destino.StartPosition = FormStartPosition.Manual;
